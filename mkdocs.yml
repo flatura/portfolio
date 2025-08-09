@@ -15,7 +15,7 @@ nav:
   - Главная: index.md
   - Проекты:
       - FastMBO: projects/fastmbo.md
-      - FastMBO ADR: external/fastmbo_docs/docs/99_ADR.md
+      - FastMBO ADR: projects/fastmbo-adr.md
 markdown_extensions:
   - admonition
   - toc:
