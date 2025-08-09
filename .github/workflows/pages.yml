@@ -15,11 +15,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          submodules: true
+          submodules: recursive
       - uses: actions/setup-python@v5
         with:
           python-version: '3.x'
       - run: pip install mkdocs mkdocs-material mkdocs-minify-plugin mkdocs-include-markdown-plugin
+      - run: |
+         pwd
+         ls -la
+         ls -la external || true
+         ls -la external/fastmbo_docs || true
+         ls -la external/fastmbo_docs/docs || true
       - name: Build site
         run: mkdocs build --strict --site-dir ./site
       - name: Upload artifact
