@@ -20,6 +20,7 @@ jobs:
         with:
           python-version: '3.x'
       - run: pip install mkdocs mkdocs-material mkdocs-minify-plugin mkdocs-include-markdown-plugin
+      - run: git submodule add https://github.com/flatura/fastmbo_docs external/fastmbo_docs
       - run: |
          pwd
          ls -la
