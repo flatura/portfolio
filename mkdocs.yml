@@ -12,9 +12,9 @@ plugins:
       minify_html: true
   - include-markdown
 nav:
-  - Главная: docs/index.md
+  - Главная: index.md
   - Проекты:
-      - FastMBO: docs/projects/fastmbo.md
+      - FastMBO: projects/fastmbo.md
       - FastMBO ADR: external/fastmbo_docs/docs/99_ADR.md
 markdown_extensions:
   - admonition
