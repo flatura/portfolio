@@ -1,0 +1,21 @@
+name: Update submodules & Rebuild
+on:
+  schedule:
+    - cron: '17 4 * * 1'
+  workflow_dispatch:
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+      - name: Update submodules
+        run: |
+          git submodule update --remote --init --recursive
+          git status --porcelain | grep '^ M ' || echo "no changes" > /tmp/no
+          git config user.name "github-actions[bot]"
+          git config user.email "actions@github.com"
+          git add external/fastmbo_docs
+          git commit -m "chore: submodules sync" || true
+          git push || true

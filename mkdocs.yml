@@ -1,0 +1,26 @@
+site_name: Портфолио Дмитрия М. - Архитектура и системный анализ
+site_url: https://flatura.github.io
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+plugins:
+  - search
+  - minify:
+      minify_html: true
+  - include-markdown
+nav:
+  - Главная: docs/index.md
+  - Проекты:
+      - FastMBO: docs/projects/fastmbo.md
+      - FastMBO ADR: external/fastmbo_docs/docs/99_ADR.md
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/flatura
