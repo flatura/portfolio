@@ -1,5 +1,5 @@
 site_name: Портфолио Дмитрия М. - Архитектура и системный анализ
-site_url: https://flatura.github.io
+site_url: https://flatura.github.io/portfolio
 theme:
   name: material
   features:
@@ -15,7 +15,11 @@ nav:
   - Главная: index.md
   - Проекты:
       - FastMBO: projects/fastmbo.md
-      - FastMBO ADR: projects/fastmbo-adr.md
+      - MLG: projects/mlg.md
+      - GraphMechanic: projects/graph-mechanic.md
+      - TickFlow: projects/tickflow.md
+      - HabitFree: projects/habitfree.md
+      - MeteoPal: projects/meteopal.md
 markdown_extensions:
   - admonition
   - toc:
