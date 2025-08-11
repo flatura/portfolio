@@ -18,7 +18,6 @@ nav:
       - MLG: projects/mlg.md
       - GraphMechanic: projects/graph-mechanic.md
       - TickFlow: projects/tickflow.md
-      - HabitFree: projects/habitfree.md
       - MeteoPal: projects/meteopal.md
 markdown_extensions:
   - admonition
