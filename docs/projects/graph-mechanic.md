@@ -9,5 +9,31 @@
 ## Архитектура
 В стадии заполнения...
 
+## Скриншоты интерфейса
+<figure markdown>
+![GraphMechanic: редактирование узла]{ src="/assets/graphmechanic/ui/v1/edit_node_9f3c1a4.webp" width="100%" loading="lazy" }
+<figcaption>Редактирование узла</figcaption>
+</figure>
+
+<figure markdown>
+![GraphMechanic: создание полилинии]{ src="/assets/graphmechanic/ui/v1/create_polyline_9f3c1a4.webp" width="100%" loading="lazy" }
+<figcaption>Создание полилинии</figcaption>
+</figure>
+
+<figure markdown>
+![GraphMechanic: генерация полилинии через роутинг-сервис]{ src="/assets/graphmechanic/ui/v1/edit_polyline_9f3c1a4.webp" width="100%" loading="lazy" }
+<figcaption>Генерация полилинии через роутинг-сервис</figcaption>
+</figure>
+
+<figure markdown>
+![GraphMechanic: починка полилинии через роутинг-сервис]{ src="/assets/graphmechanic/ui/v1/fix_polyline_9f3c1a4.webp" width="100%" loading="lazy" }
+<figcaption>Редактирование узла</figcaption>
+</figure>
+
+<figure markdown>
+![GraphMechanic: интерфейс]{ src="/assets/graphmechanic/ui/v1/ui_9f3c1a4.webp" width="100%" loading="lazy" }
+<figcaption>Пользовательский интерфейс</figcaption>
+</figure>
+
 ## Полная документация
 - Репозиторий: https://github.com/flatura/graphmechanic_docs
