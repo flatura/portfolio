@@ -14,10 +14,18 @@ plugins:
   - glightbox
 nav:
   - Главная: index.md
-  - Проекты:
-      - FastMBO: projects/fastmbo.md
+  - Коммерческие проекты:
+      - GIS Data Visualization Product: projects/gis_bi_2.md
+      - GIS Data Visualization Project: projects/gis_bi_1.md
       - MLG: projects/mlg.md
+      - FastMBO: projects/fastmbo.md
+  - Внутренние инициативы:
+      - PolylineMechanic: projects/polyline-mechanic.md
+      - ExpendIt: projects/expendit.md
+      - GramotaGen: projects/gramotagen.md
+  - Личные проекты:
       - GraphMechanic: projects/graph-mechanic.md
+      - ArchLab: projects/archlab.md
       - TickFlow: projects/tickflow.md
       - MeteoPal: projects/meteopal.md
 markdown_extensions:
