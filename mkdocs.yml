@@ -15,19 +15,20 @@ plugins:
 nav:
   - Главная: index.md
   - Коммерческие проекты:
-      - GIS Data Visualization Product: projects/gis_bi_2.md
-      - GIS Data Visualization Project: projects/gis_bi_1.md
-      - MLG: projects/mlg.md
       - FastMBO: projects/fastmbo.md
+      - GIS Data Visualization Project: projects/gis_bi_1.md
+      - GIS Data Visualization Product: projects/gis_bi_2.md
   - Внутренние инициативы:
       - PolylineMechanic: projects/polyline-mechanic.md
       - ExpendIt: projects/expendit.md
-      - GramotaGen: projects/gramotagen.md
   - Личные проекты:
+      - MLG: projects/mlg.md
       - GraphMechanic: projects/graph-mechanic.md
+  - Идеи/Эксперименты:
       - ArchLab: projects/archlab.md
       - TickFlow: projects/tickflow.md
       - MeteoPal: projects/meteopal.md
+      - GramotaGen: projects/gramotagen.md
 markdown_extensions:
   - admonition
   - toc:
