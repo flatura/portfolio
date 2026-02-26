@@ -1,4 +1,4 @@
-site_name: Портфолио Дмитрия М. - Архитектура и системный анализ
+site_name: Портфолио Дмитрия М. - Solution Architecture
 site_url: https://flatura.github.io/portfolio
 theme:
   name: material
@@ -14,21 +14,14 @@ plugins:
   - glightbox
 nav:
   - Главная: index.md
-  - Коммерческие проекты:
-      - FastMBO: projects/fastmbo.md
-      - GIS Data Visualization Project: projects/gis_bi_1.md
-      - GIS Data Visualization Product: projects/gis_bi_2.md
-  - Внутренние инициативы:
-      - PolylineMechanic: projects/polyline-mechanic.md
-      - ExpendIt: projects/expendit.md
-  - Личные проекты:
-      - MLG: projects/mlg.md
+  - Флагманский SaaS проект:
+      - MyLovelyGarden (ERP): projects/mlg.md
+  - Enterprise-опыт:
+      - FMCG Supply Chain Optimization: projects/fmcg_planner_forecaster.md
+      - Enterprise GIS Platform: projects/enterprise_gis.md
+      - HR KPI System (FastMBO): projects/fastmbo.md
+  - R&D и Архитектурные стенды:
       - GraphMechanic: projects/graph-mechanic.md
-  - Идеи/Эксперименты:
-      - ArchLab: projects/archlab.md
-      - TickFlow: projects/tickflow.md
-      - MeteoPal: projects/meteopal.md
-      - GramotaGen: projects/gramotagen.md
 markdown_extensions:
   - admonition
   - toc:

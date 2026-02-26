@@ -64,7 +64,7 @@
   * **Docs-as-Code:** Внедрение автоматизированного рендеринга архитектурных диаграмм (PlantUML) через GitHub Actions для синхронизации требований и кода.
 * **Стек:** FastAPI, Angular, OracleDB, PostGIS, OSRM, OracleDB.
 
-🔗 [Подробнее о проекте](projects/gis_bi_1.md)
+🔗 [Подробнее о проекте](projects/enterprise_gis)
 
 ### 3. HR KPI Management System (FastMBO)
 *Сфера: EdTech / HRTech (2021 - 2022)*
