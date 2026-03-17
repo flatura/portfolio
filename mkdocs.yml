@@ -1,4 +1,4 @@
-site_name: Портфолио Дмитрия М. - Архитектура и системный анализ
+site_name: "Dmitry M. — Portfolio | Architecture & Systems Analysis"
 site_url: https://flatura.github.io/portfolio
 theme:
   name: material
@@ -7,24 +7,53 @@ theme:
     - navigation.top
     - content.code.copy
 plugins:
+  - i18n:
+      docs_structure: folder
+      fallback_to_default: true
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: ru
+          name: Русский
+          build: true
+          site_name: "Портфолио Дмитрия М. - Архитектура и системный анализ"
+          nav:
+            - Главная: index.md
+            - Коммерческие проекты:
+                - FastMBO: projects/fastmbo.md
+                - GIS Data Visualization Project: projects/gis_bi_1.md
+                - GIS Data Visualization Product: projects/gis_bi_2.md
+            - Внутренние инициативы:
+                - PolylineMechanic: projects/polyline-mechanic.md
+                - ExpendIt: projects/expendit.md
+            - Личные проекты:
+                - MLG: projects/mlg.md
+                - GraphMechanic: projects/graph-mechanic.md
+            - Идеи/Эксперименты:
+                - ArchLab: projects/archlab.md
+                - TickFlow: projects/tickflow.md
+                - MeteoPal: projects/meteopal.md
+                - GramotaGen: projects/gramotagen.md
   - search
   - minify:
       minify_html: true
   - include-markdown
   - glightbox
 nav:
-  - Главная: index.md
-  - Коммерческие проекты:
+  - Home: index.md
+  - Commercial projects:
       - FastMBO: projects/fastmbo.md
       - GIS Data Visualization Project: projects/gis_bi_1.md
       - GIS Data Visualization Product: projects/gis_bi_2.md
-  - Внутренние инициативы:
+  - Internal initiatives:
       - PolylineMechanic: projects/polyline-mechanic.md
       - ExpendIt: projects/expendit.md
-  - Личные проекты:
+  - Personal projects:
       - MLG: projects/mlg.md
       - GraphMechanic: projects/graph-mechanic.md
-  - Идеи/Эксперименты:
+  - Ideas / Experiments:
       - ArchLab: projects/archlab.md
       - TickFlow: projects/tickflow.md
       - MeteoPal: projects/meteopal.md
