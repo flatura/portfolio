@@ -8,7 +8,7 @@
 - Проработка решений на уровне system design
 - Моделирование данных и интеграционных взаимодействий
 - Подготовка API- и ETL-спецификаций
-- Архитектурные артефакты: C4, DFD, ADR
+- Архитектурные артефакты: C4, DFD, ADR, Sequence Diagram
 - Внутренние инструменты на Java / Spring Boot
 - Практическая инженерия с учетом инфраструктурных ограничений
 
@@ -29,8 +29,8 @@
 
 ## MyLovelyGarden
 
-**Тип:** B2B SaaS / botanical domain  
-**Роль:** Co-founder, System Designer, Backend-oriented Engineer  
+**Тип:** B2B SaaS / Ботанический домен  
+**Роль:** Co-founder, System Designer, Backend-oriented Engineer
 **Статус:** active
 
 ### Контекст
@@ -42,6 +42,8 @@
 - Подготовка технической документации и системных решений
 - Совместная работа с экспертом предметной области
 - Практическая реализация backend-части и координация общей технической структуры проекта
+- Деплой проекта на VPS
+- Масштабирование
 
 ### Ключевые решения
 - Soft multi-tenancy
@@ -53,7 +55,35 @@
 Java, Spring Boot, PostgreSQL, Docker, GitHub, AI-assisted development workflow
 
 ### Ссылки
-[Детальное описание архитектуры (C4 & ADR) -> скоро будет доступно]
+[Подробнее о проекте](projects/mlg.md)
+
+---
+
+## Serverless Transcriber SaaS
+
+**Тип:** Serverless SaaS / Cloud-Native Application  
+**Роль:** System Designer
+**Статус:** active
+
+### Контекст
+Решение: Бессерверное решение для транскрибации аудиозаписей посредством внешнего API-транскрибации.
+
+### Зона ответственности
+- Проектирование решения
+- Контроль реализации (AI assisted development)
+- Отладка и запуск
+
+### Ключевые решения
+-  = Отсутствие постоянно работающих серверов (Serverless) 
+- Инфраструктура как код (IaC)
+- Событийная архитектурная модель (Event Driven Design)
+- AI-assisted development workflow
+
+### Технологический стек
+AWS Lambda, Amazon S3, Amazon API Gateway, AWS DynamoDB, Python, Terraform, AssemblyAI, Claude Code
+
+### Ссылки
+[Подробнее о проекте](projects/serverless_transcriber.md)
 
 ---
 
@@ -65,23 +95,25 @@ Java, Spring Boot, PostgreSQL, Docker, GitHub, AI-assisted development workflow
 
 ### Контекст
 Участие в двух инициативах для FMCG-производителя:
-- ML-based demand forecasting
-- Mathematical production planning
+- Прогнозирование спроса на базе ML-моделей
+- Математическое планирование производства (солвер)
 
 ### Зона ответственности
 - Проработка бизнес- и функциональных требований
-- Моделирование процессов в BPMN / Camunda
-- Выявление источников данных и требований к ETL-подготовке
+- Моделирование процессов в BPMN
+- Выявление источников данных и требований к подготовке под ML-модель (ETL)
 - Валидация R&D-гипотез с использованием Jupyter Notebook, SQL и AI-assisted Python анализа данных
 - Подготовка архитектурных артефактов совместно с Enterprise Architect
 - Проработка модели данных, DDL, API-спецификаций и ETL-контрактов для оптимизационного контура на базе солвера
 - Развитие модульной документации в Confluence
 
 ### Ключевой результат
-Подготовленные технические материалы, модель данных и архитектурные артефакты помогли стейкхолдерам оценить сложность реализации и принять решение в пользу коробочного решения вместо продолжения in-house разработки.
+Сформировал полный пакет проектной и интеграционной документации, который позволил бизнесу и Enterprise-архитекторам прозрачно оценить сложность In-house разработки и принять финальное продуктовое решение.
 
 ### Технологический стек
-BPMN, Camunda, SQL, Python, Jupyter Notebook, Confluence, C4, DFD, Gurobi
+BPMN, Camunda, SQL, Python, Jupyter Notebook, Confluence, C4, DFD
+
+[Project details](projects/fmcg_forecaster_planner.md)
 
 ---
 

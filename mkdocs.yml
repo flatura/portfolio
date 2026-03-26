@@ -1,4 +1,4 @@
-site_name: "Dmitry M. — Portfolio | Architecture & Systems Analysis"
+site_name: "Dmitry M. - Portfolio | Architecture & Systems Analysis"
 site_url: https://flatura.github.io/portfolio
 theme:
   name: material
@@ -22,20 +22,17 @@ plugins:
           nav:
             - Главная: index.md
             - Коммерческие проекты:
+                - FMCG ML Прогнозатор / Планировщик: projects/fmcg_forecaster_planner.md
+                - ГИС Визуализатор корп.данных: projects/gis_bi_1.md
+                - ГИС Визуализатор (продукт): projects/gis_bi_2.md
                 - FastMBO: projects/fastmbo.md
-                - GIS Data Visualization Project: projects/gis_bi_1.md
-                - GIS Data Visualization Product: projects/gis_bi_2.md
             - Внутренние инициативы:
                 - PolylineMechanic: projects/polyline-mechanic.md
                 - ExpendIt: projects/expendit.md
             - Личные проекты:
                 - MLG: projects/mlg.md
+                - Serverless Transcriber: projects/serverless_transcriber.md
                 - GraphMechanic: projects/graph-mechanic.md
-            - Идеи/Эксперименты:
-                - ArchLab: projects/archlab.md
-                - TickFlow: projects/tickflow.md
-                - MeteoPal: projects/meteopal.md
-                - GramotaGen: projects/gramotagen.md
   - search
   - minify:
       minify_html: true
@@ -44,20 +41,17 @@ plugins:
 nav:
   - Home: index.md
   - Commercial projects:
-      - FastMBO: projects/fastmbo.md
+      - FMCG ML Forecaster / Planner: projects/fmcg_forecaster_planner.md
       - GIS Data Visualization Project: projects/gis_bi_1.md
       - GIS Data Visualization Product: projects/gis_bi_2.md
+      - FastMBO: projects/fastmbo.md
   - Internal initiatives:
       - PolylineMechanic: projects/polyline-mechanic.md
       - ExpendIt: projects/expendit.md
   - Personal projects:
       - MLG: projects/mlg.md
+      - Serverless Transcriber: projects/serverless_transcriber.md
       - GraphMechanic: projects/graph-mechanic.md
-  - Ideas / Experiments:
-      - ArchLab: projects/archlab.md
-      - TickFlow: projects/tickflow.md
-      - MeteoPal: projects/meteopal.md
-      - GramotaGen: projects/gramotagen.md
 markdown_extensions:
   - admonition
   - toc:

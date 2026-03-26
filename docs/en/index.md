@@ -1,10 +1,9 @@
 # Home# Dmitry M.
-**System Designer | Solution Architecture Track | Ex-Infrastructure Engineer**
+**System Designer | Integration & Data Design | Solution Architecture Track | Building B2B SaaS**
 
 Systems analyst and technical designer with an engineering background in infrastructure, software development, and internal systems. I work at the intersection of business requirements, data models, integrations, and practical implementation. My current career direction is Solution Architecture Associate.
 
 ## Core Focus
-
 - Solution elaboration at the system design level
 - Data modeling and integration design
 - API and ETL specifications
@@ -13,7 +12,6 @@ Systems analyst and technical designer with an engineering background in infrast
 - Practical engineering with infrastructure constraints in mind
 
 ## Core Competencies
-
 - System Analysis
 - Solution Design
 - Data Modeling
@@ -27,7 +25,7 @@ Systems analyst and technical designer with an engineering background in infrast
 
 ---
 
-## MyLovelyGarden
+## MLG
 
 **Type:** B2B SaaS / botanical domain  
 **Role:** Co-founder, System Designer, Backend-oriented Engineer  
@@ -53,14 +51,53 @@ A platform for botanical organizations and plant collections. It is being design
 Java, Spring Boot, PostgreSQL, Docker, GitHub, AI-assisted development workflow
 
 ### Links
-[Detailed architecture description (C4 & ADR) -> coming soon]
+[Project details](projects/mlg.md) | [C4 diagrams](/portfolio/assets/MLG_Context+Container_Diagram_en_safe.drawio.png) | [UI]()
+
+---
+
+## Serverless AI-Powered Transcriber
+**Type:** Cloud-Native SaaS / Serverless Platform
+**Role:** Solution Architect & Lead Designer
+**Status:** Active
+
+### Context
+A high-performance online service for automated audio transcription. The project addresses the need for a scalable, cost-effective, and secure way to process long-form audio recordings using external AI engines.
+
+### Areas of Responsibility
+End-to-End Solution Design: Architecting the flow from secure user authentication to asynchronous file processing.
+
+### Implementation Strategy
+Orchestrating an AI-assisted development workflow (Claude Code) to accelerate delivery.
+
+### Infrastructure & Deployment
+Managing the full lifecycle via IaC and automated invalidation/sync processes.
+
+### Key Architectural Decisions
+Serverless-First Approach: Zero maintenance and near-zero idle costs (Pay-per-use model).
+
+Event-Driven Asynchronous Pipeline: Leveraged S3 Triggers and API Webhooks to handle long-running AI tasks without blocking the UI.
+
+Offloaded Data Transfers: Used S3 Presigned URLs (POST/GET) to handle multi-gigabyte uploads directly, bypassing API Gateway limits.
+
+Secure Authentication: Implemented Amazon Cognito with PKCE flow for secure, token-based frontend access.
+
+Infrastructure as Code (IaC): 100% reproducible environment managed through Terraform.
+
+### Technology Stack
+Cloud: AWS (Lambda, S3, API Gateway, DynamoDB, Cognito, CloudFront)
+Language: Python 3.12 (Backend), Vanilla JavaScript (Frontend)
+IaC: Terraform
+AI Engine: AssemblyAI (Universal-3-Pro model)
+Workflow: Claude Code, Git
+
+[Project details](projects/serverless_transcriber.md)
 
 ---
 
 ## Supply Chain Optimization for FMCG
 
 **Type:** Enterprise / decision-support systems  
-**Role:** Systems Analyst / System Designer  
+**Role:** Systems Analyst / System Designer
 **Status:** commercial project
 
 ### Context
@@ -83,9 +120,11 @@ The resulting technical materials, data model, and architecture artifacts helped
 ### Technology Stack
 BPMN, Camunda, SQL, Python, Jupyter Notebook, Confluence, C4, DFD, Gurobi
 
+[Project details](projects/fmcg_forecaster_planner.md)
+
 ---
 
-## Enterprise GIS / Railway Graph Tooling
+## Enterprise GIS / ad-hoc Railway Graph Tooling
 
 **Type:** Enterprise GIS / internal tooling  
 **Role:** Systems Analyst / Technical System Designer  
@@ -103,15 +142,15 @@ Work in an enterprise GIS domain at the intersection of system analysis, data pr
 - Developing an internal tool for visual editing and cleanup of graph data
 
 ### Key Outcomes
-- Reduced cold data load time from 24 to 4 seconds through algorithms mapping railway polylines to transport graph nodes
-- Deployed an internal tile server and routing engine, allowing the team to operate independently of external GIS services
-- Designed and built an internal Spring Boot + OpenLayers tool that enabled preparation of more than 10,000 infrastructure objects in 4 weeks
+- Reduced cold data load time from 24 to 4 seconds through algorithms mapping railway polylines to transport graph nodes.
+- Deployed an internal tile server and routing engine, allowing the team to operate independently of external Projects GIS modules.
+- Designed and built an internal Spring Boot + OpenLayers tool that enabled preparation of more than 10,000 infrastructure objects in 4 weeks.
 - The tool and documentation package were retained in the corporate GitLab as a reusable internal solution
 
 ### Technology Stack
 Java, Spring Boot, JDBC, OpenLayers, OSRM, Docker, Confluence, Jira, UML
 
-🔗 [Project details](projects/gis_bi_1.md)
+[Project details](projects/gis_bi_1.md)
 
 ---
 
@@ -148,7 +187,7 @@ Java, Spring Boot, Docker, Process Automation, Technical Documentation
 I work on solutions at the intersection of requirements, data, integrations, and practical implementation. My primary interest is in systems where structure, traceability, maintainability, and a reasonable balance between delivery speed and technical sustainability matter.
 
 ## Engineering Foundation
-I have an engineering background in infrastructure, virtualization, networking, internal platforms, and application development. This helps me account not only for the logical solution model, but also for operational constraints.
+I have a 10+ years of engineering background in infrastructure, virtualization, networking, internal platforms, and application development. This helps me account not only for the logical solution model, but also for operational constraints.
 
 ## Current Development Track
 I am moving toward Solution Architecture Associate through:
