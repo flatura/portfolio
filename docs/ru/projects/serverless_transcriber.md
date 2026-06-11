@@ -21,20 +21,20 @@
 ## Скриншоты решения
 ### Главное меню
 <figure markdown>
-![UI_1](assets/transcriber/main_menu.webp)
+![UI_1](../../assets/transcriber/main_menu.webp)
 <figcaption>Главное меню</figcaption>
 </figure>
 
 ### Загрузка аудиозаписи 
 <figure markdown>
-![UI_1](assets/transcriber/loading.webp)
+![UI_1](../../assets/transcriber/loading.webp)
 <figcaption>Загрузка аудиозаписи</figcaption>
 </figure>
 
 
 ### Обработка файла
 <figure markdown>
-![UI_1](assets/transcriber/processed.webp)
+![UI_1](../../assets/transcriber/processed.webp)
 <figcaption>Обработка записи</figcaption>
 </figure>
 

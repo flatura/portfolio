@@ -21,20 +21,20 @@ There is an episodic need for fast and cost-effective transcription of large aud
 ## UI Screenshots
 ### Main menu
 <figure markdown>
-![UI_1](assets/transcriber/main_menu.webp)
+![UI_1](../../assets/transcriber/main_menu.webp)
 <figcaption>Main menu</figcaption>
 </figure>
 
 ### Upoading a record
 <figure markdown>
-![UI_1](assets/transcriber/loading.webp)
+![UI_1](../../assets/transcriber/loading.webp)
 <figcaption>Uploading a record</figcaption>
 </figure>
 
 
 ### Processing the record
 <figure markdown>
-![UI_1](assets/transcriber/processed.webp)
+![UI_1](../../assets/transcriber/processed.webp)
 <figcaption>Processing the record</figcaption>
 </figure>
 

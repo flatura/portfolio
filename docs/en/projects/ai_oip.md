@@ -26,19 +26,19 @@ A prototype system for managerial analytics, where the LLM does not "answer from
 ## UI Screenshots
 ### "What can you do?"
 <figure markdown>
-![UI_1](assets/ai_oip/what.png)
+![UI_1](../../assets/ai_oip/what.png)
 <figcaption>"Что ты умеешь?"</figcaption>
 </figure>
 
 ### Financial playbook: gross margin drop hypothese
 <figure markdown>
-![UI_1](assets/ai_oip/gross_margin.png)
+![UI_1](../../assets/ai_oip/gross_margin.png)
 <figcaption>Gross margin drop hypothese</figcaption>
 </figure>
 
 ### Execution playbook: KPI anomaly
 <figure markdown>
-![UI_1](assets/ai_oip/KPI.png)
+![UI_1](../../assets/ai_oip/KPI.png)
 <figcaption>KPI anomaly</figcaption>
 </figure>
 

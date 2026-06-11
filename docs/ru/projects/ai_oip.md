@@ -31,19 +31,19 @@ RU:
 ## Скриншоты решения
 ### "Что ты умеешь?"
 <figure markdown>
-![UI_1](assets/ai_oip/what.png)
+![UI_1](../../assets/ai_oip/what.png)
 <figcaption>"Что ты умеешь?"</figcaption>
 </figure>
 
 ### Финансовый плейбук: причина падения маржи
 <figure markdown>
-![UI_1](assets/ai_oip/gross_margin.png)
+![UI_1](../../assets/ai_oip/gross_margin.png)
 <figcaption>Гипотеза: причина падения маржи</figcaption>
 </figure>
 
 ### Кроссфункциональный плейбук: аномалии системы целеполагания
 <figure markdown>
-![UI_1](assets/ai_oip/KPI.png)
+![UI_1](../../assets/ai_oip/KPI.png)
 <figcaption>Аномалия системы целеполагания</figcaption>
 </figure>
 
