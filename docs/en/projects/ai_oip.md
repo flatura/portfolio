@@ -112,19 +112,19 @@ This scenario demonstrates the intended product direction: not just retrieving d
 </figure>
 
 <figure markdown>
-![UI_2](../../assets/ai_oip/gross_margin-report.png)
+![UI_3](../../assets/ai_oip/gross_margin_report.png)
 <figcaption>Financial performance diagnosis chars report</figcaption>
 </figure>
 
 <figure markdown>
-![UI_2](../../assets/ai_oip/tools.png)
+![UI_4](../../assets/ai_oip/tools.png)
 <figcaption>Financial performance diagnosis called tools</figcaption>
 </figure>
 
 #### Executive Operations playbook: KPI anomaly
 
 <figure markdown>
-![UI_3](../../assets/ai_oip/KPI.png)
+![UI_5](../../assets/ai_oip/KPI.png)
 <figcaption>Operational anomaly diagnosis across delivery, ITSM, PMO, and documents</figcaption>
 </figure>
 
