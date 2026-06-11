@@ -1,4 +1,4 @@
-site_name: "Dmitry M. - Portfolio | Architecture & Systems Analysis and Prototyping"
+site_name: "Dmitry M. - Portfolio | Architecture & Systems Design"
 site_url: https://flatura.github.io/portfolio
 theme:
   name: material
@@ -18,11 +18,15 @@ plugins:
         - locale: ru
           name: Русский
           build: true
-          site_name: "Портфолио Дмитрия М. - Архитектура и системный анализ и прототипирование"
+          site_name: "Портфолио Дмитрия М. - Проектирование и системный анализ"
           nav:
             - Главная: index.md
-            - Коммерческие проекты:
-                - Ботанический SaaS: projects/mlg.md
+            - Подход и услуги: services.md
+            - Ключевые проекты:
+                - Botanical SaaS: projects/botanical.md
+                - AI Operational Intelligence Platform: projects/ai_oip.md
+                - AWS Audio Transcriber: projects/serverless_transcriber.md
+            - Корпоративный опыт:
                 - FMCG ML Прогнозатор / Планировщик: projects/fmcg_forecaster_planner.md
                 - ГИС Визуализатор корп.данных: projects/gis_bi_1.md
                 - ГИС Визуализатор (продукт): projects/gis_bi_2.md
@@ -30,9 +34,6 @@ plugins:
             - Внутренние инициативы:
                 - PolylineMechanic: projects/polyline-mechanic.md
                 - ExpendIt: projects/expendit.md
-            - Личные проекты:
-                - AI Operational Intelligence Platform: projects/ai_oip.md
-                - AWS Audio Transcriber: projects/serverless_transcriber.md
                 - GraphMechanic: projects/graph-mechanic.md
   - search
   - minify:
@@ -41,18 +42,19 @@ plugins:
   - glightbox
 nav:
   - Home: index.md
-  - Commercial projects:
-      - Botanical SaaS: projects/mlg.md
+  - Approach & Services: services.md
+  - Featured Projects:
+      - Botanical SaaS: projects/botanical.md
+      - AI Operational Intelligence Platform: projects/ai_oip.md
+      - AWS Audio Transcriber: projects/serverless_transcriber.md
+  - Enterprise Experience:
       - FMCG ML Forecaster / Planner: projects/fmcg_forecaster_planner.md
       - GIS Data Visualization Project: projects/gis_bi_1.md
       - GIS Data Visualization Product: projects/gis_bi_2.md
       - FastMBO: projects/fastmbo.md
-  - Internal initiatives:
+  - Internal Initiatives:
       - PolylineMechanic: projects/polyline-mechanic.md
       - ExpendIt: projects/expendit.md
-  - Personal projects:
-      - AI Operational Intelligence Platform: projects/ai_oip.md
-      - AWS Audio Transcriber: projects/serverless_transcriber.md
       - GraphMechanic: projects/graph-mechanic.md
 markdown_extensions:
   - admonition
