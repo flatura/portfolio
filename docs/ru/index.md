@@ -19,6 +19,6 @@
 
 ## Ключевые проекты
 
-* [Linnata SaaS](projects/botanical.md) — B2B платформа с soft multi-tenancy и гибридной моделью данных.
+* [Botanical SaaS](projects/botanical.md) — B2B платформа с soft multi-tenancy и гибридной моделью данных.
 * [AI Operational Intelligence Platform](projects/ai_oip.md) — Прототип системы управленческой аналитики на базе LangGraph.
 * [Serverless Transcriber](projects/serverless_transcriber.md) — Облачное serverless-решение на базе AWS.
