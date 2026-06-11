@@ -117,7 +117,7 @@ This scenario demonstrates the intended product direction: not just retrieving d
 </figure>
 
 <figure markdown>
-![UI_4](../../assets/ai_oip/tools.png)
+![UI_4](../../assets/ai_oip/tools_called.png)
 <figcaption>Financial performance diagnosis called tools</figcaption>
 </figure>
 
