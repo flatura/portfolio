@@ -25,7 +25,7 @@ Systems analyst and technical designer with an engineering background in infrast
 
 ---
 
-## MLG
+## Botanical ERP and global exchange (SaaS)
 
 **Type:** B2B SaaS / botanical domain  
 **Role:** Co-founder, System Designer, Backend-oriented Engineer  
@@ -52,6 +52,39 @@ Java, Spring Boot, PostgreSQL, Docker, GitHub, AI-assisted development workflow
 
 ### Links
 [Project details](projects/mlg.md) | [C4 diagrams](/portfolio/assets/MLG_Context+Container_Diagram_en_safe.drawio.png) | [UI]()
+
+---
+
+## AI Operational Intelligence Platform
+
+**Type:** Enterprise AI / Decision-support system / Agentic analytics prototype  
+**Role:** System Designer, AI-assisted Prototype Engineer
+**Status:** working prototype, May 2026
+
+### Context
+A prototype system for managerial analytics, where the LLM does not "answer from memory" but operates within a controlled execution loop: it selects permitted tools, calls backend functions, retrieves verifiable data, preserves the execution trace, and generates an executive-level response based on evidence.
+
+### Responsibilities
+- Designed the overall architectural framework of the project.
+- Built a LangGraph-based agent harness for controlled scenario execution.
+- Defined a tool registry to describe available tools and constraints.
+- Prepared synthetic financial and cross-functional managerial scenarios.
+- Configured Open WebUI as a familiar chat interface for PoC demonstration.
+- Developed the approach to system transparency: tool calls, parameters, results, evidence.
+- Shaped the development direction: playbooks, evidence graph, report generation, tool generator.
+
+### Key Decisions
+- Controlled LLM invocation instead of a free chat approach.
+- Tool registry as a catalog of instruments for the LLM.
+- Evidence-based answers: the response must reference data, not just the model's reasoning.
+- Run trace as the foundation for trust, debugging, and audit.
+- Separation of roles: the backend sets the boundaries, the LLM acts within a constrained scenario.
+
+### Technology Stack
+LangGraph, Python, Open WebUI, synthetic datasets, tool registry, agent harness, LLM-assisted development, evidence-based analytics.
+
+### What the project demonstrates
+This project demonstrates my transition from classical system analysis to designing enterprise AI systems: not just "bolting on a chat", but assembling a controlled loop with tools, constraints, tracing, verifiable data, and clear managerial value.
 
 ---
 
@@ -94,36 +127,6 @@ Workflow: Claude Code, Git
 
 ---
 
-## Supply Chain Optimization for FMCG
-
-**Type:** Enterprise / decision-support systems  
-**Role:** Systems Analyst / System Designer
-**Status:** commercial project
-
-### Context
-Participation in two initiatives for an FMCG manufacturer:
-- ML-based demand forecasting
-- Mathematical production planning
-
-### Scope of Contribution
-- Elaborating business and functional requirements
-- Process modeling in BPMN / Camunda
-- Identifying data sources and ETL preparation requirements
-- Validating R&D hypotheses using Jupyter Notebook, SQL, and AI-assisted Python-based data analysis
-- Preparing architecture artifacts together with the Enterprise Architect
-- Designing the data model, DDL, API specifications, and ETL contracts for the solver-based optimization workflow
-- Evolving modular documentation in Confluence
-
-### Key Outcome
-The resulting technical materials, data model, and architecture artifacts helped stakeholders assess implementation complexity and supported the decision to adopt a packaged solution instead of continuing in-house development.
-
-### Technology Stack
-BPMN, Camunda, SQL, Python, Jupyter Notebook, Confluence, C4, DFD, Gurobi
-
-[Project details](projects/fmcg_forecaster_planner.md)
-
----
-
 ## Enterprise GIS / ad-hoc Railway Graph Tooling
 
 **Type:** Enterprise GIS / internal tooling  
@@ -151,6 +154,36 @@ Work in an enterprise GIS domain at the intersection of system analysis, data pr
 Java, Spring Boot, JDBC, OpenLayers, OSRM, Docker, Confluence, Jira, UML
 
 [Project details](projects/gis_bi_1.md)
+
+---
+
+## Supply Chain Optimization for FMCG
+
+**Type:** Enterprise / decision-support systems  
+**Role:** Systems Analyst / System Designer
+**Status:** commercial project
+
+### Context
+Participation in two initiatives for an FMCG manufacturer:
+- ML-based demand forecasting
+- Mathematical production planning
+
+### Scope of Contribution
+- Elaborating business and functional requirements
+- Process modeling in BPMN / Camunda
+- Identifying data sources and ETL preparation requirements
+- Validating R&D hypotheses using Jupyter Notebook, SQL, and AI-assisted Python-based data analysis
+- Preparing architecture artifacts together with the Enterprise Architect
+- Designing the data model, DDL, API specifications, and ETL contracts for the solver-based optimization workflow
+- Evolving modular documentation in Confluence
+
+### Key Outcome
+The resulting technical materials, data model, and architecture artifacts helped stakeholders assess implementation complexity and supported the decision to adopt a packaged solution instead of continuing in-house development.
+
+### Technology Stack
+BPMN, Camunda, SQL, Python, Jupyter Notebook, Confluence, C4, DFD, Gurobi
+
+[Project details](projects/fmcg_forecaster_planner.md)
 
 ---
 
@@ -212,8 +245,8 @@ Docker, OSRM, OpenLayers, Confluence, Jira, GitHub, GitLab
 
 # Links
 
-- [LinkedIn](https://linkedin.com/in/morozovda-sa)
-- [GitHub](https://github.com/flatura)
-
+- [LinkedIn](https://linkedin.com/in/morozovda-sa) 
+- [GitHub](https://github.com/flatura) 
+- [Upwork](https://www.upwork.com/freelancers/~0139dd3a8609dcc36e)
 
 Content available in Russian. [Русская версия](/ru/).

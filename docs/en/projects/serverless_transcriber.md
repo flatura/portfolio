@@ -18,6 +18,27 @@ There is an episodic need for fast and cost-effective transcription of large aud
 * Strict access control to the service.
 * Complete isolation of user data.
 
+## UI Screenshots
+### Main menu
+<figure markdown>
+![UI_1](assets/transcriber/main_menu.webp)
+<figcaption>Main menu</figcaption>
+</figure>
+
+### Upoading a record
+<figure markdown>
+![UI_1](assets/transcriber/loading.webp)
+<figcaption>Uploading a record</figcaption>
+</figure>
+
+
+### Processing the record
+<figure markdown>
+![UI_1](assets/transcriber/processed.webp)
+<figcaption>Processing the record</figcaption>
+</figure>
+
+
 ## Architectural Challenges & Engineering Decisions
 * **Optimal Resource Utilization:** Need to account for the episodic nature of resource usage, a small number of use cases, and broad regional availability.
   * *Solution:* Utilize a Serverless approach and AWS Lambda infrastructure. A traditional VPS is unsuitable due to recurring computing costs (even when the service is idle). A Telegram bot is not viable due to audio file size limits (and the bot's logic still requires hosting).

@@ -1,4 +1,4 @@
-site_name: "Dmitry M. - Portfolio | Architecture & Systems Analysis"
+site_name: "Dmitry M. - Portfolio | Architecture & Systems Analysis and Prototyping"
 site_url: https://flatura.github.io/portfolio
 theme:
   name: material
@@ -18,10 +18,11 @@ plugins:
         - locale: ru
           name: Русский
           build: true
-          site_name: "Портфолио Дмитрия М. - Архитектура и системный анализ"
+          site_name: "Портфолио Дмитрия М. - Архитектура и системный анализ и прототипирование"
           nav:
             - Главная: index.md
             - Коммерческие проекты:
+                - Ботанический SaaS: projects/mlg.md
                 - FMCG ML Прогнозатор / Планировщик: projects/fmcg_forecaster_planner.md
                 - ГИС Визуализатор корп.данных: projects/gis_bi_1.md
                 - ГИС Визуализатор (продукт): projects/gis_bi_2.md
@@ -30,8 +31,8 @@ plugins:
                 - PolylineMechanic: projects/polyline-mechanic.md
                 - ExpendIt: projects/expendit.md
             - Личные проекты:
-                - MLG: projects/mlg.md
-                - Serverless Transcriber: projects/serverless_transcriber.md
+                - AI Operational Intelligence Platform: projects/ai_oip.md
+                - AWS Audio Transcriber: projects/serverless_transcriber.md
                 - GraphMechanic: projects/graph-mechanic.md
   - search
   - minify:
@@ -41,6 +42,7 @@ plugins:
 nav:
   - Home: index.md
   - Commercial projects:
+      - Botanical SaaS: projects/mlg.md
       - FMCG ML Forecaster / Planner: projects/fmcg_forecaster_planner.md
       - GIS Data Visualization Project: projects/gis_bi_1.md
       - GIS Data Visualization Product: projects/gis_bi_2.md
@@ -49,15 +51,25 @@ nav:
       - PolylineMechanic: projects/polyline-mechanic.md
       - ExpendIt: projects/expendit.md
   - Personal projects:
-      - MLG: projects/mlg.md
-      - Serverless Transcriber: projects/serverless_transcriber.md
+      - AI Operational Intelligence Platform: projects/ai_oip.md
+      - AWS Audio Transcriber: projects/serverless_transcriber.md
       - GraphMechanic: projects/graph-mechanic.md
 markdown_extensions:
   - admonition
+  - attr_list
+  - md_in_html
   - toc:
       permalink: true
-  - md_in_html
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 extra:
   social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/morozovda-sa/
+    - icon: fontawesome/brands/upwork
+      link: https://www.upwork.com/freelancers/~0139dd3a8609dcc36e
     - icon: fontawesome/brands/github
       link: https://github.com/flatura

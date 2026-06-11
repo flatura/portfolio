@@ -27,14 +27,14 @@
 
 ---
 
-## MyLovelyGarden
+## Botanical ERP and global exchange (SaaS)
 
 **Тип:** B2B SaaS / Ботанический домен  
 **Роль:** Co-founder, System Designer, Backend-oriented Engineer
 **Статус:** active
 
 ### Контекст
-Платформа для ботанических организаций и коллекций растений. Проектируется как прикладная B2B-система с учетом предметной сложности, ролевой модели доступа и долгосрочной эволюции продукта.
+Платформа для ботанических садов, питомников и коллекционеров. Проектируется как прикладная B2B-система на стыке академического научного подхода и облачных технологий. Нацелена на глобализацию и поддержку биоразнообразия планеты через автоматизацию рутинных задач научных работников.
 
 ### Зона ответственности
 - Проработка доменной модели и ключевых системных сценариев
@@ -43,7 +43,7 @@
 - Совместная работа с экспертом предметной области
 - Практическая реализация backend-части и координация общей технической структуры проекта
 - Деплой проекта на VPS
-- Масштабирование
+- Проектирование и выполнение масштабирования
 
 ### Ключевые решения
 - Soft multi-tenancy
@@ -59,6 +59,42 @@ Java, Spring Boot, PostgreSQL, Docker, GitHub, AI-assisted development workflow
 
 ---
 
+## AI Operional Intelligence Platform
+
+**Тип:** Enterprise AI / Decision-support system / Agentic analytics prototype  
+**Роль:** System Designer, AI-assisted Prototype Engineer
+**Статус:** working prototype, May 2026
+
+### Контекст
+Прототип системы для управленческой аналитики, где LLM не “отвечает из головы”, а работает внутри контролируемого исполнительного контура: выбирает разрешённые инструменты, вызывает backend-функции, получает проверяемые данные, сохраняет трассу выполнения и формирует executive-level ответ на основе evidence.
+
+### Зона ответственности
+- Спроектировал общий архитектурный контур проекта.
+- Собрал LangGraph-based agent harness для управляемого выполнения сценариев.
+- Выделил tool registry для описания доступных инструментов и ограничений.
+- Подготовил синтетические финансовые и кросс-функциональные управленческие сценарии.
+- Настроил Open WebUI как привычный chat-интерфейс для демонстрации PoC.
+- Проработал подход к прозрачности системы: tool calls, параметры, результаты, доказательства.
+- Сформировал направление развития: playbooks, evidence graph, report generation, tool generator.
+
+### Ключевые решения
+- Управляемый запуск LLM вместо свободного chat-подхода.
+- Tool registry как каталог инстурментов для LLM.
+- Ответы с докаательствами: ответ должен ссылаться на данные, а не только на рассуждение модели.
+- Run trace как основа доверия, отладки и аудита.
+- Разделение ролей: backend задаёт рамки, LLM действует внутри ограниченного сценария.
+
+### Технологический стек
+LangGraph, Python, Open WebUI, synthetic datasets, tool registry, agent harness, LLM-assisted development, evidence-based analytics.
+
+### Что показывает проект
+Этот проект показывает мой переход от классического системного анализа к проектированию enterprise AI-систем: не “прикрутить чат”, а собрать контролируемый контур, где есть инструменты, ограничения, трассировка, проверяемые данные и понятная управленческая ценность.
+
+### Ссылки
+[Подробнее о проекте](projects/ai_oip.md)
+
+---
+
 ## Serverless Transcriber SaaS
 
 **Тип:** Serverless SaaS / Cloud-Native Application  
@@ -66,7 +102,7 @@ Java, Spring Boot, PostgreSQL, Docker, GitHub, AI-assisted development workflow
 **Статус:** active
 
 ### Контекст
-Решение: Бессерверное решение для транскрибации аудиозаписей посредством внешнего API-транскрибации.
+Решение: Бессерверное решение для транскрибации аудиозаписей посредством внешнего API-транскрибации с диаризацией или без неё.
 
 ### Зона ответственности
 - Проектирование решения
@@ -74,7 +110,7 @@ Java, Spring Boot, PostgreSQL, Docker, GitHub, AI-assisted development workflow
 - Отладка и запуск
 
 ### Ключевые решения
--  = Отсутствие постоянно работающих серверов (Serverless) 
+- Отсутствие постоянно работающих серверов (Serverless) 
 - Инфраструктура как код (IaC)
 - Событийная архитектурная модель (Event Driven Design)
 - AI-assisted development workflow
@@ -84,6 +120,36 @@ AWS Lambda, Amazon S3, Amazon API Gateway, AWS DynamoDB, Python, Terraform, Asse
 
 ### Ссылки
 [Подробнее о проекте](projects/serverless_transcriber.md)
+
+---
+
+## Enterprise GIS / Railway Graph Tooling
+
+**Тип:** Enterprise GIS / internal tooling  
+**Роль:** Systems Analyst / Technical System Designer  
+**Статус:** commercial project
+
+### Контекст
+Работа в корпоративной GIS-предметной области на стыке системного анализа, data processing, инфраструктуры и прикладной разработки.
+
+### Зона ответственности
+- Подготовка и уточнение бизнес- и системных требований
+- Совместная проработка решений с архитекторами
+- Координация поставки с учетом требований ИБ и проектных ограничений
+- Проектирование и реализация алгоритмов обработки данных железнодорожного графа
+- Развертывание внутренней GIS-инфраструктуры
+- Разработка внутреннего инструмента для визуального редактирования и очистки графовых данных
+
+### Ключевые результаты
+- Сократил время холодной загрузки данных с 24 до 4 секунд за счет алгоритмов привязки железнодорожных полилиний к узлам транспортного графа
+- Развернул внутренний tile server и routing engine, что позволило работать независимо от внешних GIS-сервисов
+- Спроектировал и разработал внутренний Spring Boot + OpenLayers инструмент, позволивший подготовить более 10 000 инфраструктурных объектов за 4 недели
+- Инструмент и комплект документации были сохранены в корпоративном GitLab как переиспользуемое внутреннее решение
+
+### Технологический стек
+Java, Spring Boot, JDBC, OpenLayers, OSRM, Docker, Confluence, Jira, UML
+
+[Подробнее о проекте](projects/gis_bi_1.md)
 
 ---
 
@@ -117,36 +183,6 @@ BPMN, Camunda, SQL, Python, Jupyter Notebook, Confluence, C4, DFD
 
 ---
 
-## Enterprise GIS / Railway Graph Tooling
-
-**Тип:** Enterprise GIS / internal tooling  
-**Роль:** Systems Analyst / Technical System Designer  
-**Статус:** commercial project
-
-### Контекст
-Работа в корпоративной GIS-предметной области на стыке системного анализа, data processing, инфраструктуры и прикладной разработки.
-
-### Зона ответственности
-- Подготовка и уточнение бизнес- и системных требований
-- Совместная проработка решений с архитекторами
-- Координация поставки с учетом требований ИБ и проектных ограничений
-- Проектирование и реализация алгоритмов обработки данных железнодорожного графа
-- Развертывание внутренней GIS-инфраструктуры
-- Разработка внутреннего инструмента для визуального редактирования и очистки графовых данных
-
-### Ключевые результаты
-- Сократил время холодной загрузки данных с 24 до 4 секунд за счет алгоритмов привязки железнодорожных полилиний к узлам транспортного графа
-- Развернул внутренний tile server и routing engine, что позволило работать независимо от внешних GIS-сервисов
-- Спроектировал и разработал внутренний Spring Boot + OpenLayers инструмент, позволивший подготовить более 10 000 инфраструктурных объектов за 4 недели
-- Инструмент и комплект документации были сохранены в корпоративном GitLab как переиспользуемое внутреннее решение
-
-### Технологический стек
-Java, Spring Boot, JDBC, OpenLayers, OSRM, Docker, Confluence, Jira, UML
-
-🔗 [Подробнее о проекте](projects/gis_bi_1.md)
-
----
-
 ## KPI / MBO Internal System
 
 **Тип:** Internal automation / performance management  
@@ -170,7 +206,7 @@ Java, Spring Boot, JDBC, OpenLayers, OSRM, Docker, Confluence, Jira, UML
 ### Технологический стек
 Java, Spring Boot, Docker, Process Automation, Technical Documentation
 
-🔗 [Подробнее о проекте](projects/fastmbo.md) | 🔗 [ADR](projects/fastmbo-adr.md)
+[Подробнее о проекте](projects/fastmbo.md) | [ADR](projects/fastmbo-adr.md)
 
 ---
 
@@ -201,9 +237,12 @@ System Analysis, Solution Design, Data Modeling, Integration Design, API Design,
 Java, Spring Boot, JDBC, PostgreSQL, SQL, Python, Jupyter Notebook
 
 ## Инфраструктура и tooling
-Docker, OSRM, OpenLayers, Confluence, Jira, GitHub, GitLab
+Docker, OSRM, OpenLayers, Confluence, Jira, GitHub, GitLab, Claude Code, Cursor, Antigraviry IDE
 
 # Ссылки
 
 - [LinkedIn](https://linkedin.com/in/morozovda-sa) 
 - [GitHub](https://github.com/flatura) 
+- [Upwork](https://www.upwork.com/freelancers/~0139dd3a8609dcc36e)
+
+Content available in English. [English version](/en/).
