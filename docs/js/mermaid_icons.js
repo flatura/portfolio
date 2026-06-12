@@ -6,29 +6,47 @@ document$.subscribe(async () => {
     `${window.location.origin}/portfolio/`
 
   const awsIconsUrl = new URL("assets/mermaid-icons/aws-icons.json", base).toString()
-  const logosIconsUrl = new URL("assets/mermaid-icons/logos-icons.json", base).toString()
+  const logosIconsUrl = new URL("assets/mermaid-icons/logos.json", base).toString()
+
+  const [awsIcons, logosIcons] = await Promise.all([
+    fetch(awsIconsUrl).then((res) => {
+      if (!res.ok) throw new Error(`Cannot load AWS icon pack: ${res.status} ${awsIconsUrl}`)
+      return res.json()
+    }),
+    fetch(logosIconsUrl).then((res) => {
+      if (!res.ok) throw new Error(`Cannot load logos icon pack: ${res.status} ${logosIconsUrl}`)
+      return res.json()
+    })
+  ])
 
   mermaid.registerIconPacks([
     {
       name: "aws",
-      loader: () => fetch(awsIconsUrl).then((res) => res.json())
+      icons: awsIcons
     },
     {
       name: "logos",
-      loader: () => fetch(logosIconsUrl).then((res) => res.json())
+      icons: logosIcons
     }
   ])
 
   mermaid.initialize({
     startOnLoad: false,
-    securityLevel: "loose"
+    securityLevel: "loose",
+    theme: document.body.getAttribute("data-md-color-scheme") === "slate" ? "dark" : "default"
   })
 
-  document.querySelectorAll(".mermaid[data-processed]").forEach((el) => {
-    el.removeAttribute("data-processed")
-  })
+  const diagrams = document.querySelectorAll("pre.mermaid-custom > code, code.mermaid-custom")
 
-  await mermaid.run({
-    querySelector: ".mermaid"
-  })
+  for (const [index, code] of diagrams.entries()) {
+    const source = code.textContent.trim()
+    const wrapper = document.createElement("div")
+    wrapper.className = "mermaid"
+    wrapper.id = `mermaid-custom-${Date.now()}-${index}`
+
+    code.parentElement.replaceWith(wrapper)
+
+    const { svg } = await mermaid.render(wrapper.id + "-svg", source)
+    wrapper.innerHTML = svg
+  }
 })

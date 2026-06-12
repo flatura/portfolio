@@ -27,8 +27,6 @@ jobs:
          ls -la external || true
          ls -la external/fastmbo_docs || true
          ls -la external/fastmbo_docs/docs || true
-      - name: Generate Mermaid AWS icon pack
-        run: python scripts/build_aws_iconify_pack.py
       - name: Build site
         run: mkdocs build --strict --site-dir ./site
       - name: Upload artifact
