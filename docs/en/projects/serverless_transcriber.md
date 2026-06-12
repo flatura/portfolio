@@ -80,7 +80,7 @@ architecture-beta
     service ai(logos:webhooks)[AssemblyAI API]
     service front(aws:cloudfront)[AWS CloudFront]
 
-front:T -- B:static
+    front:T -- B:static
     browser:T -- B:api
     browser:L -- R:front
     browser:B -- T:cognito
