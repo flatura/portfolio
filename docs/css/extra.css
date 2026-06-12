@@ -8,15 +8,15 @@
 .md-typeset .mermaid-custom svg .edgePath .path,
 .md-typeset .mermaid-custom svg path.flowchart-link,
 .md-typeset .mermaid-custom svg .flowchart-link {
-  stroke: #666666 !important;
+  stroke: #444444 !important;
   stroke-width: 1.8px !important;
 }
 
 /* Arrow heads */
 .md-typeset .mermaid-custom svg marker path,
 .md-typeset .mermaid-custom svg defs marker path {
-  fill: #666666 !important;
-  stroke: #666666 !important;
+  fill: #444444 !important;
+  stroke: #444444 !important;
 }
 
 /* General text */
@@ -26,8 +26,8 @@
 .md-typeset .mermaid-custom svg .edgeLabel,
 .md-typeset .mermaid-custom svg .cluster-label,
 .md-typeset .mermaid-custom svg .messageText {
-  fill: #555555 !important;
-  color: #555555 !important;
+  fill: #444444 !important;
+  color: #444444 !important;
 }
 
 /* Edge label background */
