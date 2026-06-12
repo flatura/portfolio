@@ -1,0 +1,44 @@
+/* Mermaid diagrams: readable neutral gray lines and labels */
+
+.md-typeset .mermaid-custom svg {
+  color: #666666;
+}
+
+/* Main connector lines */
+.md-typeset .mermaid-custom svg .edgePath .path,
+.md-typeset .mermaid-custom svg path.flowchart-link,
+.md-typeset .mermaid-custom svg .flowchart-link {
+  stroke: #666666 !important;
+  stroke-width: 1.8px !important;
+}
+
+/* Arrow heads */
+.md-typeset .mermaid-custom svg marker path,
+.md-typeset .mermaid-custom svg defs marker path {
+  fill: #666666 !important;
+  stroke: #666666 !important;
+}
+
+/* General text */
+.md-typeset .mermaid-custom svg text,
+.md-typeset .mermaid-custom svg .label,
+.md-typeset .mermaid-custom svg .nodeLabel,
+.md-typeset .mermaid-custom svg .edgeLabel,
+.md-typeset .mermaid-custom svg .cluster-label,
+.md-typeset .mermaid-custom svg .messageText {
+  fill: #555555 !important;
+  color: #555555 !important;
+}
+
+/* Edge label background */
+.md-typeset .mermaid-custom svg .edgeLabel,
+.md-typeset .mermaid-custom svg .labelBkg {
+  background-color: #ffffff !important;
+}
+
+/* Edge label text inside foreignObject */
+.md-typeset .mermaid-custom svg foreignObject,
+.md-typeset .mermaid-custom svg foreignObject div,
+.md-typeset .mermaid-custom svg foreignObject span {
+  color: #555555 !important;
+}
