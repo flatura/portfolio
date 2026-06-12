@@ -1,6 +1,3 @@
-```md
-# Enterprise GIS Platform: B2E & B2B Solutions
-
 **Status:** Pilot / pre-production operation for internal B2E use; pre-sale architecture for B2B productization  
 **Role:** Systems Analyst / Solution Designer  
 **Domain:** Enterprise GIS, logistics, railway infrastructure  
@@ -80,4 +77,3 @@ Used across related components:
 This project demonstrates experience in enterprise GIS systems, internal product development, B2B productization, geospatial data modeling, infrastructure isolation, on-premise deployment constraints, and communication between business stakeholders, architects, and development teams.
 
 It is especially relevant to roles involving systems analysis, solution design, enterprise integration, GIS-enabled products, and MVP-to-product transition.
-```
