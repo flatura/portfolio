@@ -1,7 +1,7 @@
 /* Mermaid diagrams: readable neutral gray lines and labels */
 
 .md-typeset .mermaid-custom svg {
-  color: #666666;
+  color: #444444;
 }
 
 /* Main connector lines */
@@ -40,5 +40,5 @@
 .md-typeset .mermaid-custom svg foreignObject,
 .md-typeset .mermaid-custom svg foreignObject div,
 .md-typeset .mermaid-custom svg foreignObject span {
-  color: #555555 !important;
+  color: #444444 !important;
 }
