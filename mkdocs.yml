@@ -75,8 +75,9 @@ extra:
       link: https://www.upwork.com/freelancers/~0139dd3a8609dcc36e
     - icon: fontawesome/brands/github
       link: https://github.com/flatura
-  extra_javascript:
-    - javascripts/mermaid_icons.js
-    - javascripts/test.js
-  extra_css:
-    - css/mermaid_icons.css
+
+extra_javascript:
+  - javascripts/mermaid_icons.js
+  - javascripts/test.js
+extra_css:
+  - css/mermaid_icons.css
