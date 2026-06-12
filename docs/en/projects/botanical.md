@@ -1,5 +1,3 @@
-# Botanical SaaS / Multi-tenant SaaS Platform for Botanical Collections
-
 **Status:** MVP / pilot preparation
 **Role:** Co-founder, System Designer, Backend-oriented Engineer
 **Platform:** Web SaaS

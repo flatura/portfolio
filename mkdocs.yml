@@ -54,11 +54,11 @@ plugins:
                 - AWS Audio Transcriber: projects/serverless_transcriber.md
             - Корпоративный опыт:
                 - FMCG ML Прогнозатор / Планировщик: projects/fmcg_forecaster_planner.md
-                - ГИС Визуализатор корп. данных: projects/gis_bi_1.md
-                - ГИС Визуализатор продукта: projects/gis_bi_2.md
-                - FastMBO: projects/fastmbo.md
+                - ГИС ж/д-логистика: projects/enterprise_gis.md
+                - Система целеполагания: projects/fastmbo.md
             - Внутренние инициативы:
                 - PolylineMechanic: projects/polyline-mechanic.md
+                - DocsAnalyzer: projects/docsanalyzer.md
                 - ExpendIt: projects/expendit.md
                 - GraphMechanic: projects/graph-mechanic.md
 
@@ -77,11 +77,11 @@ nav:
       - AWS Audio Transcriber: projects/serverless_transcriber.md
   - Enterprise Experience:
       - FMCG ML Forecaster / Planner: projects/fmcg_forecaster_planner.md
-      - GIS Data Visualization Project: projects/gis_bi_1.md
-      - GIS Data Visualization Product: projects/gis_bi_2.md
-      - FastMBO: projects/fastmbo.md
+      - GIS train logistics: projects/enterprise_gis.md
+      - MBO KPI system: projects/fastmbo.md
   - Internal Initiatives:
       - PolylineMechanic: projects/polyline-mechanic.md
+      - DocsAnalyzer: projects/docsanalyzer.md
       - ExpendIt: projects/expendit.md
       - GraphMechanic: projects/graph-mechanic.md
 

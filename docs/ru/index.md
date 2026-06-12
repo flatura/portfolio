@@ -1,4 +1,4 @@
-# Дмитрий М. | Technical System Designer & Architect
+# Дмитрий М. | System Designer & Architect
 
 Я перевожу неясные бизнес-идеи и AI-прототипы в стабильные и масштабируемые production-системы. 
 
@@ -19,6 +19,6 @@
 
 ## Ключевые проекты
 
-* [Botanical SaaS](projects/botanical.md) - B2B платформа с soft multi-tenancy и гибридной моделью данных.
-* [AI Operational Intelligence Platform](projects/ai_oip.md) - Прототип системы управленческой аналитики на базе LangGraph.
+* * [Botanical SaaS](projects/botanical.md) — B2B SaaS для ботанических коллекций с multi-tenancy, научной таксономией POWO/IPNI, GIS-картой, импортом из Excel и публичными страницами организаций.
+* [AI Operational Intelligence Platform](projects/ai_oip.md) - Прототип системы управленческой ИИ-аналитики на базе LangGraph.
 * [Serverless Transcriber](projects/serverless_transcriber.md) - Облачное serverless-решение на базе AWS.

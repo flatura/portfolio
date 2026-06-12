@@ -19,6 +19,6 @@ My focus is on helping founders and businesses bridge the gap between "it works 
 
 ## Featured Work
 
-* [Botanical SaaS](projects/botanical.md) - B2B platform with soft multi-tenancy and hybrid data modeling.
+* [Botanical SaaS](projects/botanical.md) - B2B ERP-platform with soft multi-tenancy, science-based taxonomy (POWO), geospacial tools, AI-powered XLS import pipeline and public organizaion pages.
 * [AI Operational Intelligence Platform](projects/ai_oip.md) - Enterprise decision-support prototype using LangGraph and tool registries.
 * [Serverless Transcriber](projects/serverless_transcriber.md) - Cloud-native AWS SaaS with event-driven design.

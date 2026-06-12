@@ -1,5 +1,3 @@
-# Serverless Transcriber SaaS
-
 **Status:** Active
 
 ## Product Overview

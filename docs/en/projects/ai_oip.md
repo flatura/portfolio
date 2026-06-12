@@ -1,5 +1,3 @@
-## Executive Decision Intelligence Platform
-
 **Type:** Enterprise AI / Decision-support platform / Agentic analytics MVP
 **Role:** Solution Architect, System Designer, AI-assisted Prototype Engineer
 **Status:** Working MVP prototype, June 2026

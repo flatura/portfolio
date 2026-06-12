@@ -1,5 +1,3 @@
-## Платформа Executive Decision Intelligence
-
 **Тип:** Enterprise AI / система поддержки принятия решений / MVP агентной аналитики
 **Роль:** Solution Architect, System Designer, AI-assisted Prototype Engineer
 **Статус:** рабочий MVP-прототип, июнь 2026
