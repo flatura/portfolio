@@ -1,11 +1,37 @@
 site_name: "Dmitry M. - Portfolio | Architecture & Systems Design"
-site_url: https://flatura.github.io/portfolio
+site_url: https://flatura.github.io/portfolio/
+
 theme:
   name: material
+  language: en
+
   features:
     - navigation.sections
     - navigation.top
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.tracking
+    - search.highlight
+    - search.suggest
     - content.code.copy
+
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
 plugins:
   - i18n:
       docs_structure: folder
@@ -28,18 +54,20 @@ plugins:
                 - AWS Audio Transcriber: projects/serverless_transcriber.md
             - Корпоративный опыт:
                 - FMCG ML Прогнозатор / Планировщик: projects/fmcg_forecaster_planner.md
-                - ГИС Визуализатор корп.данных: projects/gis_bi_1.md
-                - ГИС Визуализатор (продукт): projects/gis_bi_2.md
+                - ГИС Визуализатор корп. данных: projects/gis_bi_1.md
+                - ГИС Визуализатор продукта: projects/gis_bi_2.md
                 - FastMBO: projects/fastmbo.md
             - Внутренние инициативы:
                 - PolylineMechanic: projects/polyline-mechanic.md
                 - ExpendIt: projects/expendit.md
                 - GraphMechanic: projects/graph-mechanic.md
+
   - search
   - minify:
       minify_html: true
   - include-markdown
   - glightbox
+
 nav:
   - Home: index.md
   - Approach & Services: services.md
@@ -56,28 +84,31 @@ nav:
       - PolylineMechanic: projects/polyline-mechanic.md
       - ExpendIt: projects/expendit.md
       - GraphMechanic: projects/graph-mechanic.md
+
 markdown_extensions:
   - admonition
   - attr_list
   - md_in_html
   - toc:
       permalink: true
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
           class: mermaid-custom
           format: !!python/name:pymdownx.superfences.fence_code_format
+
 extra:
-  social:
-    - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/in/morozovda-sa/
-    - icon: fontawesome/brands/upwork
-      link: https://www.upwork.com/freelancers/~0139dd3a8609dcc36e
-    - icon: fontawesome/brands/github
-      link: https://github.com/flatura
+  generator: false
 
 extra_javascript:
   - javascripts/mermaid_icons.js
   - javascripts/test.js
+
 extra_css:
   - css/mermaid_icons.css
+  - css/extra.css
