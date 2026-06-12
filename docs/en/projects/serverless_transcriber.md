@@ -71,10 +71,10 @@ In this project, I acted as the Solution Designer, DevOps Engineer, and QA Teste
 ```mermaid
 architecture-beta
     service dynamo(aws:dynamodb)[AWS DynamoDB]
-    service lambda(aws:lambda)[AWS Lambda]
+    service lambda(aws:lambda)[AWS Lambda] 
     service api(aws:api-gateway)[AWS API Gateway]
-    service static(aws:s3)[Static website at Amazon S3]
-    service storage(aws:s3)[File storage at Amazon S3]
+    service static(aws:simple-storage-service)[Static website at Amazon S3]
+    service storage(aws:simple-storage-service)[File storage at Amazon S3]
     service browser(logos:chrome)[Browser]
     service cognito(aws:cognito)[AWS Cognito]
     service ai(logos:webhooks)[AssemblyAI API]

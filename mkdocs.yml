@@ -76,4 +76,4 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/flatura
   extra_javascript:
-    - js/mermaid-icons.js
+    - js/mermaid_icons.js
