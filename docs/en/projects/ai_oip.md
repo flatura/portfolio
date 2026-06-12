@@ -1,8 +1,10 @@
+# AI Operational Intelligence Platform
+
 **Type:** Enterprise AI / Decision-support platform / Agentic analytics MVP
 **Role:** Solution Architect, System Designer, AI-assisted Prototype Engineer
 **Status:** Working MVP prototype, June 2026
 
-### Context
+## Context
 
 An enterprise AI prototype for evidence-based managerial analytics.
 
@@ -10,13 +12,13 @@ The system is designed around a simple principle: the LLM does not “answer fro
 
 The product direction is an **AI Executive Analyst with verifiable evidence**: a decision-support layer that helps executives and domain owners investigate business questions, detect operational risks, explain deviations, and prepare management actions without relying on opaque AI reasoning.
 
-### Problem
+## Problem
 
 Typical executive analytics requires manual work across BI reports, spreadsheets, task trackers, meeting notes, documents, and domain experts. LLMs can help with synthesis, but a free-form chat over corporate data is unsafe and unreliable: it can hallucinate, lose context, call the wrong data source, or produce conclusions that cannot be audited.
 
 This project explores how to make LLM-based managerial analytics controlled, traceable, and useful for enterprise environments.
 
-### Responsibilities
+## Responsibilities
 
 * Designed the overall architecture of the MVP: chat harness, agent runtime, playbook routing, tool gateway, tool registry, structured data layer, document RAG layer, and execution trace.
 * Built a LangGraph/FastAPI-based laboratory agent runtime for controlled diagnostic workflows.
@@ -28,7 +30,7 @@ This project explores how to make LLM-based managerial analytics controlled, tra
 * Configured Open WebUI as a temporary chat interface for MVP demonstration.
 * Shaped the product direction toward executive reports, signal cards, evidence graphs, proactive alerts, and future backend-native orchestration.
 
-### Key Architectural Decisions
+## Key Architectural Decisions
 
 * **Controlled LLM execution instead of free chat.**
   The LLM reasons and plans, but data access is delegated to controlled backend tools.
@@ -51,7 +53,7 @@ This project explores how to make LLM-based managerial analytics controlled, tra
 * **Lab runtime separated from target architecture.**
   LangGraph and Open WebUI are used as fast MVP/lab tools. The target product architecture assumes a backend-native control plane, dedicated UI, Tool Gateway, semantic layer, report service, and audit trail.
 
-### Implemented MVP Capabilities
+## Implemented MVP Capabilities
 
 * Chat-based executive query interface through Open WebUI.
 * LangGraph/FastAPI `agent-lab` runtime for diagnostic workflows.
@@ -67,9 +69,9 @@ This project explores how to make LLM-based managerial analytics controlled, tra
 * Same-language response handling for user-facing answers.
 * Initial guardrails against wrong fallback behavior, repeated tool calls, and unsupported analysis paths.
 
-### Demo Scenarios
+## Demo Scenarios
 
-#### Financial Performance Diagnosis
+### Financial Performance Diagnosis
 
 Example question:
 
@@ -77,7 +79,7 @@ Example question:
 
 The system selects a financial diagnostic playbook, calls metric tools for gross margin, revenue, discounts, COGS, and product mix, then produces an executive summary with evidence and limitations.
 
-#### Operational / KPI Anomaly Diagnosis
+### Operational / KPI Anomaly Diagnosis
 
 Example question:
 
@@ -85,7 +87,7 @@ Example question:
 
 The system selects an operational diagnostic playbook and investigates delivery, PMO, ITSM, meeting decisions, and related evidence to detect cross-functional bottlenecks that are not visible in isolated KPI dashboards.
 
-#### Cross-Domain Management Hypothesis
+### Cross-Domain Management Hypothesis
 
 Target scenario:
 
@@ -93,16 +95,16 @@ Target scenario:
 
 This scenario demonstrates the intended product direction: not just retrieving delayed tasks, but turning structured and document evidence into a management-ready diagnostic brief.
 
-### UI Screenshots
+## UI Screenshots
 
-#### "What can you do?"
+### "What can you do?"
 
 <figure markdown>
 ![UI_1](../../assets/ai_oip/what.png)
 <figcaption>Available playbooks and tools</figcaption>
 </figure>
 
-#### Financial playbook: gross margin drop hypothesis
+### Financial playbook: gross margin drop hypothesis
 
 <figure markdown>
 ![UI_2](../../assets/ai_oip/gross_margin.png)
@@ -119,15 +121,14 @@ This scenario demonstrates the intended product direction: not just retrieving d
 <figcaption>Financial performance diagnosis called tools</figcaption>
 </figure>
 
-#### Executive Operations playbook: KPI anomaly
+### Executive Operations playbook: KPI anomaly
 
 <figure markdown>
 ![UI_5](../../assets/ai_oip/KPI.png)
 <figcaption>Operational anomaly diagnosis across delivery, ITSM, PMO, and documents</figcaption>
 </figure>
 
-
-### Technology Stack
+## Technology Stack
 
 **Agent runtime:** LangGraph, FastAPI, Python
 **Interface:** Open WebUI as temporary demo harness
