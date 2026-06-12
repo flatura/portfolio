@@ -1,4 +1,4 @@
-# FastMBO — Internal Goal-Setting and Bonus Calculation System
+# FastMBO - Internal Goal-Setting and Bonus Calculation System
 
 **Type:** Internal automation / MBO system / lightweight internal ERP  
 **Role:** initiator, systems analyst, concept author, prototype developer  
@@ -99,11 +99,11 @@ Additional effect:
 
 ## User Roles
 
-- **Employee** — fills in the evaluation sheet, adds achievements, views results.
-- **Manager** — approves achievements and metrics of direct reports.
-- **Responsible user** — controls the period and checks data completeness and correctness.
-- **Director** — approves final results and controls the bonus fund.
-- **System administrator** — manages settings, users, periods, and audit.
+- **Employee** - fills in the evaluation sheet, adds achievements, views results.
+- **Manager** - approves achievements and metrics of direct reports.
+- **Responsible user** - controls the period and checks data completeness and correctness.
+- **Director** - approves final results and controls the bonus fund.
+- **System administrator** - manages settings, users, periods, and audit.
 
 ## Architectural Approach
 

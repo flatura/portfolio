@@ -1,6 +1,9 @@
 # AWS Serverless Transcriber
 
 **Status:** Active
+**Role:** Co-founder, System Designer, Backend-oriented Engineer
+**Platform:** Web SaaS
+**Stack:** Python, AWS Lambda, APi Gateway, DynamoDB, AWS S3, Terraform, LLM API
 
 ## Product Overview
 A serverless solution for transcribing audio recordings using an external transcription API.

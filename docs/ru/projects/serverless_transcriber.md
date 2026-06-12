@@ -1,6 +1,9 @@
 # AWS Serverless транскрибатор аудио
 
 **Статус:** active
+**Роль:** Co-founder, System Designer, Backend-oriented Engineer
+**Реализация:** Web SaaS
+**Стек:** Python, AWS Lambda, APi Gateway, DynamoDB, AWS S3, Terraform, LLM API
 
 ## Обзор продукта
 Бессерверное решение для транскрибации аудиозаписей посредством внешнего API-транскрибации. 
@@ -59,7 +62,7 @@
 * **Infrastructure:** AWS API Gateway, упаковка в Terraform проект
 
 ## Архитектурные артефакты
-### Архитектурная диаграмма
+### Архитектурная концепция
 ```mermaid
 architecture-beta
     service dynamo(aws:dynamodb)[AWS DynamoDB]
@@ -85,7 +88,7 @@ architecture-beta
     storage:L -- R:browser
 ```
 
-### Диаграмма последовательности
+### Диаграммы последовательности
 #### Аутентификация
 ```mermaid
 sequenceDiagram
