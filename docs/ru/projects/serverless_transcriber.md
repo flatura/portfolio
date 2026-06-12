@@ -70,15 +70,15 @@
 ### Архитектурная диаграмма
 ```mermaid
 architecture-beta
-    service dynamo(logos:aws-dynamodb)[AWS DynamoDB]
-    service lambda(logos:aws-lambda)[AWS Lambda]
-    service api(logos:aws-api-gateway)[AWS API Gateway]
-    service static(logos:aws-s3)[Static website at Amazon S3]
-    service storage(logos:aws-s3)[File storage at Amazon S3]
+    service dynamo(aws:dynamodb)[AWS DynamoDB]
+    service lambda(aws:lambda)[AWS Lambda]
+    service api(aws:api-gateway)[AWS API Gateway]
+    service static(aws:s3)[Static website at Amazon S3]
+    service storage(aws:s3)[File storage at Amazon S3]
     service browser(logos:chrome)[Browser]
-    service cognito(logos:aws-cognito)[AWS Cognito]
+    service cognito(aws:cognito)[AWS Cognito]
     service ai(logos:webhooks)[AssemblyAI API]
-    service front(logos:aws-cloudfront)[AWS CloudFront]
+    service front(aws:cloudfront)[AWS CloudFront]
 
     front:T -- B:static
     browser:T -- B:api
