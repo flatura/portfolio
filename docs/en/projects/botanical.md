@@ -3,7 +3,7 @@
 **Status:** MVP / pilot preparation
 **Role:** Co-founder, System Designer, Backend-oriented Engineer
 **Platform:** Web SaaS
-**Stack:** Java 21, Spring Boot, PostgreSQL/PostGIS, MinIO/S3-compatible storage, Angular, OpenLayers, Docker
+**Stack:** Java 21, Spring Boot, PostgreSQL/PostGIS, MinIO/S3-compatible storage, Angular, OpenLayers, Docker, LLM
 
 ## Summary
 
