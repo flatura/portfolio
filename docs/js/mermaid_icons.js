@@ -36,17 +36,39 @@ document$.subscribe(async () => {
     theme: document.body.getAttribute("data-md-color-scheme") === "slate" ? "dark" : "default"
   })
 
-  const diagrams = document.querySelectorAll("pre.mermaid-custom > code, code.mermaid-custom")
+  const blocks = Array.from(document.querySelectorAll(".mermaid-custom"))
 
-  for (const [index, code] of diagrams.entries()) {
-    const source = code.textContent.trim()
+  console.log(`[mermaid-custom] found blocks: ${blocks.length}`)
+
+  for (const [index, block] of blocks.entries()) {
+    const source = block.textContent.trim()
+
+    if (!source) {
+      console.warn("[mermaid-custom] empty block", block)
+      continue
+    }
+
+    if (!source.includes("architecture-beta") && !source.includes("flowchart") && !source.includes("sequenceDiagram")) {
+      console.warn("[mermaid-custom] suspicious source", source.slice(0, 120))
+    }
+
     const wrapper = document.createElement("div")
     wrapper.className = "mermaid"
     wrapper.id = `mermaid-custom-${Date.now()}-${index}`
 
-    code.parentElement.replaceWith(wrapper)
+    const replaceTarget =
+      block.tagName === "CODE" && block.parentElement?.tagName === "PRE"
+        ? block.parentElement
+        : block
 
-    const { svg } = await mermaid.render(wrapper.id + "-svg", source)
-    wrapper.innerHTML = svg
+    replaceTarget.replaceWith(wrapper)
+
+    try {
+      const { svg } = await mermaid.render(`${wrapper.id}-svg`, source)
+      wrapper.innerHTML = svg
+    } catch (error) {
+      console.error("[mermaid-custom] render failed", error, source)
+      wrapper.innerHTML = `<pre class="mermaid-error">${source}</pre>`
+    }
   }
 })
