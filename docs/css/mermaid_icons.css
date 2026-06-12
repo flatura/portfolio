@@ -1,0 +1,15 @@
+.mermaid {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.mermaid svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.mermaid-error {
+  white-space: pre-wrap;
+  border: 1px solid #c00;
+  padding: 1rem;
+}
