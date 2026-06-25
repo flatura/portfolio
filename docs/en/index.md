@@ -56,13 +56,13 @@ An internal tool for working with railway infrastructure data: graph preparation
 
 My role: system analysis, data model design, prototyping, Java/Spring Boot, PostgreSQL, OpenLayers, and preparation of the solution for internal use.
 
-* [details](projects/gis_bi.md)
+* [details](projects/gis_bi_1.md)
 
 ### FMCG Decision-Support Initiatives
 
 Participation in analysis and solution design for demand forecasting and production planning initiatives in an FMCG context.
 
-My role: system analysis, process description, integration flows, DFD/C4, SQL, specifications, and collaboration with R&D and engineering teams.
+My role: system analysis, process description, integration flows, DFD/C4, SQL, specifications, and collaboration with R&D, DS and architecture teams.
 
 * [details](projects/fmcg_forecaster_planner.md)
 
