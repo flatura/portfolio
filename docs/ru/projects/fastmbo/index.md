@@ -50,6 +50,3 @@ FastMBO - внутренняя система для автоматизации 
 | 21 | [Что демонстрирует проект](21-what-this-demonstrates.md) |
 | - | [Architecture Decision Records](adr/index.md) |
 
-## Полная документация
-
-- Репозиторий документации: <https://github.com/flatura/fastmbo_docs>

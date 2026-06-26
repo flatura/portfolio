@@ -49,7 +49,3 @@ FastMBO is an internal system for automating goal-setting, evaluation sheet coll
 | 20 | [Screenshots and Demo](20-screenshots-and-demo.md) |
 | 21 | [What This Demonstrates](21-what-this-demonstrates.md) |
 | - | [Architecture Decision Records](adr/index.md) |
-
-## Full Documentation
-
-- Documentation repository: <https://github.com/flatura/fastmbo_docs>
