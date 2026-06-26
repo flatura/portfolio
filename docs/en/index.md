@@ -1,4 +1,4 @@
-# Dmitry M. — System Analyst / Solution Design Analyst
+# Dmitry M. - System Analyst / Solution Design Analyst
 
 I work on system analysis and solution design for enterprise and product systems.
 
@@ -48,7 +48,7 @@ A B2B SaaS platform for botanical collection management: multi-tenancy, RBAC, sc
 
 My role: system design, domain modeling, data structure, backend/frontend coordination, import flows, access control, architecture decisions, and MVP implementation.
 
-* [details](projects/botanical.md)
+* [details](projects/botanical/)
 
 ### Enterprise GIS / Railway Graph Tooling
 
@@ -56,7 +56,7 @@ An internal tool for working with railway infrastructure data: graph preparation
 
 My role: system analysis, data model design, prototyping, Java/Spring Boot, PostgreSQL, OpenLayers, and preparation of the solution for internal use.
 
-* [details](projects/gis_bi_1.md)
+* [details](projects/enterprise_gis/)
 
 ### FMCG Decision-Support Initiatives
 
@@ -72,7 +72,7 @@ A management analytics prototype with a controlled execution loop: LangGraph-bas
 
 My role: execution flow design, scenarios, synthetic datasets, tool registry, prototyping, and validation of the approach.
 
-* [details](projects/ai_oip.md)
+* [details](projects/ai_oip/)
 
 ### Serverless Transcriber
 
@@ -80,7 +80,7 @@ A serverless prototype of a transcription service on AWS: audio upload, file sto
 
 My role: solution architecture, backend/API design, AWS Lambda, S3, API Gateway, DynamoDB, Terraform, and Python.
 
-* [details](projects/serverless_transcriber.md)
+* [details](projects/serverless_transcriber/)
 
 ## Target Roles
 

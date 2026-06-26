@@ -1,0 +1,42 @@
+# Платформа для ботанических садов (SaaS)
+
+**Статус:** MVP / подготовка к пилотному запуску  
+**Роль:** сооснователь, системный проектировщик, backend-oriented engineer  
+**Платформа:** Web SaaS  
+**Стек:** Java 21, Spring Boot, PostgreSQL/PostGIS, MinIO/S3-compatible storage, Angular, OpenLayers, Docker, LLM
+
+Botanical SaaS - мультитенантная SaaS-платформа для ботанических садов, питомников, селекционеров, научных коллекций и частных собраний растений.
+
+## С чего начать
+
+1. [Обзор](01-overview.md) - краткое описание продукта  
+2. [Проблема](03-problem.md) - проблема продукта  
+3. [Архитектура](14-architecture.md) - C4 container diagram  
+4. [Требования](05-requirements.md) - ключевые реализованные возможности  
+
+## Все разделы
+
+| # | Раздел |
+|---|--------|
+| 01 | [Обзор](01-overview.md) |
+| 02 | [Контекст](02-context.md) |
+| 03 | [Проблема](03-problem.md) |
+| 04 | [Цели и нецели](04-goals-and-non-goals.md) |
+| 05 | [Требования](05-requirements.md) |
+| 06 | [Ограничения](06-constraints.md) |
+| 07 | [Роль и обязанности](07-role-and-responsibilities.md) |
+| 08 | [Доменная модель](08-domain-model.md) |
+| 09 | [Модель данных](09-data-model.md) |
+| 10 | [API-контракты](10-api-contracts.md) |
+| 11 | [Потоки интеграции](11-integration-flows.md) |
+| 12 | [Модель безопасности и доступа](12-security-and-access-model.md) |
+| 13 | [Нефункциональные требования](13-non-functional-requirements.md) |
+| 14 | [Архитектура](14-architecture.md) |
+| 15 | [Ключевые решения](15-key-decisions.md) |
+| 16 | [Компромиссы](16-trade-offs.md) |
+| 17 | [Режимы отказа](17-failure-modes.md) |
+| 18 | [Оценка масштаба и стоимости](18-sizing-and-cost-notes.md) |
+| 19 | [Дорожная карта](19-roadmap.md) |
+| 20 | [Скриншоты и демо](20-screenshots-and-demo.md) |
+| 21 | [Что демонстрирует проект](21-what-this-demonstrates.md) |
+| - | [Architecture Decision Records](adr/index.md) |

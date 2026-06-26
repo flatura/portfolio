@@ -1,12 +1,19 @@
 site_name: "Dmitry M. - Portfolio | Architecture & Systems Design"
 site_url: https://flatura.github.io/portfolio/
 
+validation:
+  nav:
+    omitted_files: info
+  links:
+    not_found: warn
+
 theme:
   name: material
   language: en
 
   features:
     - navigation.sections
+    - navigation.indexes
     - navigation.top
     - navigation.tabs
     - navigation.tabs.sticky
@@ -49,17 +56,90 @@ plugins:
             - Главная: index.md
             - Подход и услуги: services.md
             - Ключевые проекты:
-                - Botanical SaaS: projects/botanical.md
-                - AI Operational Intelligence Platform: projects/ai_oip.md
-                - AWS Audio Transcriber: projects/serverless_transcriber.md
+                - Botanical SaaS:
+                    - projects/botanical/index.md
+                    - Обзор: projects/botanical/01-overview.md
+                    - Проблема: projects/botanical/03-problem.md
+                    - Требования: projects/botanical/05-requirements.md
+                    - Архитектура: projects/botanical/14-architecture.md
+                    - Модель безопасности и доступа: projects/botanical/12-security-and-access-model.md
+                    - Ключевые решения: projects/botanical/15-key-decisions.md
+                    - Компромиссы: projects/botanical/16-trade-offs.md
+                    - Что демонстрирует проект: projects/botanical/21-what-this-demonstrates.md
+                - AI Operational Intelligence Platform:
+                    - projects/ai_oip/index.md
+                    - Обзор: projects/ai_oip/01-overview.md
+                    - Проблема: projects/ai_oip/03-problem.md
+                    - Требования: projects/ai_oip/05-requirements.md
+                    - Архитектура: projects/ai_oip/14-architecture.md
+                    - Модель безопасности и доступа: projects/ai_oip/12-security-and-access-model.md
+                    - Ключевые решения: projects/ai_oip/15-key-decisions.md
+                    - Компромиссы: projects/ai_oip/16-trade-offs.md
+                    - Скриншоты и демо: projects/ai_oip/20-screenshots-and-demo.md
+                    - Что демонстрирует проект: projects/ai_oip/21-what-this-demonstrates.md
+                - AWS Audio Transcriber:
+                    - projects/serverless_transcriber/index.md
+                    - Обзор: projects/serverless_transcriber/01-overview.md
+                    - Требования: projects/serverless_transcriber/05-requirements.md
+                    - Архитектура: projects/serverless_transcriber/14-architecture.md
+                    - Модель безопасности и доступа: projects/serverless_transcriber/12-security-and-access-model.md
+                    - Потоки интеграции: projects/serverless_transcriber/11-integration-flows.md
+                    - Ключевые решения: projects/serverless_transcriber/15-key-decisions.md
+                    - Оценка масштаба и стоимости: projects/serverless_transcriber/18-sizing-and-cost-notes.md
+                    - Скриншоты и демо: projects/serverless_transcriber/20-screenshots-and-demo.md
             - Корпоративный опыт:
                 - FMCG ML Прогнозатор / Планировщик: projects/fmcg_forecaster_planner.md
-                - ГИС ж/д-логистика: projects/enterprise_gis.md
-                - Система целеполагания: projects/fastmbo.md
+                - ГИС ж/д-логистика:
+                    - projects/enterprise_gis/index.md
+                    - Обзор: projects/enterprise_gis/01-overview.md
+                    - Контекст: projects/enterprise_gis/02-context.md
+                    - Архитектура: projects/enterprise_gis/14-architecture.md
+                    - Модель безопасности и доступа: projects/enterprise_gis/12-security-and-access-model.md
+                    - Ключевые решения: projects/enterprise_gis/15-key-decisions.md
+                    - Что демонстрирует проект: projects/enterprise_gis/21-what-this-demonstrates.md
+                - Система целеполагания:
+                    - projects/fastmbo/index.md
+                    - Обзор: projects/fastmbo/01-overview.md
+                    - Проблема: projects/fastmbo/03-problem.md
+                    - Требования: projects/fastmbo/05-requirements.md
+                    - Архитектура: projects/fastmbo/14-architecture.md
+                    - Модель безопасности и доступа: projects/fastmbo/12-security-and-access-model.md
+                    - Потоки интеграции: projects/fastmbo/11-integration-flows.md
+                    - Компромиссы: projects/fastmbo/16-trade-offs.md
+                    - Оценка масштаба и стоимости: projects/fastmbo/18-sizing-and-cost-notes.md
+                    - Что демонстрирует проект: projects/fastmbo/21-what-this-demonstrates.md
             - Внутренние инициативы:
-                - PolylineMechanic: projects/polyline-mechanic.md
+                - PolylineMechanic:
+                    - projects/polyline-mechanic/index.md
+                    - Обзор: projects/polyline-mechanic/01-overview.md
+                    - Проблема: projects/polyline-mechanic/03-problem.md
+                    - Требования: projects/polyline-mechanic/05-requirements.md
+                    - Архитектура: projects/polyline-mechanic/14-architecture.md
+                    - Потоки интеграции: projects/polyline-mechanic/11-integration-flows.md
+                    - Компромиссы: projects/polyline-mechanic/16-trade-offs.md
+                    - Скриншоты и демо: projects/polyline-mechanic/20-screenshots-and-demo.md
+                    - Что демонстрирует проект: projects/polyline-mechanic/21-what-this-demonstrates.md
+                - GraphMechanic:
+                    - projects/graph-mechanic/index.md
+                    - Обзор: projects/graph-mechanic/01-overview.md
+                    - Проблема: projects/graph-mechanic/03-problem.md
+                    - Требования: projects/graph-mechanic/05-requirements.md
+                    - Архитектура: projects/graph-mechanic/14-architecture.md
+                    - Доменная модель: projects/graph-mechanic/08-domain-model.md
+                    - Ключевые решения: projects/graph-mechanic/15-key-decisions.md
+                    - Компромиссы: projects/graph-mechanic/16-trade-offs.md
+                    - Что демонстрирует проект: projects/graph-mechanic/21-what-this-demonstrates.md
                 - DocsAnalyzer: projects/docsanalyzer.md
-                - ExpendIt: projects/expendit.md
+                - ExpendIt:
+                    - projects/expendit/index.md
+                    - Обзор: projects/expendit/01-overview.md
+                    - Проблема: projects/expendit/03-problem.md
+                    - Требования: projects/expendit/05-requirements.md
+                    - Доменная модель: projects/expendit/08-domain-model.md
+                    - Модель данных: projects/expendit/09-data-model.md
+                    - Архитектура: projects/expendit/14-architecture.md
+                    - Компромиссы: projects/expendit/16-trade-offs.md
+                    - Что демонстрирует проект: projects/expendit/21-what-this-demonstrates.md
 
   - search
   - minify:
@@ -71,17 +151,90 @@ nav:
   - Home: index.md
   - Approach & Services: services.md
   - Featured Projects:
-      - Botanical SaaS: projects/botanical.md
-      - AI Operational Intelligence Platform: projects/ai_oip.md
-      - AWS Audio Transcriber: projects/serverless_transcriber.md
+      - Botanical SaaS:
+          - projects/botanical/index.md
+          - Overview: projects/botanical/01-overview.md
+          - Problem: projects/botanical/03-problem.md
+          - Requirements: projects/botanical/05-requirements.md
+          - Architecture: projects/botanical/14-architecture.md
+          - Security & Access: projects/botanical/12-security-and-access-model.md
+          - Key decisions: projects/botanical/15-key-decisions.md
+          - Trade-offs: projects/botanical/16-trade-offs.md
+          - What this demonstrates: projects/botanical/21-what-this-demonstrates.md
+      - AI Operational Intelligence Platform:
+          - projects/ai_oip/index.md
+          - Overview: projects/ai_oip/01-overview.md
+          - Problem: projects/ai_oip/03-problem.md
+          - Requirements: projects/ai_oip/05-requirements.md
+          - Architecture: projects/ai_oip/14-architecture.md
+          - Security & Access: projects/ai_oip/12-security-and-access-model.md
+          - Key decisions: projects/ai_oip/15-key-decisions.md
+          - Trade-offs: projects/ai_oip/16-trade-offs.md
+          - Screenshots and demo: projects/ai_oip/20-screenshots-and-demo.md
+          - What this demonstrates: projects/ai_oip/21-what-this-demonstrates.md
+      - AWS Audio Transcriber:
+          - projects/serverless_transcriber/index.md
+          - Overview: projects/serverless_transcriber/01-overview.md
+          - Requirements: projects/serverless_transcriber/05-requirements.md
+          - Architecture: projects/serverless_transcriber/14-architecture.md
+          - Security & Access: projects/serverless_transcriber/12-security-and-access-model.md
+          - Integration Flows: projects/serverless_transcriber/11-integration-flows.md
+          - Key decisions: projects/serverless_transcriber/15-key-decisions.md
+          - Sizing & cost: projects/serverless_transcriber/18-sizing-and-cost-notes.md
+          - Screenshots: projects/serverless_transcriber/20-screenshots-and-demo.md
   - Enterprise Experience:
       - FMCG ML Forecaster / Planner: projects/fmcg_forecaster_planner.md
-      - GIS train logistics: projects/enterprise_gis.md
-      - MBO KPI system: projects/fastmbo.md
+      - GIS train logistics:
+          - projects/enterprise_gis/index.md
+          - Overview: projects/enterprise_gis/01-overview.md
+          - Context: projects/enterprise_gis/02-context.md
+          - Architecture: projects/enterprise_gis/14-architecture.md
+          - Security & Access: projects/enterprise_gis/12-security-and-access-model.md
+          - Key decisions: projects/enterprise_gis/15-key-decisions.md
+          - What this demonstrates: projects/enterprise_gis/21-what-this-demonstrates.md
+      - MBO KPI system:
+          - projects/fastmbo/index.md
+          - Overview: projects/fastmbo/01-overview.md
+          - Problem: projects/fastmbo/03-problem.md
+          - Requirements: projects/fastmbo/05-requirements.md
+          - Architecture: projects/fastmbo/14-architecture.md
+          - Security & Access: projects/fastmbo/12-security-and-access-model.md
+          - Integration Flows: projects/fastmbo/11-integration-flows.md
+          - Trade-offs: projects/fastmbo/16-trade-offs.md
+          - Sizing & cost: projects/fastmbo/18-sizing-and-cost-notes.md
+          - What this demonstrates: projects/fastmbo/21-what-this-demonstrates.md
   - Internal Initiatives:
-      - PolylineMechanic: projects/polyline-mechanic.md
+      - PolylineMechanic:
+          - projects/polyline-mechanic/index.md
+          - Overview: projects/polyline-mechanic/01-overview.md
+          - Problem: projects/polyline-mechanic/03-problem.md
+          - Requirements: projects/polyline-mechanic/05-requirements.md
+          - Architecture: projects/polyline-mechanic/14-architecture.md
+          - Integration Flows: projects/polyline-mechanic/11-integration-flows.md
+          - Trade-offs: projects/polyline-mechanic/16-trade-offs.md
+          - Screenshots and demo: projects/polyline-mechanic/20-screenshots-and-demo.md
+          - What this demonstrates: projects/polyline-mechanic/21-what-this-demonstrates.md
+      - GraphMechanic:
+          - projects/graph-mechanic/index.md
+          - Overview: projects/graph-mechanic/01-overview.md
+          - Problem: projects/graph-mechanic/03-problem.md
+          - Requirements: projects/graph-mechanic/05-requirements.md
+          - Architecture: projects/graph-mechanic/14-architecture.md
+          - Domain Model: projects/graph-mechanic/08-domain-model.md
+          - Key decisions: projects/graph-mechanic/15-key-decisions.md
+          - Trade-offs: projects/graph-mechanic/16-trade-offs.md
+          - What this demonstrates: projects/graph-mechanic/21-what-this-demonstrates.md
       - DocsAnalyzer: projects/docsanalyzer.md
-      - ExpendIt: projects/expendit.md
+      - ExpendIt:
+          - projects/expendit/index.md
+          - Overview: projects/expendit/01-overview.md
+          - Problem: projects/expendit/03-problem.md
+          - Requirements: projects/expendit/05-requirements.md
+          - Domain Model: projects/expendit/08-domain-model.md
+          - Data Model: projects/expendit/09-data-model.md
+          - Architecture: projects/expendit/14-architecture.md
+          - Trade-offs: projects/expendit/16-trade-offs.md
+          - What this demonstrates: projects/expendit/21-what-this-demonstrates.md
 
 markdown_extensions:
   - admonition
