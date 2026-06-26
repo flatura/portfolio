@@ -20,13 +20,6 @@ jobs:
         with:
           python-version: '3.x'
       - run: pip install -r requirements.txt
-      - run: git submodule add https://github.com/flatura/fastmbo_docs external/fastmbo_docs
-      - run: |
-         pwd
-         ls -la
-         ls -la external || true
-         ls -la external/fastmbo_docs || true
-         ls -la external/fastmbo_docs/docs || true
       - name: Build site
         run: mkdocs build --strict --site-dir ./site
       - name: Upload artifact
