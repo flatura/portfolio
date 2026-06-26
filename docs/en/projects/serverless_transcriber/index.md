@@ -7,12 +7,20 @@
 
 A serverless solution for transcribing audio recordings using an external transcription API.
 
-## Start here
+## Quick reading path
 
 1. [Overview](01-overview.md) - product summary and stack  
 2. [Context](02-context.md) - background and workload profile  
 3. [Architecture](14-architecture.md) - system design  
 4. [Integration Flows](11-integration-flows.md) - upload, processing, and download sequences  
+5. [All-in-one](all-in-one.md) - full case study in one page  
+
+## Document assemblies
+
+- [All-in-one](all-in-one.md) - all modules assembled for sequential reading and export
+- [Architecture review](architecture-review.md) - constraints through roadmap for architecture review sessions
+- [SRS pack](srs-pack.md) - overview through non-functional requirements for SRS-style review
+- [Demo pack](demo-pack.md) - overview, role, architecture, decisions, screenshots, and outcomes
 
 ## All sections
 

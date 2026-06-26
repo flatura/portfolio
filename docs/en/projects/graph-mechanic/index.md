@@ -7,7 +7,7 @@
 
 GraphMechanic is a visual platform for working with domain-specific graph data: infrastructure networks, transport graphs, GIS-linked objects, logical dependencies, and operational topology.
 
-## Start here
+## Quick reading path
 
 1. [Overview](01-overview.md) - product summary and concept  
 2. [Context](02-context.md) - evolution from PolylineMechanic  
@@ -15,6 +15,14 @@ GraphMechanic is a visual platform for working with domain-specific graph data: 
 4. [Requirements](05-requirements.md) - key capabilities and use cases  
 5. [Architecture](14-architecture.md) - modular web application design  
 6. [What This Demonstrates](21-what-this-demonstrates.md) - professional relevance  
+7. [All-in-one](all-in-one.md) - full case study in one page  
+
+## Document assemblies
+
+- [All-in-one](all-in-one.md) - all modules assembled for sequential reading and export
+- [Architecture review](architecture-review.md) - constraints through roadmap for architecture review sessions
+- [SRS pack](srs-pack.md) - overview through non-functional requirements for SRS-style review
+- [Demo pack](demo-pack.md) - overview, role, architecture, decisions, screenshots, and outcomes
 
 ## All sections
 

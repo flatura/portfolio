@@ -7,12 +7,20 @@
 
 Enterprise GIS platform for the logistics sector - visualization of corporate operational data on a map with spatial binding to railway infrastructure.
 
-## Start here
+## Quick reading path
 
 1. [Overview](01-overview.md) - product summary and technology stack  
 2. [Context](02-context.md) - internal B2E and B2B product directions  
 3. [Architecture](14-architecture.md) - railway binding, architecture formalization  
 4. [Key Decisions](15-key-decisions.md) - isolated GIS infrastructure, configurable data model  
+5. [All-in-one](all-in-one.md) - full case study in one page  
+
+## Document assemblies
+
+- [All-in-one](all-in-one.md) - all modules assembled for sequential reading and export
+- [Architecture review](architecture-review.md) - constraints through roadmap for architecture review sessions
+- [SRS pack](srs-pack.md) - overview through non-functional requirements for SRS-style review
+- [Demo pack](demo-pack.md) - overview, role, architecture, decisions, screenshots, and outcomes
 
 ## All sections
 

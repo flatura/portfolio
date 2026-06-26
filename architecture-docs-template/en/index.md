@@ -12,6 +12,11 @@
 2. [Problem](03-problem.md) — what problem this solves  
 3. [Architecture](14-architecture.md) — system design  
 4. [What this demonstrates](21-what-this-demonstrates.md) — portfolio relevance  
+5. [All-in-one](all-in-one.md) — full case study in one page  
+
+## Document assemblies
+
+- [All-in-one](all-in-one.md) — all modules assembled for sequential reading and export  
 
 ## All sections
 

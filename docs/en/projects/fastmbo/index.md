@@ -8,12 +8,20 @@
 
 FastMBO is an internal system for automating goal-setting, evaluation sheet collection, achievement approval, and bonus calculation based on the MBO model.
 
-## Start here
+## Quick reading path
 
 1. [Overview](01-overview.md) - product summary  
 2. [Problem](03-problem.md) - operational pain points  
 3. [Architecture](14-architecture.md) - monolithic approach, BPMN, C4  
 4. [Integration Flows](11-integration-flows.md) - target TO-BE process  
+5. [All-in-one](all-in-one.md) - full case study in one page  
+
+## Document assemblies
+
+- [All-in-one](all-in-one.md) - all modules assembled for sequential reading and export
+- [Architecture review](architecture-review.md) - constraints through roadmap for architecture review sessions
+- [SRS pack](srs-pack.md) - overview through non-functional requirements for SRS-style review
+- [Demo pack](demo-pack.md) - overview, role, architecture, decisions, screenshots, and outcomes
 
 ## All sections
 

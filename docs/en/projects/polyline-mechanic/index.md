@@ -6,7 +6,7 @@
 
 A local web utility for creating, editing, and repairing railway track polylines used in railway graph data preparation.
 
-## Start here
+## Quick reading path
 
 1. [Overview](01-overview.md) - product summary and technology stack  
 2. [Context](02-context.md) - enterprise GIS initiative  
@@ -14,6 +14,14 @@ A local web utility for creating, editing, and repairing railway track polylines
 4. [Architecture](14-architecture.md) - layered monolithic web application  
 5. [Integration Flows](11-integration-flows.md) - routing service integration  
 6. [Screenshots and Demo](20-screenshots-and-demo.md) - UI screenshots  
+7. [All-in-one](all-in-one.md) - full case study in one page  
+
+## Document assemblies
+
+- [All-in-one](all-in-one.md) - all modules assembled for sequential reading and export
+- [Architecture review](architecture-review.md) - constraints through roadmap for architecture review sessions
+- [SRS pack](srs-pack.md) - overview through non-functional requirements for SRS-style review
+- [Demo pack](demo-pack.md) - overview, role, architecture, decisions, screenshots, and outcomes
 
 ## All sections
 

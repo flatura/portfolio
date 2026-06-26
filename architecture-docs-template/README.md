@@ -54,6 +54,25 @@ Each project gets a folder under `docs/<locale>/projects/<slug>/` with a landing
 
 If a section has no source content, keep the file with **only its H1 heading**. Do not invent filler text.
 
+## All-in-one assembly (`all-in-one.md`)
+
+Copy `all-in-one.md` from the locale subtree alongside the numbered modules. The page uses `mkdocs-include-markdown-plugin` with `heading-offset=1` so each module H1 becomes H2 under a single assembly H1. Include paths must use the `./` prefix (e.g. `"./01-overview.md"`).
+
+1. Set the assembly H1 (`# [Project Name] — all-in-one` / `# [Project Name] — всё вместе`).
+2. Generate the Contents block:
+
+   ```bash
+   python scripts/assembly_toc.py docs/en/projects/<slug>
+   python scripts/assembly_toc.py docs/ru/projects/<slug>
+   ```
+
+   EN headings get semantic anchors (`#overview`). RU Cyrillic headings get numeric fallbacks (`#_2`, `#_5`, …) because Python-Markdown slugify strips non-ASCII; the script simulates the full assembled page (Contents h2 + all module subheadings) so anchors match `mkdocs build`.
+3. Add `All-in-one` / `Всё вместе` to `mkdocs.yml` nav (both EN and RU blocks).
+4. Link from `index.md` (Quick reading path + Document assemblies).
+5. Validate: `mkdocs build --strict`. Spot-check mermaid fences and `<figure markdown>` on diagram- or screenshot-heavy projects.
+
+Cross-module `.md` links inside numbered modules resolve to standalone module pages when clicked from the assembly page; that is expected.
+
 ## Extraction
 
 This directory lives at the repo root (outside `docs/`) so MkDocs does not build it. It can be copied or subtree-split into a standalone public template repository.

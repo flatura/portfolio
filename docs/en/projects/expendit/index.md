@@ -7,13 +7,21 @@
 
 A lightweight internal ERP-like system for IT department consumables accounting - tracking stock levels, material movement history, and procurement planning.
 
-## Start here
+## Quick reading path
 
 1. [Overview](01-overview.md) - product summary and technology stack  
 2. [Context](02-context.md) - operational pain point  
 3. [Problem](03-problem.md) - manual accounting issues  
 4. [Architecture](14-architecture.md) - layered modular monolith  
 5. [Data Model](09-data-model.md) - class diagram  
+6. [All-in-one](all-in-one.md) - full case study in one page  
+
+## Document assemblies
+
+- [All-in-one](all-in-one.md) - all modules assembled for sequential reading and export
+- [Architecture review](architecture-review.md) - constraints through roadmap for architecture review sessions
+- [SRS pack](srs-pack.md) - overview through non-functional requirements for SRS-style review
+- [Demo pack](demo-pack.md) - overview, role, architecture, decisions, screenshots, and outcomes
 
 ## All sections
 

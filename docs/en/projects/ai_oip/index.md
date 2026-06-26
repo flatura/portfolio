@@ -6,12 +6,20 @@
 
 An enterprise AI prototype for evidence-based managerial analytics - an **AI Executive Analyst with verifiable evidence** that helps executives investigate business questions without opaque AI reasoning.
 
-## Start here
+## Quick reading path
 
 1. [Overview](01-overview.md) - product summary and technology stack  
 2. [Context](02-context.md) - product direction and execution principle  
 3. [Architecture](14-architecture.md) - Tool Gateway, Tool Registry, playbooks  
 4. [Screenshots and Demo](20-screenshots-and-demo.md) - demo scenarios and UI  
+5. [All-in-one](all-in-one.md) - full case study in one page  
+
+## Document assemblies
+
+- [All-in-one](all-in-one.md) - all modules assembled for sequential reading and export
+- [Architecture review](architecture-review.md) - constraints through roadmap for architecture review sessions
+- [SRS pack](srs-pack.md) - overview through non-functional requirements for SRS-style review
+- [Demo pack](demo-pack.md) - overview, role, architecture, decisions, screenshots, and outcomes
 
 ## All sections
 

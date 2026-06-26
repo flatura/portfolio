@@ -7,12 +7,20 @@
 
 Botanical SaaS is a multi-tenant SaaS platform for botanical gardens, nurseries, plant breeders, and private plant collections.
 
-## Start here
+## Quick reading path
 
 1. [Overview](01-overview.md) - product summary  
 2. [Problem](03-problem.md) - product problem  
 3. [Architecture](14-architecture.md) - C4 container diagram  
 4. [Requirements](05-requirements.md) - key implemented capabilities  
+5. [All-in-one](all-in-one.md) - full case study in one page  
+
+## Document assemblies
+
+- [All-in-one](all-in-one.md) - all modules assembled for sequential reading and export
+- [Architecture review](architecture-review.md) - constraints through roadmap for architecture review sessions
+- [SRS pack](srs-pack.md) - overview through non-functional requirements for SRS-style review
+- [Demo pack](demo-pack.md) - overview, role, architecture, decisions, screenshots, and outcomes
 
 ## All sections
 

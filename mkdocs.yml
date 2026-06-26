@@ -66,6 +66,7 @@ plugins:
                     - Ключевые решения: projects/botanical/15-key-decisions.md
                     - Компромиссы: projects/botanical/16-trade-offs.md
                     - Что демонстрирует проект: projects/botanical/21-what-this-demonstrates.md
+                    - Всё вместе: projects/botanical/all-in-one.md
                 - AI Operational Intelligence Platform:
                     - projects/ai_oip/index.md
                     - Обзор: projects/ai_oip/01-overview.md
@@ -77,6 +78,7 @@ plugins:
                     - Компромиссы: projects/ai_oip/16-trade-offs.md
                     - Скриншоты и демо: projects/ai_oip/20-screenshots-and-demo.md
                     - Что демонстрирует проект: projects/ai_oip/21-what-this-demonstrates.md
+                    - Всё вместе: projects/ai_oip/all-in-one.md
                 - AWS Audio Transcriber:
                     - projects/serverless_transcriber/index.md
                     - Обзор: projects/serverless_transcriber/01-overview.md
@@ -87,6 +89,7 @@ plugins:
                     - Ключевые решения: projects/serverless_transcriber/15-key-decisions.md
                     - Оценка масштаба и стоимости: projects/serverless_transcriber/18-sizing-and-cost-notes.md
                     - Скриншоты и демо: projects/serverless_transcriber/20-screenshots-and-demo.md
+                    - Всё вместе: projects/serverless_transcriber/all-in-one.md
             - Корпоративный опыт:
                 - FMCG ML Прогнозатор / Планировщик: projects/fmcg_forecaster_planner.md
                 - ГИС ж/д-логистика:
@@ -97,6 +100,7 @@ plugins:
                     - Модель безопасности и доступа: projects/enterprise_gis/12-security-and-access-model.md
                     - Ключевые решения: projects/enterprise_gis/15-key-decisions.md
                     - Что демонстрирует проект: projects/enterprise_gis/21-what-this-demonstrates.md
+                    - Всё вместе: projects/enterprise_gis/all-in-one.md
                 - Система целеполагания:
                     - projects/fastmbo/index.md
                     - Обзор: projects/fastmbo/01-overview.md
@@ -108,6 +112,7 @@ plugins:
                     - Компромиссы: projects/fastmbo/16-trade-offs.md
                     - Оценка масштаба и стоимости: projects/fastmbo/18-sizing-and-cost-notes.md
                     - Что демонстрирует проект: projects/fastmbo/21-what-this-demonstrates.md
+                    - Всё вместе: projects/fastmbo/all-in-one.md
             - Внутренние инициативы:
                 - PolylineMechanic:
                     - projects/polyline-mechanic/index.md
@@ -119,6 +124,7 @@ plugins:
                     - Компромиссы: projects/polyline-mechanic/16-trade-offs.md
                     - Скриншоты и демо: projects/polyline-mechanic/20-screenshots-and-demo.md
                     - Что демонстрирует проект: projects/polyline-mechanic/21-what-this-demonstrates.md
+                    - Всё вместе: projects/polyline-mechanic/all-in-one.md
                 - GraphMechanic:
                     - projects/graph-mechanic/index.md
                     - Обзор: projects/graph-mechanic/01-overview.md
@@ -129,6 +135,7 @@ plugins:
                     - Ключевые решения: projects/graph-mechanic/15-key-decisions.md
                     - Компромиссы: projects/graph-mechanic/16-trade-offs.md
                     - Что демонстрирует проект: projects/graph-mechanic/21-what-this-demonstrates.md
+                    - Всё вместе: projects/graph-mechanic/all-in-one.md
                 - DocsAnalyzer: projects/docsanalyzer.md
                 - ExpendIt:
                     - projects/expendit/index.md
@@ -140,6 +147,7 @@ plugins:
                     - Архитектура: projects/expendit/14-architecture.md
                     - Компромиссы: projects/expendit/16-trade-offs.md
                     - Что демонстрирует проект: projects/expendit/21-what-this-demonstrates.md
+                    - Всё вместе: projects/expendit/all-in-one.md
 
   - search
   - minify:
@@ -161,6 +169,7 @@ nav:
           - Key decisions: projects/botanical/15-key-decisions.md
           - Trade-offs: projects/botanical/16-trade-offs.md
           - What this demonstrates: projects/botanical/21-what-this-demonstrates.md
+          - All-in-one: projects/botanical/all-in-one.md
       - AI Operational Intelligence Platform:
           - projects/ai_oip/index.md
           - Overview: projects/ai_oip/01-overview.md
@@ -172,6 +181,7 @@ nav:
           - Trade-offs: projects/ai_oip/16-trade-offs.md
           - Screenshots and demo: projects/ai_oip/20-screenshots-and-demo.md
           - What this demonstrates: projects/ai_oip/21-what-this-demonstrates.md
+          - All-in-one: projects/ai_oip/all-in-one.md
       - AWS Audio Transcriber:
           - projects/serverless_transcriber/index.md
           - Overview: projects/serverless_transcriber/01-overview.md
@@ -182,6 +192,7 @@ nav:
           - Key decisions: projects/serverless_transcriber/15-key-decisions.md
           - Sizing & cost: projects/serverless_transcriber/18-sizing-and-cost-notes.md
           - Screenshots: projects/serverless_transcriber/20-screenshots-and-demo.md
+          - All-in-one: projects/serverless_transcriber/all-in-one.md
   - Enterprise Experience:
       - FMCG ML Forecaster / Planner: projects/fmcg_forecaster_planner.md
       - GIS train logistics:
@@ -192,6 +203,7 @@ nav:
           - Security & Access: projects/enterprise_gis/12-security-and-access-model.md
           - Key decisions: projects/enterprise_gis/15-key-decisions.md
           - What this demonstrates: projects/enterprise_gis/21-what-this-demonstrates.md
+          - All-in-one: projects/enterprise_gis/all-in-one.md
       - MBO KPI system:
           - projects/fastmbo/index.md
           - Overview: projects/fastmbo/01-overview.md
@@ -203,6 +215,7 @@ nav:
           - Trade-offs: projects/fastmbo/16-trade-offs.md
           - Sizing & cost: projects/fastmbo/18-sizing-and-cost-notes.md
           - What this demonstrates: projects/fastmbo/21-what-this-demonstrates.md
+          - All-in-one: projects/fastmbo/all-in-one.md
   - Internal Initiatives:
       - PolylineMechanic:
           - projects/polyline-mechanic/index.md
@@ -214,6 +227,7 @@ nav:
           - Trade-offs: projects/polyline-mechanic/16-trade-offs.md
           - Screenshots and demo: projects/polyline-mechanic/20-screenshots-and-demo.md
           - What this demonstrates: projects/polyline-mechanic/21-what-this-demonstrates.md
+          - All-in-one: projects/polyline-mechanic/all-in-one.md
       - GraphMechanic:
           - projects/graph-mechanic/index.md
           - Overview: projects/graph-mechanic/01-overview.md
@@ -224,6 +238,7 @@ nav:
           - Key decisions: projects/graph-mechanic/15-key-decisions.md
           - Trade-offs: projects/graph-mechanic/16-trade-offs.md
           - What this demonstrates: projects/graph-mechanic/21-what-this-demonstrates.md
+          - All-in-one: projects/graph-mechanic/all-in-one.md
       - DocsAnalyzer: projects/docsanalyzer.md
       - ExpendIt:
           - projects/expendit/index.md
@@ -235,6 +250,7 @@ nav:
           - Architecture: projects/expendit/14-architecture.md
           - Trade-offs: projects/expendit/16-trade-offs.md
           - What this demonstrates: projects/expendit/21-what-this-demonstrates.md
+          - All-in-one: projects/expendit/all-in-one.md
 
 markdown_extensions:
   - admonition
