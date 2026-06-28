@@ -1,6 +1,6 @@
-# Domain Model
+## Domain Model
 
-## Scientific Taxonomy
+### Scientific Taxonomy
 
 Plant records are tied to a centralized taxonomy layer based on POWO/IPNI reference data.
 

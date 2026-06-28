@@ -1,6 +1,6 @@
-# Integration Flows
+## Integration Flows
 
-## Smart Import
+### Smart Import
 
 The platform includes a guided spreadsheet import pipeline for existing plant collections.
 

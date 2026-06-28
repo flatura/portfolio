@@ -1,6 +1,6 @@
-# Non-Functional Requirements
+## Non-Functional Requirements
 
-## Infrastructure and Deployment
+### Infrastructure and Deployment
 
 The project is designed as a practical cloud-ready MVP:
 

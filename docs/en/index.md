@@ -42,7 +42,7 @@ Typical cases:
 
 ## Key Projects
 
-### Linnata / Botanical B2B SaaS
+### Botanical B2B SaaS
 
 A B2B SaaS platform for botanical collection management: multi-tenancy, RBAC, scientific taxonomy, plant specimens, departments, locations, lists, Excel import, images, QR labels, and public organization pages.
 

@@ -1,6 +1,6 @@
-# Architecture
+## Architecture
 
-## Container diagram
+### Container diagram
 
 ```mermaid
     C4Container

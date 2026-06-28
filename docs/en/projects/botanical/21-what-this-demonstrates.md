@@ -1,6 +1,6 @@
-# What This Demonstrates
+## What This Demonstrates
 
-## Relevance
+### Relevance
 
 This project demonstrates my ability to work across system analysis, backend design, implementation, and deployment preparation.
 

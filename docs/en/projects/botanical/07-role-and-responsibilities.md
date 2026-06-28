@@ -1,6 +1,6 @@
-# Role and Responsibilities
+## Role and Responsibilities
 
-## My Role
+### My Role
 
 I acted as a co-founder and technical owner of the system architecture.
 
@@ -15,7 +15,7 @@ My work included:
 * coordinating technical decisions with a botanical domain expert;
 * using AI-assisted development tools in a controlled workflow to accelerate routine implementation while keeping architecture, data model, API contracts, reviews, and deployment decisions under manual control.
 
-## AI-assisted Development Approach
+### AI-assisted Development Approach
 
 The project was built with an AI-assisted engineering workflow.
 
