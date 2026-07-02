@@ -1,19 +1,19 @@
 # FastMBO - Internal Goal-Setting and Bonus Calculation System — demo pack
 
-This page assembles modules relevant to demos and stakeholder presentations: overview, role, architecture highlights, key decisions, screenshots, and outcomes.
+This page assembles sections relevant to demos and stakeholder presentations: overview, role, architecture, decisions, roadmap, and demonstration.
 
 ## Contents
 
+- [Summary](#summary)
 - [Overview](#overview)
 - [Role and Responsibilities](#role-and-responsibilities)
-- [Architecture](#architecture)
-- [Key Decisions](#key-decisions)
-- [Screenshots and Demo](#screenshots-and-demo)
-- [What This Demonstrates](#what-this-demonstrates)
+- [Architecture and Integrations](#architecture-and-integrations)
+- [Decisions, Trade-offs, and Risks](#decisions-trade-offs-and-risks)
+- [Roadmap and Demonstration](#roadmap-and-demonstration)
 
+{% include-markdown "./summary.md" heading-offset=1 %}
 {% include-markdown "./01-overview.md" heading-offset=1 %}
-{% include-markdown "./07-role-and-responsibilities.md" heading-offset=1 %}
-{% include-markdown "./14-architecture.md" heading-offset=1 %}
-{% include-markdown "./15-key-decisions.md" heading-offset=1 %}
-{% include-markdown "./20-screenshots-and-demo.md" heading-offset=1 %}
-{% include-markdown "./21-what-this-demonstrates.md" heading-offset=1 %}
+{% include-markdown "./04-role-and-responsibilities.md" heading-offset=1 %}
+{% include-markdown "./06-architecture-and-integrations.md" heading-offset=1 %}
+{% include-markdown "./08-decisions-trade-offs-and-risks.md" heading-offset=1 %}
+{% include-markdown "./09-roadmap-and-demonstration.md" heading-offset=1 %}

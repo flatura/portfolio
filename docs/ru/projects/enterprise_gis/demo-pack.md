@@ -1,19 +1,19 @@
 # Корпоративная платформа визуализации данных из внутренних систем — демо-сборка
 
-Эта страница собирает модули для демо и презентаций стейкхолдерам: обзор, роль, архитектура, ключевые решения, скриншоты и результаты.
+Эта страница собирает разделы для демо и презентаций стейкхолдерам: обзор, роль, архитектура, решения, дорожная карта и демонстрация.
 
 ## Содержание
 
-- [Обзор](#_2)
-- [Роль и обязанности](#_5)
-- [Архитектура](#_7)
-- [Ключевые решения](#_9)
-- [Скриншоты и демо](#_10)
-- [Что демонстрирует проект](#_11)
+- [Краткое описание](#_2)
+- [Обзор](#_8)
+- [Роль и обязанности](#_11)
+- [Архитектура и интеграции](#_13)
+- [Решения, компромиссы и риски](#_17)
+- [Дорожная карта и демонстрация](#_20)
 
+{% include-markdown "./summary.md" heading-offset=1 %}
 {% include-markdown "./01-overview.md" heading-offset=1 %}
-{% include-markdown "./07-role-and-responsibilities.md" heading-offset=1 %}
-{% include-markdown "./14-architecture.md" heading-offset=1 %}
-{% include-markdown "./15-key-decisions.md" heading-offset=1 %}
-{% include-markdown "./20-screenshots-and-demo.md" heading-offset=1 %}
-{% include-markdown "./21-what-this-demonstrates.md" heading-offset=1 %}
+{% include-markdown "./04-role-and-responsibilities.md" heading-offset=1 %}
+{% include-markdown "./06-architecture-and-integrations.md" heading-offset=1 %}
+{% include-markdown "./08-decisions-trade-offs-and-risks.md" heading-offset=1 %}
+{% include-markdown "./09-roadmap-and-demonstration.md" heading-offset=1 %}

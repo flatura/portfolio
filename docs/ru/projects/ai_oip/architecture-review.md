@@ -1,32 +1,19 @@
 # AI Operational Intelligence Platform — архитектурное ревью
 
-Эта страница собирает модули для архитектурного ревью: ограничения, безопасность, нефункциональные требования, архитектура, решения, компромиссы, режимы отказа, оценка масштаба и дорожная карта.
+Эта страница собирает разделы для архитектурного ревью: цели, требования и ограничения; модель системы; архитектура и интеграции; безопасность, качество и эксплуатация; решения, компромиссы и риски.
 
 ## Содержание
 
-- [Обзор](#_2)
-- [Ограничения](#_5)
-- [Модель безопасности и доступа](#_6)
-- [Нефункциональные требования](#_7)
-- [Архитектура](#_8)
-- [Ключевые решения](#_9)
-- [Компромиссы](#_10)
-- [Режимы отказа](#_11)
-- [Оценка масштаба и стоимости](#_12)
-- [Дорожная карта](#_13)
-- [Architecture Decision Records](#architecture-decision-records)
+- [Краткое описание](#_2)
+- [Цели, требования и ограничения](#_8)
+- [Модель системы](#_12)
+- [Архитектура и интеграции](#_15)
+- [Безопасность, качество и эксплуатация](#_18)
+- [Решения, компромиссы и риски](#_23)
 
-{% include-markdown "./01-overview.md" heading-offset=1 %}
-{% include-markdown "./06-constraints.md" heading-offset=1 %}
-{% include-markdown "./12-security-and-access-model.md" heading-offset=1 %}
-{% include-markdown "./13-non-functional-requirements.md" heading-offset=1 %}
-{% include-markdown "./14-architecture.md" heading-offset=1 %}
-{% include-markdown "./15-key-decisions.md" heading-offset=1 %}
-{% include-markdown "./16-trade-offs.md" heading-offset=1 %}
-{% include-markdown "./17-failure-modes.md" heading-offset=1 %}
-{% include-markdown "./18-sizing-and-cost-notes.md" heading-offset=1 %}
-{% include-markdown "./19-roadmap.md" heading-offset=1 %}
-
-## Architecture Decision Records
-
-See [Architecture Decision Records](adr/index.md).
+{% include-markdown "./summary.md" heading-offset=1 %}
+{% include-markdown "./03-goals-requirements-and-constraints.md" heading-offset=1 %}
+{% include-markdown "./05-system-model.md" heading-offset=1 %}
+{% include-markdown "./06-architecture-and-integrations.md" heading-offset=1 %}
+{% include-markdown "./07-security-quality-and-operations.md" heading-offset=1 %}
+{% include-markdown "./08-decisions-trade-offs-and-risks.md" heading-offset=1 %}

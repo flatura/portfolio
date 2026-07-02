@@ -1,19 +1,19 @@
 # Утилита редактирования полилиний железнодорожного графа — демо-сборка
 
-Эта страница собирает модули для демо и презентаций стейкхолдерам: обзор, роль, архитектура, ключевые решения, скриншоты и результаты.
+Эта страница собирает разделы для демо и презентаций стейкхолдерам: обзор, роль, архитектура, решения, дорожная карта и демонстрация.
 
 ## Содержание
 
-- [Обзор](#_2)
-- [Роль и обязанности](#_4)
-- [Архитектура](#_5)
-- [Ключевые решения](#_7)
-- [Скриншоты и демо](#_8)
-- [Что демонстрирует проект](#_10)
+- [Краткое описание](#_2)
+- [Обзор](#_8)
+- [Роль и обязанности](#_10)
+- [Архитектура и интеграции](#_11)
+- [Решения, компромиссы и риски](#_17)
+- [Дорожная карта и демонстрация](#_21)
 
+{% include-markdown "./summary.md" heading-offset=1 %}
 {% include-markdown "./01-overview.md" heading-offset=1 %}
-{% include-markdown "./07-role-and-responsibilities.md" heading-offset=1 %}
-{% include-markdown "./14-architecture.md" heading-offset=1 %}
-{% include-markdown "./15-key-decisions.md" heading-offset=1 %}
-{% include-markdown "./20-screenshots-and-demo.md" heading-offset=1 %}
-{% include-markdown "./21-what-this-demonstrates.md" heading-offset=1 %}
+{% include-markdown "./04-role-and-responsibilities.md" heading-offset=1 %}
+{% include-markdown "./06-architecture-and-integrations.md" heading-offset=1 %}
+{% include-markdown "./08-decisions-trade-offs-and-risks.md" heading-offset=1 %}
+{% include-markdown "./09-roadmap-and-demonstration.md" heading-offset=1 %}

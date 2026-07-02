@@ -1,1 +1,0 @@
-# Goals and Non-Goals

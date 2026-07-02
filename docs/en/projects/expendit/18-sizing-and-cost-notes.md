@@ -1,1 +1,0 @@
-# Sizing and Cost Notes
