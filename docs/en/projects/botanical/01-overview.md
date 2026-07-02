@@ -1,4 +1,4 @@
-## Overview
+# Overview
 
 Botanical SaaS is a multi-tenant SaaS platform for botanical gardens, nurseries, plant breeders, and private plant collections.
 

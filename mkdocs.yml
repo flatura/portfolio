@@ -56,17 +56,13 @@ plugins:
             - Главная: index.md
             - Подход и услуги: services.md
             - Ключевые проекты:
-                - Botanical SaaS:
+                - Платформа для ботанических садов (SaaS):
                     - projects/botanical/index.md
-                    - Обзор: projects/botanical/01-overview.md
-                    - Проблема: projects/botanical/03-problem.md
-                    - Требования: projects/botanical/05-requirements.md
-                    - Архитектура: projects/botanical/14-architecture.md
-                    - Модель безопасности и доступа: projects/botanical/12-security-and-access-model.md
-                    - Ключевые решения: projects/botanical/15-key-decisions.md
-                    - Компромиссы: projects/botanical/16-trade-offs.md
-                    - Что демонстрирует проект: projects/botanical/21-what-this-demonstrates.md
+                    - Архитектура и интеграции: projects/botanical/06-architecture-and-integrations.md
+                    - Решения, компромиссы и риски: projects/botanical/08-decisions-trade-offs-and-risks.md
+                    - Дорожная карта и демонстрация: projects/botanical/09-roadmap-and-demonstration.md
                     - Всё вместе: projects/botanical/all-in-one.md
+                    - Архитектурное ревью: projects/botanical/architecture-review.md
                 - AI Operational Intelligence Platform:
                     - projects/ai_oip/index.md
                     - Обзор: projects/ai_oip/01-overview.md
@@ -161,15 +157,11 @@ nav:
   - Featured Projects:
       - Botanical SaaS:
           - projects/botanical/index.md
-          - Overview: projects/botanical/01-overview.md
-          - Problem: projects/botanical/03-problem.md
-          - Requirements: projects/botanical/05-requirements.md
-          - Architecture: projects/botanical/14-architecture.md
-          - Security & Access: projects/botanical/12-security-and-access-model.md
-          - Key decisions: projects/botanical/15-key-decisions.md
-          - Trade-offs: projects/botanical/16-trade-offs.md
-          - What this demonstrates: projects/botanical/21-what-this-demonstrates.md
+          - Architecture and Integrations: projects/botanical/06-architecture-and-integrations.md
+          - Decisions, Trade-offs, and Risks: projects/botanical/08-decisions-trade-offs-and-risks.md
+          - Roadmap and Demonstration: projects/botanical/09-roadmap-and-demonstration.md
           - All-in-one: projects/botanical/all-in-one.md
+          - Architecture review: projects/botanical/architecture-review.md
       - AI Operational Intelligence Platform:
           - projects/ai_oip/index.md
           - Overview: projects/ai_oip/01-overview.md

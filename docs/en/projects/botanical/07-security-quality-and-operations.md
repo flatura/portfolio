@@ -1,3 +1,5 @@
+# Security, Quality, and Operations
+
 ## Security and Access Model
 
 ### Multi-tenancy and Access Control
@@ -11,3 +13,18 @@ Users can belong to multiple organizations and have different roles depending on
 Organizations can expose selected data through public pages, public plant pages, public lists, QR-label targets, and a global map.
 
 The public layer uses separate DTOs and visibility rules to avoid leaking internal fields.
+## Non-Functional Requirements
+
+### Infrastructure and Deployment
+
+The project is designed as a practical cloud-ready MVP:
+
+* separated frontend and backend;
+* containerized services;
+* PostgreSQL/PostGIS database;
+* MinIO/S3-compatible media and import storage;
+* Flyway-controlled schema migrations;
+* production profile based on environment configuration;
+* basic CI/CD and deployment automation path.
+## Failure Modes
+## Sizing and Cost Notes

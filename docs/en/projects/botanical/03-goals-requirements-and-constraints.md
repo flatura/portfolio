@@ -1,3 +1,6 @@
+# Goals, Requirements, and Constraints
+
+## Goals and Non-Goals
 ## Requirements
 
 ### Key Implemented Capabilities
@@ -13,3 +16,4 @@ It includes plant search, filtering, batch operations, soft delete, restore work
 The system treats spatial data as a core domain concern.
 
 It supports geospatial plant and place data, PostGIS points and polygons, garden places, greenhouses, beds, map editing, plant positioning, and public map scenarios.
+## Constraints

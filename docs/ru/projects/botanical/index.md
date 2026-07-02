@@ -1,50 +1,32 @@
 # Платформа для ботанических садов (SaaS)
 
-**Статус:** MVP / подготовка к пилотному запуску  
-**Роль:** сооснователь, системный проектировщик, backend-oriented engineer  
-**Платформа:** Web SaaS  
-**Стек:** Java 21, Spring Boot, PostgreSQL/PostGIS, MinIO/S3-compatible storage, Angular, OpenLayers, Docker, LLM
-
-Botanical SaaS - мультитенантная SaaS-платформа для ботанических садов, питомников, селекционеров, научных коллекций и частных собраний растений.
+{% include-markdown "./summary.md" heading-offset=1 %}
 
 ## Быстрый маршрут
 
-1. [Обзор](01-overview.md) - краткое описание продукта  
-2. [Проблема](03-problem.md) - проблема продукта  
-3. [Архитектура](14-architecture.md) - C4 container diagram  
-4. [Требования](05-requirements.md) - ключевые реализованные возможности  
-5. [Всё вместе](all-in-one.md) - полный кейс на одной странице  
+1. [Обзор](01-overview.md) — краткое описание продукта и стек
+2. [Контекст и проблема](02-context-and-problem.md) — предпосылки и формулировка проблемы
+3. [Архитектура и интеграции](06-architecture-and-integrations.md) — C4 container diagram
+4. [Цели, требования и ограничения](03-goals-requirements-and-constraints.md) — ключевые реализованные возможности
+5. [Всё вместе](all-in-one.md) — полный кейс на одной странице
 
 ## Документные сборки
 
-- [Всё вместе](all-in-one.md) - все модули собраны для последовательного чтения и экспорта
-- [Архитектурное ревью](architecture-review.md) - от ограничений до дорожной карты для сессий архитектурного ревью
-- [SRS-сборка](srs-pack.md) - от обзора до нефункциональных требований для ревью в формате SRS
-- [Демо-сборка](demo-pack.md) - обзор, роль, архитектура, решения, скриншоты и результаты
+- [Всё вместе](all-in-one.md) - все разделы собраны для последовательного чтения и экспорта
+- [Архитектурное ревью](architecture-review.md) - от целей до решений для сессий архитектурного ревью
+- [SRS-сборка](srs-pack.md) - от контекста до эксплуатации для ревью в формате SRS
+- [Демо-сборка](demo-pack.md) - обзор, роль, архитектура, решения, дорожная карта и демонстрация
 
-## Все разделы
+## Полная структура
 
-| # | Раздел |
-|---|--------|
-| 01 | [Обзор](01-overview.md) |
-| 02 | [Контекст](02-context.md) |
-| 03 | [Проблема](03-problem.md) |
-| 04 | [Цели и нецели](04-goals-and-non-goals.md) |
-| 05 | [Требования](05-requirements.md) |
-| 06 | [Ограничения](06-constraints.md) |
-| 07 | [Роль и обязанности](07-role-and-responsibilities.md) |
-| 08 | [Доменная модель](08-domain-model.md) |
-| 09 | [Модель данных](09-data-model.md) |
-| 10 | [API-контракты](10-api-contracts.md) |
-| 11 | [Потоки интеграции](11-integration-flows.md) |
-| 12 | [Модель безопасности и доступа](12-security-and-access-model.md) |
-| 13 | [Нефункциональные требования](13-non-functional-requirements.md) |
-| 14 | [Архитектура](14-architecture.md) |
-| 15 | [Ключевые решения](15-key-decisions.md) |
-| 16 | [Компромиссы](16-trade-offs.md) |
-| 17 | [Режимы отказа](17-failure-modes.md) |
-| 18 | [Оценка масштаба и стоимости](18-sizing-and-cost-notes.md) |
-| 19 | [Дорожная карта](19-roadmap.md) |
-| 20 | [Скриншоты и демо](20-screenshots-and-demo.md) |
-| 21 | [Что демонстрирует проект](21-what-this-demonstrates.md) |
-| - | [Architecture Decision Records](adr/index.md) |
+- [Краткое описание](summary.md)
+- [01 — Обзор](01-overview.md)
+- [02 — Контекст и проблема](02-context-and-problem.md)
+- [03 — Цели, требования и ограничения](03-goals-requirements-and-constraints.md)
+- [04 — Роль и обязанности](04-role-and-responsibilities.md)
+- [05 — Модель системы](05-system-model.md)
+- [06 — Архитектура и интеграции](06-architecture-and-integrations.md)
+- [07 — Безопасность, качество и эксплуатация](07-security-quality-and-operations.md)
+- [08 — Решения, компромиссы и риски](08-decisions-trade-offs-and-risks.md)
+- [09 — Дорожная карта и демонстрация](09-roadmap-and-demonstration.md)
+- [Architecture Decision Records](adr/index.md)

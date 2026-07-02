@@ -1,3 +1,5 @@
+# Decisions, Trade-offs, and Risks
+
 ## Key Decisions
 
 ### Key Architecture Decisions
@@ -27,3 +29,11 @@ The system separates current operational state from history/audit-related data. 
 #### Controlled Public Exposure
 
 Public pages, plant cards, lists, photos, and map data are exposed through dedicated public endpoints and DTOs. Visibility rules prevent accidental exposure of internal tenant data.
+
+## Trade-offs
+
+### Root-unit soft multi-tenancy vs database-per-tenant
+
+This keeps early-stage operational complexity lower than database-per-tenant while preserving isolation and shared reference data.
+
+See also [Architecture Decision Records](adr/index.md).
