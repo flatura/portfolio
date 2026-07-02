@@ -9,6 +9,10 @@ permissions:
   pages: write
   id-token: write
 
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -20,6 +24,15 @@ jobs:
       - run: pip install -r requirements.txt
       - name: Build site
         run: mkdocs build --strict --site-dir ./site
+      # region agent log
+      - name: Diagnose artifact (debug e7730a)
+        run: |
+          python scripts/debug_pages_deploy.py
+          echo "=== artifact summary ==="
+          find site -type f | wc -l
+          du -sh site
+          test -f site/index.html && echo "index.html: ok" || echo "index.html: MISSING"
+      # endregion
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -34,3 +47,5 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          timeout: 1200000
