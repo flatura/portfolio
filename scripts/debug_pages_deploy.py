@@ -58,14 +58,17 @@ def git_remote() -> str | None:
 def workflow_checks(workflow: Path) -> dict:
     text = workflow.read_text(encoding="utf-8")
     return {
-        "uses_deploy_pages_v4": "actions/deploy-pages@v4" in text or "actions/deploy-pages@v5" in text,
-        "uses_configure_pages": "actions/configure-pages@v" in text,
-        "uses_upload_pages_artifact": "actions/upload-pages-artifact@v3" in text,
-        "has_github_pages_environment": "name: github-pages" in text,
-        "has_pages_write_permission": "pages: write" in text,
-        "has_id_token_write": "id-token: write" in text,
+        "deploy_method": (
+            "gh-pages-branch"
+            if "peaceiris/actions-gh-pages" in text
+            else "deployment-api"
+        ),
+        "uses_peaceiris_gh_pages": "peaceiris/actions-gh-pages" in text,
+        "uses_deploy_pages": "actions/deploy-pages@" in text,
+        "uses_configure_pages": "actions/configure-pages@" in text,
+        "uses_upload_pages_artifact": "actions/upload-pages-artifact@" in text,
+        "has_contents_write": "contents: write" in text,
         "has_concurrency": "concurrency:" in text,
-        "has_deploy_timeout": "timeout:" in text and "deploy-pages" in text,
     }
 
 
@@ -89,6 +92,19 @@ def main() -> int:
     # endregion
 
     # region agent log
+    log(
+        "H13",
+        "debug_pages_deploy.py:main",
+        "deployment api failure pattern",
+        {
+            "symptom": "Deployment failed, try again later after artifact upload",
+            "fix": "bypass deploy-pages API; push static site to gh-pages branch",
+            "pages_source_required": "Settings -> Pages -> Deploy from branch gh-pages / root",
+        },
+    )
+    # endregion
+
+    # region agent log
     log("H5", "debug_pages_deploy.py:main", "workflow config flags", workflow_checks(workflow))
     # endregion
 
@@ -98,11 +114,11 @@ def main() -> int:
         "debug_pages_deploy.py:main",
         "pages source checklist",
         {
-            "note": "deployment_queued usually means Pages backend never picked up deploy",
+            "note": "gh-pages branch deploy avoids Deployment API queue/failures",
             "check_repo_settings": [
-                "Settings -> Pages -> Build and deployment -> Source must be GitHub Actions",
-                "Settings -> Environments -> github-pages -> no required reviewers blocking",
-                "Actions -> cancel any stuck github-pages deployments",
+                "Settings -> Pages -> Build and deployment -> Source: Deploy from a branch",
+                "Branch: gh-pages, folder: / (root)",
+                "Wait for first workflow run to create gh-pages branch before changing source",
             ],
         },
     )
@@ -115,8 +131,7 @@ def main() -> int:
         "queue/concurrency checklist",
         {
             "workflow_has_concurrency": "concurrency:" in workflow.read_text(encoding="utf-8"),
-            "rapid_push_risk": "multiple pushes without cancel-in-progress can leave stale queued deploys",
-            "default_deploy_timeout_ms": 600000,
+            "deploy_api_removed": "actions/deploy-pages@" not in workflow.read_text(encoding="utf-8"),
         },
     )
     # endregion

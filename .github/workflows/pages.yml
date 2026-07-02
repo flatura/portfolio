@@ -12,11 +12,7 @@ on:
 
 permissions:
 
-  contents: read
-
-  pages: write
-
-  id-token: write
+  contents: write
 
 
 
@@ -30,7 +26,7 @@ concurrency:
 
 jobs:
 
-  build:
+  deploy:
 
     runs-on: ubuntu-latest
 
@@ -48,7 +44,11 @@ jobs:
 
       - name: Build site
 
-        run: mkdocs build --strict --site-dir ./site
+        run: |
+
+          mkdocs build --strict --site-dir ./site
+
+          touch ./site/.nojekyll
 
       # region agent log
 
@@ -60,48 +60,24 @@ jobs:
 
           python scripts/check_include_cycles.py
 
-          echo "=== artifact summary ==="
-
-          find site -type f | wc -l
-
-          du -sh site
-
           test -f site/index.html && echo "index.html: ok" || echo "index.html: MISSING"
+
+          test -f site/.nojekyll && echo ".nojekyll: ok" || echo ".nojekyll: MISSING"
 
       # endregion
 
-      - name: Setup Pages
+      - name: Deploy to gh-pages branch
 
-        id: pages
+        id: gh_pages
 
-        uses: actions/configure-pages@v5
-
-      - name: Upload artifact
-
-        uses: actions/upload-pages-artifact@v3
+        uses: peaceiris/actions-gh-pages@v4
 
         with:
 
-          path: ./site
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 
-  deploy:
+          publish_dir: ./site
 
-    runs-on: ubuntu-latest
-
-    needs: build
-
-    environment:
-
-      name: github-pages
-
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    steps:
-
-      - name: Deploy
-
-        id: deployment
-
-        uses: actions/deploy-pages@v5
+          publish_branch: gh-pages
 
 
