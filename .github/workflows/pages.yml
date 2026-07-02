@@ -1,83 +1,41 @@
 name: Build & Deploy Pages
-
 on:
-
   push:
-
     branches: [ master, main ]
-
   workflow_dispatch:
 
-
-
 permissions:
-
   contents: write
 
-
-
 concurrency:
-
   group: pages-${{ github.ref }}
-
   cancel-in-progress: true
 
-
-
 jobs:
-
   deploy:
-
     runs-on: ubuntu-latest
-
     steps:
-
       - uses: actions/checkout@v4
-
       - uses: actions/setup-python@v5
-
         with:
-
           python-version: '3.x'
-
       - run: pip install -r requirements.txt
-
       - name: Build site
-
         run: |
-
           mkdocs build --strict --site-dir ./site
-
           touch ./site/.nojekyll
-
       # region agent log
-
       - name: Diagnose artifact (debug e7730a)
-
         run: |
-
           python scripts/debug_pages_deploy.py
-
           python scripts/check_include_cycles.py
-
           test -f site/index.html && echo "index.html: ok" || echo "index.html: MISSING"
-
           test -f site/.nojekyll && echo ".nojekyll: ok" || echo ".nojekyll: MISSING"
-
       # endregion
-
       - name: Deploy to gh-pages branch
-
         id: gh_pages
-
         uses: peaceiris/actions-gh-pages@v4
-
         with:
-
           github_token: ${{ secrets.GITHUB_TOKEN }}
-
           publish_dir: ./site
-
           publish_branch: gh-pages
-
-
