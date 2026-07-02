@@ -1,6 +1,6 @@
-"""Generate the Contents section for all-in-one.md from module headings.
+"""Generate the Contents section for assembled project pages.
 
-Simulates the assembled page: page Contents h2, then each module with
+Simulates the assembled page: page Contents h2, then each included file with
 heading-offset=1, using Python-Markdown slug rules (including global _N
 fallbacks for non-ASCII headings).
 
@@ -17,29 +17,21 @@ from pathlib import Path
 
 from markdown.extensions.toc import slugify
 
-MODULES = [
+SUMMARY = "summary.md"
+
+COMPACT_MODULES = [
     "01-overview.md",
-    "02-context.md",
-    "03-problem.md",
-    "04-goals-and-non-goals.md",
-    "05-requirements.md",
-    "06-constraints.md",
-    "07-role-and-responsibilities.md",
-    "08-domain-model.md",
-    "09-data-model.md",
-    "10-api-contracts.md",
-    "11-integration-flows.md",
-    "12-security-and-access-model.md",
-    "13-non-functional-requirements.md",
-    "14-architecture.md",
-    "15-key-decisions.md",
-    "16-trade-offs.md",
-    "17-failure-modes.md",
-    "18-sizing-and-cost-notes.md",
-    "19-roadmap.md",
-    "20-screenshots-and-demo.md",
-    "21-what-this-demonstrates.md",
+    "02-context-and-problem.md",
+    "03-goals-requirements-and-constraints.md",
+    "04-role-and-responsibilities.md",
+    "05-system-model.md",
+    "06-architecture-and-integrations.md",
+    "07-security-quality-and-operations.md",
+    "08-decisions-trade-offs-and-risks.md",
+    "09-roadmap-and-demonstration.md",
 ]
+
+ALL_IN_ONE_MODULES = [SUMMARY, *COMPACT_MODULES]
 
 HEADING_RE = re.compile(r"^(#{1,6})\s+(.+?)\s*$")
 ADR_LABEL = "Architecture Decision Records"
@@ -78,14 +70,19 @@ class AnchorRegistry:
         return f"{base}_{self._counts[base] - 1}"
 
 
-def module_entry_anchors(project_dir: Path, lang: str) -> list[tuple[str, str]]:
+def module_entry_anchors(project_dir: Path, modules: list[str], lang: str) -> list[tuple[str, str]]:
     registry = AnchorRegistry()
     entries: list[tuple[str, str]] = []
 
     registry.assign("Contents" if lang == "en" else "Содержание")
 
-    for name in MODULES:
-        headings = parse_headings((project_dir / name).read_text(encoding="utf-8"))
+    for name in modules:
+        path = project_dir / name
+        if not path.is_file():
+            raise FileNotFoundError(f"Missing module for TOC: {path}")
+        headings = parse_headings(path.read_text(encoding="utf-8"))
+        if not headings:
+            raise ValueError(f"No headings in {name}")
         module_title = headings[0][1]
         module_anchor: str | None = None
 
@@ -102,12 +99,21 @@ def module_entry_anchors(project_dir: Path, lang: str) -> list[tuple[str, str]]:
     return entries
 
 
-def contents_section(lang: str, project_dir: Path) -> str:
+def contents_section(
+    lang: str,
+    project_dir: Path,
+    modules: list[str] | None = None,
+    *,
+    include_adr: bool = False,
+) -> str:
+    if modules is None:
+        modules = ALL_IN_ONE_MODULES
     heading = "## Contents" if lang == "en" else "## Содержание"
     lines = [heading, ""]
-    for title, anchor in module_entry_anchors(project_dir, lang):
+    for title, anchor in module_entry_anchors(project_dir, modules, lang):
         lines.append(f"- [{title}](#{anchor})")
-    lines.append(f"- [{ADR_LABEL}](#{ADR_ANCHOR})")
+    if include_adr:
+        lines.append(f"- [{ADR_LABEL}](#{ADR_ANCHOR})")
     lines.append("")
     return "\n".join(lines)
 
@@ -118,7 +124,7 @@ def main() -> int:
         return 2
     project_dir = Path(sys.argv[1])
     lang = "ru" if "ru" in project_dir.parts else "en"
-    print(contents_section(lang, project_dir))
+    print(contents_section(lang, project_dir, include_adr=True))
     return 0
 
 

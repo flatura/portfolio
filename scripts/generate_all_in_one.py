@@ -7,44 +7,20 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from assembly_toc import contents_section  # noqa: E402
-
-MODULES = [
-    "01-overview.md",
-    "02-context.md",
-    "03-problem.md",
-    "04-goals-and-non-goals.md",
-    "05-requirements.md",
-    "06-constraints.md",
-    "07-role-and-responsibilities.md",
-    "08-domain-model.md",
-    "09-data-model.md",
-    "10-api-contracts.md",
-    "11-integration-flows.md",
-    "12-security-and-access-model.md",
-    "13-non-functional-requirements.md",
-    "14-architecture.md",
-    "15-key-decisions.md",
-    "16-trade-offs.md",
-    "17-failure-modes.md",
-    "18-sizing-and-cost-notes.md",
-    "19-roadmap.md",
-    "20-screenshots-and-demo.md",
-    "21-what-this-demonstrates.md",
-]
+from assembly_toc import ALL_IN_ONE_MODULES, contents_section  # noqa: E402
 
 INCLUDES = "\n".join(
-    f'{{% include-markdown "./{name}" heading-offset=1 %}}' for name in MODULES
+    f'{{% include-markdown "./{name}" heading-offset=1 %}}' for name in ALL_IN_ONE_MODULES
 )
 
 EN_INTRO = (
-    "This page is assembled from modular project documentation files. "
-    "Individual modules remain the source of truth; this page is for sequential reading, "
+    "This page is assembled from compact project documentation sections. "
+    "Individual section files remain the source of truth; this page is for sequential reading, "
     "review, and PDF-style export."
 )
 RU_INTRO = (
-    "Эта страница собирается из модулей проектной документации. "
-    "Отдельные модули остаются источником истины; эта страница предназначена "
+    "Эта страница собирается из компактных разделов проектной документации. "
+    "Отдельные файлы разделов остаются источником истины; эта страница предназначена "
     "для последовательного чтения, ревью и экспорта в стиле PDF."
 )
 
@@ -62,7 +38,7 @@ def generate(project_dir: Path) -> str:
     title = project_title(project_dir)
     suffix = "всё вместе" if lang == "ru" else "all-in-one"
     intro = RU_INTRO if lang == "ru" else EN_INTRO
-    toc = contents_section(lang, project_dir)
+    toc = contents_section(lang, project_dir, include_adr=True)
     adr_footer = (
         "## Architecture Decision Records\n\n"
         + ("См. " if lang == "ru" else "See ")

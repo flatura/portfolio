@@ -1,5 +1,7 @@
-﻿# Overview
+# Overview
 
 *Product or system summary, scope, and technology stack.*
 
-[Product name, one-line description, key technologies]
+- [ ] Product name and one-line description
+- [ ] Scope and boundaries
+- [ ] Technology stack
