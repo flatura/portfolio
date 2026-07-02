@@ -58,7 +58,8 @@ def git_remote() -> str | None:
 def workflow_checks(workflow: Path) -> dict:
     text = workflow.read_text(encoding="utf-8")
     return {
-        "uses_deploy_pages_v4": "actions/deploy-pages@v4" in text,
+        "uses_deploy_pages_v4": "actions/deploy-pages@v4" in text or "actions/deploy-pages@v5" in text,
+        "uses_configure_pages": "actions/configure-pages@v" in text,
         "uses_upload_pages_artifact": "actions/upload-pages-artifact@v3" in text,
         "has_github_pages_environment": "name: github-pages" in text,
         "has_pages_write_permission": "pages: write" in text,

@@ -7,7 +7,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from assembly_toc import ALL_IN_ONE_MODULES, contents_section  # noqa: E402
+from assembly_toc import SUMMARY, ALL_IN_ONE_MODULES, assert_include_leaves, contents_section
 
 INCLUDES = "\n".join(
     f'{{% include-markdown "./{name}" heading-offset=1 %}}' for name in ALL_IN_ONE_MODULES
@@ -34,6 +34,7 @@ def project_title(project_dir: Path) -> str:
 
 
 def generate(project_dir: Path) -> str:
+    assert_include_leaves(ALL_IN_ONE_MODULES, str(project_dir / "all-in-one.md"))
     lang = "ru" if "ru" in project_dir.parts else "en"
     title = project_title(project_dir)
     suffix = "всё вместе" if lang == "ru" else "all-in-one"

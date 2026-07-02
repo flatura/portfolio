@@ -1,51 +1,107 @@
 name: Build & Deploy Pages
+
 on:
+
   push:
+
     branches: [ master, main ]
+
   workflow_dispatch:
 
+
+
 permissions:
+
   contents: read
+
   pages: write
+
   id-token: write
 
+
+
 concurrency:
+
   group: pages-${{ github.ref }}
+
   cancel-in-progress: true
 
+
+
 jobs:
+
   build:
+
     runs-on: ubuntu-latest
+
     steps:
+
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
+
         with:
+
           python-version: '3.x'
+
       - run: pip install -r requirements.txt
+
       - name: Build site
+
         run: mkdocs build --strict --site-dir ./site
+
       # region agent log
+
       - name: Diagnose artifact (debug e7730a)
+
         run: |
+
           python scripts/debug_pages_deploy.py
+
+          python scripts/check_include_cycles.py
+
           echo "=== artifact summary ==="
+
           find site -type f | wc -l
+
           du -sh site
+
           test -f site/index.html && echo "index.html: ok" || echo "index.html: MISSING"
+
       # endregion
+
+      - name: Setup Pages
+
+        id: pages
+
+        uses: actions/configure-pages@v5
+
       - name: Upload artifact
+
         uses: actions/upload-pages-artifact@v3
+
         with:
+
           path: ./site
+
   deploy:
+
     runs-on: ubuntu-latest
+
     needs: build
+
     environment:
+
       name: github-pages
+
       url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
+
       - name: Deploy
+
         id: deployment
-        uses: actions/deploy-pages@v4
-        with:
-          timeout: 1200000
+
+        uses: actions/deploy-pages@v5
+
+

@@ -33,6 +33,23 @@ COMPACT_MODULES = [
 
 ALL_IN_ONE_MODULES = [SUMMARY, *COMPACT_MODULES]
 
+INCLUDE_LEAF_FILES = frozenset(ALL_IN_ONE_MODULES)
+ASSEMBLY_FILES = frozenset(
+    {
+        "index.md",
+        "all-in-one.md",
+        "architecture-review.md",
+        "srs-pack.md",
+        "demo-pack.md",
+    }
+)
+
+
+def assert_include_leaves(modules: list[str], context: str) -> None:
+    bad = [m for m in modules if m not in INCLUDE_LEAF_FILES]
+    if bad:
+        raise ValueError(f"{context}: non-leaf include targets: {bad}")
+
 HEADING_RE = re.compile(r"^(#{1,6})\s+(.+?)\s*$")
 ADR_LABEL = "Architecture Decision Records"
 ADR_ANCHOR = "architecture-decision-records"

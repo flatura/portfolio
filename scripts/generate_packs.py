@@ -5,7 +5,7 @@ from __future__ import annotations
 import re
 from pathlib import Path
 
-from assembly_toc import SUMMARY, contents_section
+from assembly_toc import SUMMARY, assert_include_leaves, contents_section
 
 ROOT = Path(__file__).resolve().parents[1]
 PROJECTS = [
@@ -130,6 +130,7 @@ def project_title(index_path: Path) -> str:
 
 
 def render_pack(project_dir: Path, lang: str, pack_name: str, meta: dict) -> str:
+    assert_include_leaves(meta["modules"], f"{project_dir}/{pack_name}.md")
     pack_meta = meta[lang]
     title = project_title(project_dir / "index.md")
     lines = [
