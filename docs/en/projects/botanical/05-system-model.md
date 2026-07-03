@@ -4,11 +4,147 @@
 
 ### Scientific Taxonomy
 
-Plant records are tied to a centralized taxonomy layer based on POWO/IPNI reference data.
+Plant records are tied to a centralized taxonomic layer (not disclosed publicly).
 
-The model supports family, genus, species, cultivars, grexes, global taxa, and tenant-owned local cultivated entities.
+The model supports families, genera, species, cultivars, grexes, global taxa, and tenant-owned local cultivated entities.
+
 ## Data Model
+
+### High-Level Data Model
+
+```mermaid
+erDiagram
+    ORGANIZATION ||--o{ ORG_UNIT : contains
+    ORGANIZATION ||--o{ PLANT : owns
+    ORGANIZATION ||--o{ PLACE : manages
+    ORGANIZATION ||--o{ PLANT_LIST : maintains
+    ORGANIZATION ||--o{ PUBLIC_PAGE : publishes
+
+    ORG_UNIT ||--o{ PLANT : curates
+    PLACE ||--o{ PLACE : contains
+    PLACE ||--o{ PLANT : locates
+
+    PLANT }o--|| SYSTEM_TAXON : "required taxon_id"
+    PLANT ||--o{ PHOTO : documents
+    PLANT }o--o{ PLANT_LIST : included_in
+
+    SYSTEM_TAXON ||--o| GLOBAL_TAXON : "species subtype"
+    SYSTEM_TAXON ||--o| CULTIVATED_ENTITY : "cultivar/grex subtype"
+
+    PUBLIC_PAGE ||--o{ PLANT_LIST : exposes
+    PUBLIC_PAGE ||--o{ PLANT : exposes_selected
+
+    ORGANIZATION {
+        uuid id PK
+        string public_name
+        string slug
+        string visibility
+    }
+
+    ORG_UNIT {
+        uuid id PK
+        uuid organization_id FK
+        uuid parent_id FK
+        string name
+    }
+
+    PLANT {
+        uuid id PK
+        uuid organization_id FK
+        uuid org_unit_id FK
+        uuid place_id FK
+        uuid taxon_id FK "mandatory"
+        string accession_number
+        string individual_code
+        string status
+        string provenance_type
+        geometry point
+        jsonb custom_fields
+    }
+
+    SYSTEM_TAXON {
+        uuid id PK
+        string display_name
+        string normalized_name
+        string taxon_type
+        string rank
+    }
+
+    GLOBAL_TAXON {
+        uuid id PK
+        uuid system_taxon_id FK
+        string id
+        string ipni_id
+        string family
+        string genus
+        string species_epithet
+        string scientific_name
+    }
+
+    CULTIVATED_ENTITY {
+        uuid id PK
+        uuid system_taxon_id FK
+        string genus
+        string cultivar_or_grex_name
+        string breeder_name
+        string registrar_name
+        int registration_year
+        string visibility_scope
+    }
+
+    PLACE {
+        uuid id PK
+        uuid organization_id FK
+        uuid parent_id FK
+        string name
+        geometry point
+        geometry polygon
+    }
+
+    PLANT_LIST {
+        uuid id PK
+        uuid organization_id FK
+        string name
+        string list_type
+        string visibility
+    }
+
+    PHOTO {
+        uuid id PK
+        uuid PLANT_id FK
+        string caption
+        string photo_tag
+        boolean publication_allowed
+    }
+
+    PUBLIC_PAGE {
+        uuid id PK
+        uuid organization_id FK
+        string slug
+        boolean visible
+    }
+```
+
+### Key Model Idea
+
+The central entity of the system is **Plant**, a digital twin of a specific plant in a living collection. This is not merely a reference row or an abstract species, but an accession record for a specific specimen: with inventory number, status, placement location, organization ownership, photos, lists, and public representation.
+
+The mandatory attribute **`taxon_id`** is the core of the model. It links each plant instance to the unified root entity **SystemTaxon**. Thanks to this, all operational scenarios—tracking, import, search, lists, exchange, QR pages, reporting, and the public map—work not with an arbitrary text plant name, but with a stable taxon identifier.
+
+**SystemTaxon** acts as the common root entity for two major taxonomic contours:
+
+* **globalTaxon** — species-level taxa from an authoritative catalog.
+* **CultivatedEntity** — cultivars and grexes that may be recognized global records from registrars, or local records created within a specific organization.
+
+This approach lets the user select a plant from a unified taxon lookup without artificially separating species search from cultivar search. For the user it looks like a single plant reference; internally the system preserves the distinction between scientific species taxa, global cultivars, grexes, and organization-local cultivars.
+
+The architectural value is that all collection data becomes comparable across organizations. The same `taxon_id` can be used in plant cards, collection lists, wishlists, exchange lists, public pages, and reports. This creates a foundation for network scenarios: the system can match which taxa one organization seeks and another is ready to transfer, without relying on unstable text names, synonyms, local variants, and typos.
+
+In the portfolio the model is shown at a high level. Internal auxiliary entities, visibility mechanisms, access tables, cultivar globalization workflows, and implementation details are intentionally omitted.
+
 ## API Contracts
+
+Endpoint names and attributes are intentionally altered for the public space.
 
 ### API Design Approach
 

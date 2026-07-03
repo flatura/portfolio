@@ -1,35 +1,32 @@
 # Role and Responsibilities
 
-### My Role
+## My Role
 
 I acted as a co-founder and technical owner of the system architecture.
 
 My work included:
 
-* translating domain knowledge into a structured SaaS domain model;
-* designing the backend architecture, APIs, data structures, and service boundaries;
-* implementing backend features and integration logic;
-* designing tenant-aware access control and organization-scoped permissions;
+* translating domain expert knowledge into a structured SaaS model;
+* designing backend architecture, API, data structures, and domain model;
+* implementing backend functionality and integration logic;
+* designing RBAC with organization (tenant) context access rights;
 * modeling plant instances, taxonomy, places, lists, photos, imports, and public pages;
-* preparing architecture documentation, C4 diagrams, ADR-style decisions, and implementation context;
-* coordinating technical decisions with a botanical domain expert;
-* using AI-assisted development tools in a controlled workflow to accelerate routine implementation while keeping architecture, data model, API contracts, reviews, and deployment decisions under manual control.
+* preparing architecture documentation, C4 diagrams, and ADRs;
+* aligning technical decisions with a domain expert;
+* using AI-assisted development tools to accelerate routine implementation while keeping manual control over architecture, data model, API contracts, review, and deployment decisions.
 
-### AI-assisted Development Approach
+## AI Usage
 
-The project was built with an AI-assisted engineering workflow.
+The project was developed with AI assistance.
 
-I used LLM-based tools to accelerate repetitive implementation tasks, generate boilerplate, and iterate faster. The core decisions remained manually controlled:
+LLMs were used to accelerate routine implementation, generate boilerplate code, and iterate quickly. Key decisions remained under manual control:
 
 * requirements interpretation;
-* domain model design;
+* domain modeling;
 * architecture decisions;
-* API contracts;
-* database boundaries;
+* data boundaries;
 * access model;
 * code review;
 * debugging;
 * deployment decisions;
-* documentation.
-
-This workflow is directly applicable to MVP rescue work: reviewing AI-generated code, identifying structural issues, stabilizing implementation, and turning a prototype into a maintainable deployable system.
+* technical documentation.

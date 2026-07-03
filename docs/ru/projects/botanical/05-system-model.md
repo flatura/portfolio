@@ -4,9 +4,9 @@
 
 ### Научная таксономия
 
-Записи о растениях связаны с централизованным таксономическим слоем на базе POWO/IPNI.
+Записи о растениях связаны с централизованным таксономическим слоем (не раскрывается публично).
 
-Модель поддерживает семейства, роды, виды, культивары, грексы, глобальные таксоны и локальные cultivated entities, принадлежащие отдельным тенантам.
+Модель поддерживает семейства, роды, виды, культивары, грексы, глобальные и локальные культивары, принадлежащие отдельным тенантам.
 
 ## Модель данных
 
@@ -15,24 +15,24 @@
 ```mermaid
 erDiagram
     ORGANIZATION ||--o{ ORG_UNIT : contains
-    ORGANIZATION ||--o{ PLANT_INSTANCE : owns
+    ORGANIZATION ||--o{ PLANT : owns
     ORGANIZATION ||--o{ PLACE : manages
     ORGANIZATION ||--o{ PLANT_LIST : maintains
     ORGANIZATION ||--o{ PUBLIC_PAGE : publishes
 
-    ORG_UNIT ||--o{ PLANT_INSTANCE : curates
+    ORG_UNIT ||--o{ PLANT : curates
     PLACE ||--o{ PLACE : contains
-    PLACE ||--o{ PLANT_INSTANCE : locates
+    PLACE ||--o{ PLANT : locates
 
-    PLANT_INSTANCE }o--|| SYSTEM_TAXON : "required taxon_id"
-    PLANT_INSTANCE ||--o{ PHOTO : documents
-    PLANT_INSTANCE }o--o{ PLANT_LIST : included_in
+    PLANT }o--|| SYSTEM_TAXON : "required taxon_id"
+    PLANT ||--o{ PHOTO : documents
+    PLANT }o--o{ PLANT_LIST : included_in
 
-    SYSTEM_TAXON ||--o| POWO_TAXON : "species subtype"
+    SYSTEM_TAXON ||--o| GLOBAL_TAXON : "species subtype"
     SYSTEM_TAXON ||--o| CULTIVATED_ENTITY : "cultivar/grex subtype"
 
     PUBLIC_PAGE ||--o{ PLANT_LIST : exposes
-    PUBLIC_PAGE ||--o{ PLANT_INSTANCE : exposes_selected
+    PUBLIC_PAGE ||--o{ PLANT : exposes_selected
 
     ORGANIZATION {
         uuid id PK
@@ -48,7 +48,7 @@ erDiagram
         string name
     }
 
-    PLANT_INSTANCE {
+    PLANT {
         uuid id PK
         uuid organization_id FK
         uuid org_unit_id FK
@@ -70,10 +70,10 @@ erDiagram
         string rank
     }
 
-    POWO_TAXON {
+    GLOBAL_TAXON {
         uuid id PK
         uuid system_taxon_id FK
-        string powo_id
+        string id
         string ipni_id
         string family
         string genus
@@ -111,7 +111,7 @@ erDiagram
 
     PHOTO {
         uuid id PK
-        uuid plant_instance_id FK
+        uuid PLANT_id FK
         string caption
         string photo_tag
         boolean publication_allowed
@@ -127,13 +127,13 @@ erDiagram
 
 ### Ключевая идея модели
 
-Центральная сущность системы - **PlantInstance**, цифровой двойник конкретного растения в живой коллекции. Это не просто строка справочника и не абстрактный вид, а учётная запись конкретного экземпляра: с инвентарным номером, статусом, местом размещения, принадлежностью к организации, фотографиями, списками и публичным представлением.
+Центральная сущность системы - **Plant**, цифровой двойник конкретного растения в живой коллекции. Это не просто строка справочника и не абстрактный вид, а учётная запись конкретного экземпляра: с инвентарным номером, статусом, местом размещения, принадлежностью к организации, фотографиями, списками и публичным представлением.
 
 Обязательный атрибут **`taxon_id`** является ядром модели. Он связывает каждый экземпляр растения с единой корневой сущностью **SystemTaxon**. Благодаря этому все операционные сценарии - учёт, импорт, поиск, списки, обмен, QR-страницы, отчётность и публичная карта -работают не с произвольным текстовым названием растения, а с устойчивым идентификатором таксона.
 
 **SystemTaxon** выступает общей корневой сущностью для двух крупных таксономических контуров:
 
-* **PowoTaxon** - видовые таксоны, поступающие из авторитетного каталога POWO/IPNI.
+* **globalTaxon** - видовые таксоны, поступающие из авторитетного каталога.
 * **CultivatedEntity** - культивары и грексы, которые могут быть признанными глобальными записями, поступающими от регистраторов, либо локальными записями, созданными внутри конкретной организации.
 
 Такой подход позволяет пользователю выбирать растение из единого taxon lookup, не разделяя искусственно поиск по видам и поиск по культиварам. Для пользователя это выглядит как единый справочник растений, а внутри системы сохраняется различие между научными видовыми таксонами, глобальными культиварами, грексами и локальными культиварами организации.
@@ -143,6 +143,8 @@ erDiagram
 В портфолио модель показана верхнеуровнево. Внутренние вспомогательные сущности, механизмы разграничения видимости, таблицы доступа, workflow глобализации культиваров и технические детали реализации намеренно опущены.
 
 ## API-контракты
+
+Названия конечных точек и атрибуты намеренно изменены для публичного пространства.
 
 ### Подход к проектированию API
 

@@ -6,31 +6,29 @@ MVP / pilot preparation
 
 ## Role
 
-Co-founder, System Designer, Backend-oriented Engineer
+Co-founder, System Designer, Developer
 
 ## Stack
 
-Java 21, Spring Boot, PostgreSQL/PostGIS, MinIO/S3-compatible storage, Angular, OpenLayers, Docker, LLM
+Java 21, Spring Boot, PostgreSQL/PostGIS, MinIO/S3-compatible storage, Angular, OpenLayers, Docker
 
 ## Project value
 
-- [All-in-one](all-in-one.md) - all modules assembled for sequential reading and export
-- [Architecture review](architecture-review.md) - constraints through roadmap for architecture review sessions
-- [SRS pack](srs-pack.md) - overview through non-functional requirements for SRS-style review
-- [Demo pack](demo-pack.md) - overview, role, architecture, decisions, screenshots, and outcomes
+For the target audience (botanical gardens, nurseries, plant breeders, holders of scientific collections and private plant collections):
+
+* a unified species reference as a trusted scientific foundation
+* network capabilities for interaction between organizations.
+
+For me:
+
+* experience designing and implementing SaaS from idea through deployment
+* experience diving into an interesting domain
 
 ## What this demonstrates
 
-This project demonstrates my ability to work across system analysis, backend design, implementation, and deployment preparation.
+This project demonstrates my ability to:
 
-It is especially relevant to:
-
-* SaaS MVP rescue and stabilization;
-* backend/API restructuring;
-* multi-tenant business applications;
-* database and migration cleanup;
-* GIS-enabled systems;
-* spreadsheet import pipelines;
-* cloud deployment preparation;
-* architecture documentation for fast-moving teams;
-* controlled use of AI-assisted development.
+* work at the intersection of system analysis, system design, implementation, and deployment.
+* take an idea through to a running system with multiple availability zones and a scaling roadmap
+* strategically plan implementation of a small-to-medium-scale SaaS
+* safely and in a controlled way apply LLM code generation for feature implementation

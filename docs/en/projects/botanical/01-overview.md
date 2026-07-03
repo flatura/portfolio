@@ -1,7 +1,7 @@
 # Overview
 
-Botanical SaaS is a multi-tenant SaaS platform for botanical gardens, nurseries, plant breeders, and private plant collections.
+Botanical SaaS is a multi-tenant SaaS platform for botanical gardens, nurseries, plant breeders, scientific collections, and private plant collections.
 
-The product replaces fragmented spreadsheets, local databases, and outdated desktop tools with a web-based system for managing living plant collections, scientific taxonomy, geospatial data, public collection pages, QR labels, imports, lists, and controlled data sharing.
+The system replaces disconnected Excel files, local databases, and legacy desktop tools with a unified web platform for managing living plant collections, scientific taxonomy, geospatial data, public organization pages, QR labels, import, lists, and controlled data exchange.
 
-My contribution covered domain modeling, backend architecture, access control design, data model design, API structure, technical documentation, hands-on backend implementation, and cloud-ready deployment preparation.
+My responsibility included domain modeling, backend architecture, access model design, data structure and API design, technical documentation, backend implementation, and preparing the system for cloud-ready deployment.

@@ -6,7 +6,7 @@
 
 1. [Overview](01-overview.md) — product summary and stack
 2. [Context and Problem](02-context-and-problem.md) — background and problem statement
-3. [Architecture and Integrations](06-architecture-and-integrations.md) — C4 container diagram
+3. [Architecture and Integrations](06-architecture-and-integrations.md)
 4. [Goals, Requirements, and Constraints](03-goals-requirements-and-constraints.md) — key implemented capabilities
 5. [All-in-one](all-in-one.md) — full case study in one page
 

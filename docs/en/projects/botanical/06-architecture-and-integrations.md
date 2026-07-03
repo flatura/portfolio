@@ -2,7 +2,7 @@
 
 ## Architecture
 
-### Container diagram
+### Container diagram (C4 Container)
 
 ```mermaid
     C4Container
@@ -10,39 +10,50 @@
 
     Person(user, "User")
 
-    System_Boundary(sys, "system") {
-      Container(spa, "Single Page Application", "Angular 21, Open Layers", "User-side UI") 
-      Container(static, "Frontend Static", "nginx", "Static data storage container.")
-      Container(backend, "Backend Business Logic", "Spring Boot", "Business logic.")
-      ContainerDb(reldb, "Relational DB", "PostgreSQL + PostGIS", "Plant instances, lists,<br/> users, RBAC roles.")
-      ContainerDb(objStore, "Object Storage", "MinIO", "Photos and multimedia.<br/> collection import files.")
+    System_Boundary(sys, "System") {
+      Container(spa, "Single Page Application", "Angular 21, OpenLayers", "User interface") 
+      Container(static, "Frontend Static", "nginx", "Container for storing<br/> static frontend files")
+      Container(backend, "Backend Business Logic", "Spring Boot", "Business logic")
+      ContainerDb(reldb, "Relational DB", "PostgreSQL + PostGIS", "Plant instances, lists,<br/> users, RBAC roles")
+      ContainerDb(objStore, "Object Storage", "MinIO", "Photos and multimedia.<br/> Collection import files")
     }
 
     Boundary(ext, "External systems", "") {
-      Container_Ext(powo, "POWO", "Plants of the World Online (Kew).<br/> Taxon reference.")
-      Container_Ext(vernacular, "WikiData", "National names reference<br/> (vernacular names).")
-      Container_Ext(llm, "LLM", "Suggestions")
+      Container_Ext(global, "global", "Taxonomic reference")
+      Container_Ext(vernacular, "WikiData", "Vernacular names reference<br/> for plants")
+      Container_Ext(llm, "LLM", "Intelligent species<br/> recognition")
     }
 
   Rel(user, spa, "Uses to<br/> manage plant collections")
 
-  Rel(spa, static, "Gets Angular <br/> static UI bundles", "HTTPS")
-  Rel(spa, backend, "Sends API-calls", "HTTPS REST")
+  Rel(spa, static, "Gets Angular<br/> static UI bundles", "HTTPS")
+  Rel(spa, backend, "Sends API calls", "HTTPS REST")
 
   Rel(backend, reldb, "Reads/writes data", "SQL")
-  Rel(backend, objStore, "Loads/reads media", "S3 API")
+  Rel(backend, objStore, "Uploads/reads media", "S3 API")
 
-  Rel(backend, powo, "Calls taxons/cultivars,<br/> writes cultivars", "HTTPS/REST")
-  Rel(backend, vernacular, "Gets species names<br/> on national language", "HTTPS/REST")
-  Rel(backend, llm, "Uses LLM-API<br/> to get species name suggestions", "HTTPS/OpenAI API compatible")
+  Rel(backend, global, "Requests taxa/cultivars,<br/> writes cultivars", "HTTPS/REST")
+  Rel(backend, vernacular, "Gets species names<br/> in national languages", "HTTPS/REST")
+  Rel(backend, llm, "Uses LLM API<br/> for species name suggestions", "HTTPS/OpenAI API compatible")
 
   UpdateLayoutConfig($c4ShapeInRow="5", $c4BoundaryInRow="3")
 
 ```
+
 ## Integration Flows
+
+### Taxonomy catalog import
+
+The system includes a manual mechanism for updating the internal taxon reference from an XLS export while preserving identifiers.
+
+### National taxon name enrichment
+
+The system includes an automatic mechanism for enriching the internal vernacular plant names reference from open sources, subject to public API constraints.
 
 ### Smart Import
 
-The platform includes a guided spreadsheet import pipeline for existing plant collections.
+The platform includes an XLS import wizard for migrating existing plant collections into the system.
 
-The import flow supports file upload, sheet selection, column mapping, value resolution, fuzzy matching, asynchronous processing, row-level results, and error report export.
+The flow supports file upload, sheet selection, column mapping (including with AI assistance), value resolution, fuzzy matching, asynchronous processing, row-level results, and error report export.
+
+For mapping column names to system entity attributes, and for more accurate recognition of species, cultivar, or enum values, LLM integration and a lightweight harness are provided. Recognition confirmation (when it was not 100%) is performed by the user.

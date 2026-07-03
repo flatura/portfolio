@@ -20,15 +20,15 @@
 
 ## Нефункциональные требования
 
-Проект спроектирован как практичный cloud-ready MVP:
+Проект спроектирован как практичный MVP:
 
 * разделенные frontend и backend;
-* containerized services;
-* PostgreSQL/PostGIS database;
-* MinIO/S3-compatible storage для медиа и import-файлов;
-* schema migrations через Flyway;
-* production profile на базе environment configuration;
-* базовый CI/CD и deployment automation path.
+* stateless-сервисы в docker-контейнерах;
+* PostgreSQL/PostGIS ДБ;
+* MinIO/S3-compatible хранилище для медиа и импорт-файлов;
+* Миграции схемы через Flyway;
+* профили запуска на базе конфигурации переменных окружения;
+* базовый CI/CD (сборка Docker-образов с помощью GitHub Actions).
 
 ## Режимы отказа
 
