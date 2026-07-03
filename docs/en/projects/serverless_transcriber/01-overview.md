@@ -7,7 +7,8 @@ A serverless solution for transcribing audio recordings using an external transc
 ## Technology Stack
 
 * **Backend:** Python on AWS Lambda
-* **Data Layer:** Amazon S3 (audio and transcription files), AWS DynamoDB (job status tracking)
-* **Frontend:** Static HTML + Vanilla JS hosted on Amazon S3 and distributed via AWS CloudFront
-* **Security:** Amazon Cognito (PKCE flow)
-* **Infrastructure & IaC:** AWS API Gateway, fully provisioned via Terraform
+* **Data:** Amazon S3 (recording files, transcriptions), AWS DynamoDB (job statuses)
+* **Frontend:** static HTML + JS on Amazon S3 deployed via AWS CloudFront
+* **AI:** AssemblyAI API
+* **Security:** AWS Cognito
+* **Infrastructure:** AWS API Gateway, packaged as a Terraform project

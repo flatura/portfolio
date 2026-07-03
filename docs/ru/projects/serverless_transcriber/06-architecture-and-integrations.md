@@ -13,7 +13,7 @@ architecture-beta
     service storage(aws:simple-storage-service)[File storage at Amazon S3]
     service browser(logos:chrome)[Browser]
     service cognito(aws:cognito)[AWS Cognito]
-    service ai(logos:webhooks)[AssemblyAI API]
+    service ai(logos:webhooks)[Transcriber API]
     service front(aws:cloudfront)[AWS CloudFront]
 
     front:T -- B:static
@@ -70,7 +70,7 @@ sequenceDiagram
     participant L as AWS Lambda
     participant S3 as Amazon S3
     participant DB as DynamoDB
-    participant AI as AssemblyAI
+    participant AI as TranscribeProvider
 
     U->>S3: POST Загрузка аудио-файла (Обход API Gateway)
     activate S3
@@ -83,7 +83,7 @@ sequenceDiagram
     L->>S3: Генерация временной GET Presigned URL для AI
     L->>AI: POST /v2/transcript (Аудио URL + Webhook URL)
     activate AI
-    alt AssemblyAI принимает запрос
+    alt TranscribeProvider принимает запрос
         AI-->>L: 201 Created (transcript_id)
         L->>DB: Status = PROCESSING (сохранение ID)
     else Ошибка API (например, HTTP 400/500)
@@ -106,7 +106,7 @@ sequenceDiagram
     participant L as AWS Lambda
     participant S3 as Amazon S3
     participant DB as DynamoDB
-    participant AI as AssemblyAI
+    participant AI as TranscribeProvider
     
     loop Каждые 15 секунд (Polling)
         U->>API: GET /jobs
@@ -122,10 +122,10 @@ sequenceDiagram
         deactivate L
     end
 
-    Note over AI, DB: AssemblyAI завершает работу
+    Note over AI, DB: TranscribeProvider завершает работу
     AI->>API: POST /webhook (передача transcript_id)
     activate API
-    API->>L: Вызов webhook_assemblyai
+    API->>L: Вызов webhook_TranscribeProvider
     deactivate API
     activate L
     L->>AI: GET /v2/transcript/{id}

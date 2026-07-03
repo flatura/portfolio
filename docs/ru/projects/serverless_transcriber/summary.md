@@ -1,17 +1,14 @@
 # Краткое описание
-
 ## Статус
-
-active
+В эксплуатации
 
 ## Роль
-
-Co-founder, System Designer, Backend-oriented Engineer
+Системный проектировщик
 
 ## Стек
-
-Python, AWS Lambda, APi Gateway, DynamoDB, AWS S3, Terraform, LLM API
+Python, AWS Lambda, API Gateway, DynamoDB, AWS S3, Terraform, LLM API integration
 
 ## Ценность проекта
-
-Бессерверное решение для транскрибации аудиозаписей посредством внешнего API-транскрибации.
+- Опыт реализации прикладного serverless-решения
+- Опыт работы с подходом Infrastructure-as-a-Code
+- Практика работы с облаком Amazon

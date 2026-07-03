@@ -6,13 +6,13 @@
 
 ## DynamoDB - статусы джобов
 
-Каждая задача транскрибации хранится как запись с жизненным циклом:
+Каждая задача транскрибации хранится как запись БД с жизненным циклом:
 
-| Статус | Значение |
+| State Machine | Значение |
 |--------|----------|
-| `UPLOADING` | Выдан Presigned URL; идёт загрузка клиентом |
-| `TRANSMITTING` | Аудио загружено в S3; отправка в AssemblyAI |
-| `PROCESSING` | AssemblyAI транскрибирует (`transcript_id` сохранён) |
+| `UPLOADING` | Выдана предподписанная ссылка; идёт загрузка клиентом |
+| `TRANSMITTING` | Аудио загружено в S3; отправка в сервис |
+| `PROCESSING` | сервис транскрибирует (`transcript_id` сохранён) |
 | `READY` | Транскрипт сохранён в S3; доступен для скачивания |
 | `ERROR` | Ошибка AssemblyAI или пайплайна (причина в логе) |
 
@@ -32,7 +32,7 @@
 | `GET` | `/download-url?fileId=...` | `get_download_url` | Проверка доступа; Presigned GET URL транскрипта |
 | `POST` | `/webhook` | `webhook_assemblyai` | Callback AssemblyAI (`transcript_id`) |
 
-Все маршруты API Gateway требуют JWT (Amazon Cognito), кроме `/webhook` (callback провайдера).
+Все маршруты API Gateway требуют JWT (Amazon Cognito), кроме `/webhook` (callback провайдера транскрибации).
 
 ## Amazon Cognito (Hosted UI / PKCE)
 
@@ -40,7 +40,7 @@
 |-------|------|------------|
 | `POST` | `/oauth2/token` | Обмен authorization code на Access & ID tokens |
 
-## AssemblyAI (внешний)
+## внешний API провайдера транскрибации
 
 | Метод | Путь | Назначение |
 |-------|------|------------|

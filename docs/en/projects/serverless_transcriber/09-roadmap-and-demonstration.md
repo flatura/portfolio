@@ -2,27 +2,32 @@
 
 ## Roadmap
 
-## Screenshots and Demo
+| Phase | Goal | Infrastructure | Exit criteria |
+|---|---|---|---|
+| v1 | Implement required functionality | AWS + Transcriber API | Basic operation; growing need for post-processing of transcription results |
+| v2 | Implement additional transcription result summarization functionality | AWS + Transcriber API + LLM API |  |
 
-## Main menu
+## Screenshots and demo
+
+### Main menu
 
 <figure markdown>
 ![UI_1](/portfolio/assets/transcriber/main_menu.webp)
 <figcaption>Main menu</figcaption>
 </figure>
 
-## Upoading a record
+### Uploading an audio recording
 
 <figure markdown>
 ![UI_1](/portfolio/assets/transcriber/loading.webp)
-<figcaption>Uploading a record</figcaption>
+<figcaption>Uploading an audio recording</figcaption>
 </figure>
 
-## Processing the record
+### File processing
 
 <figure markdown>
 ![UI_1](/portfolio/assets/transcriber/processed.webp)
-<figcaption>Processing the record</figcaption>
+<figcaption>Processing the recording</figcaption>
 </figure>
 
-## What This Demonstrates
+## What this project demonstrates

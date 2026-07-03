@@ -2,7 +2,7 @@
 
 ## Architecture
 
-## Cloud Architecture Diagram
+## Architectural concept
 
 ```mermaid
 architecture-beta
@@ -13,7 +13,7 @@ architecture-beta
     service storage(aws:simple-storage-service)[File storage at Amazon S3]
     service browser(logos:chrome)[Browser]
     service cognito(aws:cognito)[AWS Cognito]
-    service ai(logos:webhooks)[AssemblyAI API]
+    service ai(logos:webhooks)[Transcriber API]
     service front(aws:cloudfront)[AWS CloudFront]
 
     front:T -- B:static
@@ -29,11 +29,11 @@ architecture-beta
     storage:L -- R:browser
 ```
 
-## Integration Flows
+## Integration flows
 
-## Sequence Diagrams
+## Sequence diagrams
 
-### Audio File Upload Initiation
+### Audio file submission
 
 ```mermaid
 sequenceDiagram
@@ -45,15 +45,22 @@ sequenceDiagram
     participant S3 as Amazon S3
     participant DB as DynamoDB
 
-    U->>API: GET /upload-url (pass JWT)
+    U->>API: GET /upload-url (+JWT in Header)
+    activate API
     API->>L: Invoke get_upload_url
+    deactivate API
+    activate L
     L->>DB: Create record (Status: UPLOADING)
     L->>S3: Generate Presigned POST URL
+    activate S3
     S3-->>L: Upload link
+    deactivate S3
     L-->>U: JSON: { uploadUrl, fileId }
+    deactivate L
+
 ```
 
-### Direct Upload & Asynchronous Trigger (Event-Driven)
+### Direct upload and asynchronous trigger (event-driven)
 
 ```mermaid
 sequenceDiagram
@@ -63,20 +70,32 @@ sequenceDiagram
     participant L as AWS Lambda
     participant S3 as Amazon S3
     participant DB as DynamoDB
-    participant AI as AssemblyAI
+    participant AI as TranscribeProvider
 
     U->>S3: POST Upload audio file (Bypass API Gateway)
+    activate S3
     S3-->>U: 204 No Content (Success)
+    deactivate S3
     
-    S3-)L: Event: ObjectCreated (Async trigger s3_trigger)
+    S3-)L: Event: ObjectCreated (Async invoke s3_trigger)
+    activate L
     L->>DB: Update status (TRANSMITTING)
     L->>S3: Generate temporary GET Presigned URL for AI
     L->>AI: POST /v2/transcript (Audio URL + Webhook URL)
-    AI-->>L: 201 Created (Return transcript_id)
-    L->>DB: Update status (PROCESSING + save ID)
+    activate AI
+    alt TranscribeProvider accepts request
+        AI-->>L: 201 Created (transcript_id)
+        L->>DB: Status = PROCESSING (save ID)
+    else API error (e.g. HTTP 400/500)
+        AI-->>L: 4xx / 5xx Error
+        deactivate AI
+        L->>DB: Status = ERROR (Log reason)
+    end
+    deactivate L
+    
 ```
 
-### AI Processing & Webhook (up to several minutes)
+### AI processing and webhook (up to several minutes)
 
 ```mermaid
 sequenceDiagram
@@ -87,15 +106,15 @@ sequenceDiagram
     participant L as AWS Lambda
     participant S3 as Amazon S3
     participant DB as DynamoDB
-    participant AI as AssemblyAI
+    participant AI as TranscribeProvider
     
     loop Every 15 seconds (Polling)
         U->>API: GET /jobs
-        activate API
+        activate API 
         API->>L: Invoke get_jobs
         deactivate API
         activate L
-        L->>DB: Request user's job list
+        L->>DB: Request user's file list
         activate DB
         DB-->>L: Data (Status: PROCESSING)
         deactivate DB
@@ -103,10 +122,10 @@ sequenceDiagram
         deactivate L
     end
 
-    Note over AI, DB: AssemblyAI completes processing
+    Note over AI, DB: TranscribeProvider completes processing
     AI->>API: POST /webhook (pass transcript_id)
     activate API
-    API->>L: Invoke webhook_assemblyai
+    API->>L: Invoke webhook_TranscribeProvider
     deactivate API
     activate L
     L->>AI: GET /v2/transcript/{id}
@@ -116,9 +135,10 @@ sequenceDiagram
     L->>S3: PUT Save text (Transcript.txt)
     L->>DB: Update status (READY)
     deactivate L
+    
 ```
 
-### Result Retrieval (Download)
+### Result retrieval (download)
 
 ```mermaid
 sequenceDiagram
@@ -141,15 +161,10 @@ sequenceDiagram
     deactivate API
     activate L
     L->>DB: Verify user access rights to file
-    activate DB
-    DB-->>L: Data access confirmed
-    deactivate DB
     L->>S3: Generate Presigned GET URL (with Content-Disposition)
     L-->>U: JSON: { downloadUrl }
     deactivate L
-    activate U
     U->>S3: Direct download of Transcript.txt
-    deactivate U
     activate S3
     S3-->>U: Transcription file
     deactivate S3

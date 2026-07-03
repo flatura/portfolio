@@ -2,16 +2,18 @@
 
 ## Status
 
-Active
+In production
 
 ## Role
 
-Co-founder, System Designer, Backend-oriented Engineer
+System Designer
 
 ## Stack
 
-Python, AWS Lambda, APi Gateway, DynamoDB, AWS S3, Terraform, LLM API
+Python, AWS Lambda, API Gateway, DynamoDB, AWS S3, Terraform, LLM API integration
 
 ## Project value
 
-A serverless solution for transcribing audio recordings using an external transcription API.
+- Experience implementing a practical serverless solution
+- Experience with Infrastructure-as-Code approach
+- Hands-on practice with Amazon cloud services

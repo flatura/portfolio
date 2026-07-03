@@ -1,8 +1,27 @@
 # Role and Responsibilities
 
-In this project, I acted as the Solution Designer, DevOps Engineer, and QA Tester.
+## My Role
 
-* Formalized business and non-functional requirements (NFRs).
-* Formulated tasks for Claude Code (AI-assisted development).
-* Designed the Target Architecture.
-* Prepared Architecture Decision Records (ADRs) for tech stack selection during the pre-sale phase.
+I acted as the technical owner of the system architecture.
+
+My work included:
+
+* translating the need into a business request, requirements, constraints, and then into context for LLM;
+* preparing architecture documentation, C4 diagrams, and ADRs;
+* using AI-assisted tools to accelerate implementation while keeping manual control over architecture, data model, review, and deployment decisions.
+
+## AI Usage
+
+The project was developed with AI assistance.
+
+LLMs were used to accelerate implementation, generate boilerplate code, and iterate quickly. Key decisions remained under manual control:
+
+* requirements interpretation;
+* domain modeling;
+* architecture decisions;
+* data boundaries;
+* access model;
+* code review;
+* debugging;
+* deployment decisions;
+* technical documentation.
