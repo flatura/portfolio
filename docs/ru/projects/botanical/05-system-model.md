@@ -676,12 +676,12 @@ GET /api/exchange/matches/{wishlistId}
 
 API-дизайн сочетает framework-level и domain-level protection:
 
-* Spring Security аутентифицирует запросы и формирует user context.
-* JWT несёт идентичность, а роли и membership’ы резолвятся на серверной стороне.
-* Method-level checks защищают write-операции и административные действия.
-* Tenant-scoped queries предотвращают утечку данных между организациями.
+* Spring Security аутентифицирует запросы и формирует контекст пользователя.
+* JWT несёт идентичность, а роли и права резолвятся на серверной стороне.
+* Method-level проверки защищают операции записи и административные действия.
+* Tenant-scoped запросы предотвращают утечку данных между организациями.
 * DTO validation блокирует некорректные запросы до выполнения бизнес-логики.
-* Public endpoints используют отдельные response models с ограниченным набором полей.
+* Public endpoints используют отдельные DTO с ограниченным набором полей.
 * Soft delete защищает от случайной потери данных.
-* Platform-level operations отделены от tenant-level workflows.
-* Audit и login events обеспечивают traceability для чувствительных действий.
+* Операции уровня всей платформы отделены от операций тенантов.
+* Audit и login events обеспечивают трассируемость чувствительных действий.

@@ -20,15 +20,15 @@
 
 ## Нефункциональные требования
 
-Проект спроектирован как практичный MVP:
+### Ключевые атрибуты качества
 
-* разделенные frontend и backend;
-* stateless-сервисы в docker-контейнерах;
-* PostgreSQL/PostGIS ДБ;
-* MinIO/S3-compatible хранилище для медиа и импорт-файлов;
-* Миграции схемы через Flyway;
-* профили запуска на базе конфигурации переменных окружения;
-* базовый CI/CD (сборка Docker-образов с помощью GitHub Actions).
+| Атрибут | Сценарий | Подход |
+|---|---|---|
+| Security | Пользователь организации A не должен получить данные организации B | tenant-scoped queries, RBAC, public DTO, integration tests |
+| Reliability | Зависший импорт не должен блокировать систему | background jobs, stale detection, retry/manual restart |
+| Maintainability | Доменная модель активно меняется на MVP-стадии | modular monolith, package boundaries, DTO/service layers |
+| Performance | Поиск по справочнику таксонов должен оставаться приемлемым при росте каталога | indexes, normalized names, pagination, fuzzy matching strategy |
+| Operability | Сбой VPS не должен приводить к полной потере данных | backups, restore plan, migration path |
 
 ## Режимы отказа
 
@@ -41,3 +41,26 @@
 | public DTO leakage      | раскрытие внутренних данных | отдельные DTO, visibility rules             |
 
 ## Оценка масштаба и стоимости
+### Основные драйверы нагрузки
+
+- количество организаций;
+- количество экземпляров растений;
+- количество фото на растение;
+- размер Excel-импортов;
+- частота Smart Import;
+- объём публичного трафика на карты, QR-страницы и изображения;
+- объём справочника таксонов.
+
+### Основные драйверы стоимости
+
+- VPS / compute;
+- PostgreSQL/PostGIS storage;
+- object storage для фото и импортов;
+- резервные копии;
+- LLM calls для Smart Import;
+- трафик публичных страниц и изображений;
+- мониторинг и хранение логов.
+
+### Масштабные уровни
+
+См. Дорожную карту

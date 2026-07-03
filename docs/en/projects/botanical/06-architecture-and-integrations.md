@@ -54,6 +54,6 @@ The system includes an automatic mechanism for enriching the internal vernacular
 
 The platform includes an XLS import wizard for migrating existing plant collections into the system.
 
-The flow supports file upload, sheet selection, column mapping (including with AI assistance), value resolution, fuzzy matching, asynchronous processing, row-level results, and error report export.
+The flow supports file upload, sheet selection, column mapping (including with AI assistance), value resolution, fuzzy matching, asynchronous processing, row-level results, and Excel export of erroneous rows.
 
 For mapping column names to system entity attributes, and for more accurate recognition of species, cultivar, or enum values, LLM integration and a lightweight harness are provided. Recognition confirmation (when it was not 100%) is performed by the user.

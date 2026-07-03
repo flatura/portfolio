@@ -2,24 +2,12 @@
 
 ## Roadmap
 
-Development and first launch:
-
-1. Launch on VPS
-2. Initial testing
-3. Add "RF" availability zone: launch on VPS in Russia
-
-Event: Pilot. Load measurement, feedback collection.
-
-5. Migration to a separate S3-compatible object storage
-
-Event: First paying clients, load growth
-
-7. Migration to a separate DB instance
-8. Horizontal scalability
-
-Event: First EU/US client
-
-10. Synchronization of public data between availability zones
+| Phase | Goal | Infrastructure | Exit criteria |
+|---|---|---|---|
+| MVP / demo | demonstrate a working system and core scenarios | VPS + Docker Compose | demo flow, backup, basic observability |
+| Pilot | load real data and collect feedback | VPS + regular backup procedures; migrate to external S3 as media grows | import of a real collection, list of UX/data issues |
+| First customers | ensure predictable operations | separate DB, external S3-compatible object storage, monitoring | paying organization, recovery procedure, support |
+| Growth | prepare scaling and regional contours | separate DB, external S3-compatible object storage, separate workers (import), read optimization, regional strategy | tenant count growth, SLA expectations, regional tenant distribution |
 
 ## Screenshots and Demo
 

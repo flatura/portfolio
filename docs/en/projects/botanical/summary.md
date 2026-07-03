@@ -2,11 +2,11 @@
 
 ## Status
 
-MVP / pilot preparation
+MVP / pilot run
 
 ## Role
 
-Co-founder, System Designer, Developer
+Co-founder, technical architecture owner, system designer
 
 ## Stack
 
@@ -16,19 +16,22 @@ Java 21, Spring Boot, PostgreSQL/PostGIS, MinIO/S3-compatible storage, Angular, 
 
 For the target audience (botanical gardens, nurseries, plant breeders, holders of scientific collections and private plant collections):
 
-* a unified species reference as a trusted scientific foundation
-* network capabilities for interaction between organizations.
+- transition from disconnected Excel/local databases to a unified web platform;
+- a unified taxonomic layer as the foundation for comparable collection data;
+- managed data disclosure, public pages, and QR scenarios;
+- a foundation for network exchange scenarios between organizations.
 
-For me:
+For the professional profile:
 
-* experience designing and implementing SaaS from idea through deployment
-* experience diving into an interesting domain
+- designing and implementing SaaS from domain idea through MVP and pilot launch;
+- working with multi-tenancy, RBAC, domain data model, API, GIS, AI-assisted import, public data preparation, and legislative compliance (152-FZ);
+- deliberate and economical use of AI without delegating architectural decisions to the model.
 
 ## What this demonstrates
 
 This project demonstrates my ability to:
 
-* work at the intersection of system analysis, system design, implementation, and deployment.
-* take an idea through to a running system with multiple availability zones and a scaling roadmap
-* strategically plan implementation of a small-to-medium-scale SaaS
-* safely and in a controlled way apply LLM code generation for feature implementation
+- work at the intersection of system analysis, system design, implementation, and deployment.
+- take an idea through to a running system with multiple availability zones and a scaling roadmap
+- strategically plan implementation of a small-to-medium-scale SaaS
+- safely and in a controlled way apply LLM code generation for feature implementation

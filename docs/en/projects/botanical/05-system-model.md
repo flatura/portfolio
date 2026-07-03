@@ -676,12 +676,12 @@ Typical response statuses:
 
 The API design combines framework-level and domain-level protection:
 
-* Spring Security authenticates requests and establishes user context.
-* JWT carries identity, while roles and memberships are resolved server-side.
-* Method-level checks protect write and administrative actions.
-* Tenant-scoped queries prevent cross-organization data leakage.
-* DTO validation blocks malformed requests before business logic execution.
-* Public endpoints use separate response models with restricted field sets.
+* Spring Security authenticates requests and forms user context.
+* JWT carries identity; roles and permissions are resolved server-side.
+* Method-level checks protect write operations and administrative actions.
+* Tenant-scoped queries prevent data leakage between organizations.
+* DTO validation blocks invalid requests before business logic execution.
+* Public endpoints use separate DTOs with a restricted field set.
 * Soft delete protects against accidental data loss.
-* Platform-level operations are separated from tenant-level workflows.
+* Platform-level operations are separated from tenant operations.
 * Audit and login events provide traceability for sensitive actions.

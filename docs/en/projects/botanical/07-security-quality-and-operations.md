@@ -20,15 +20,15 @@ The system has a single User entity and two role-based access models: organizati
 
 ## Non-Functional Requirements
 
-The project is designed as a practical MVP:
+### Key Quality Attributes
 
-* separated frontend and backend;
-* stateless services in Docker containers;
-* PostgreSQL/PostGIS database;
-* MinIO/S3-compatible storage for media and import files;
-* schema migrations via Flyway;
-* launch profiles based on environment configuration;
-* basic CI/CD (Docker image build via GitHub Actions).
+| Attribute | Scenario | Approach |
+|---|---|---|
+| Security | A user from organization A must not access organization B data | tenant-scoped queries, RBAC, public DTO, integration tests |
+| Reliability | A stuck import must not block the system | background jobs, stale detection, retry/manual restart |
+| Maintainability | The domain model changes actively at the MVP stage | modular monolith, package boundaries, DTO/service layers |
+| Performance | Taxonomy reference search must remain acceptable as the catalog grows | indexes, normalized names, pagination, fuzzy matching strategy |
+| Operability | A VPS failure must not lead to complete data loss | backups, restore plan, migration path |
 
 ## Failure Modes
 
@@ -41,3 +41,27 @@ The project is designed as a practical MVP:
 | public DTO leakage | exposure of internal data | separate DTOs, visibility rules |
 
 ## Sizing and Cost Notes
+
+### Primary load drivers
+
+- number of organizations;
+- number of plant instances;
+- number of photos per plant;
+- Excel import size;
+- Smart Import frequency;
+- public traffic volume for maps, QR pages, and images;
+- taxonomy reference volume.
+
+### Primary cost drivers
+
+- VPS / compute;
+- PostgreSQL/PostGIS storage;
+- object storage for photos and imports;
+- backups;
+- LLM calls for Smart Import;
+- public page and image traffic;
+- monitoring and log storage.
+
+### Scaling tiers
+
+See [Roadmap and Demonstration](09-roadmap-and-demonstration.md).
