@@ -1,7 +1,5 @@
 # Goals, Requirements, and Constraints
-
 ## Goals and Non-Goals
-
 ### Primary project goals
 
 * Implement cost-optimal audio transcription for personal use
@@ -13,37 +11,37 @@
 
 ## Business requirements
 
-BR-001. The service is accessible over the internet.
-BR-002. Access is limited to authorized users.
-BR-003. The system supports transcription of long audio.
-BR-004. The system supports speaker diarization.
-BR-005. The user can download the completed transcript.
+- BR-001. The service is accessible over the internet.
+- BR-002. Access is limited to authorized users.
+- BR-003. The system supports transcription of long audio.
+- BR-004. The system supports speaker diarization.
+- BR-005. The user can download the completed transcript.
 
 ## Functional requirements
 
-FR-001. The user receives a presigned upload URL.
-FR-002. The system creates a transcription job whose current status the user can check without refreshing the page.
-FR-003. The system updates job status as processing progresses.
-FR-004. The UI displays a list of jobs and their current status.
-FR-005. The user receives a presigned URL for the completed transcript.
-FR-006. The webhook handler accepts a callback from the transcription provider.
+- FR-001. The user receives a presigned upload URL.
+- FR-002. The system creates a transcription job whose current status the user can check without refreshing the page.
+- FR-003. The system updates job status as processing progresses.
+- FR-004. The UI displays a list of jobs and their current status.
+- FR-005. The user receives a presigned URL for the completed transcript.
+- FR-006. The webhook handler accepts a callback from the transcription provider.
 
 ## Constraints
 
-CON-001. Files up to 300 MB.
-CON-002. Recording duration up to 6 hours.
-CON-003. Up to 5 files transcribed concurrently.
-CON-004. 1–3 users.
-CON-005. An on-premises model is not considered.
-CON-006. Ongoing infrastructure costs must be minimal.
+- CON-001. Files up to 300 MB.
+- CON-002. Recording duration up to 6 hours.
+- CON-003. Up to 5 files transcribed concurrently.
+- CON-004. 1–3 users.
+- CON-005. An on-premises model is not considered.
+- CON-006. Ongoing infrastructure costs must be minimal.
 
 ## Non-functional requirements
 
-NFR-001. Access control.
-NFR-002. Cost efficiency.
-NFR-003. Portability.
-NFR-004. Operability.
-NFR-005. Resilience of async workflow.
+- NFR-001. Access control.
+- NFR-002. Cost efficiency.
+- NFR-003. Portability.
+- NFR-004. Operability.
+- NFR-005. Resilience of async workflow.
 
 ## Requirements (detailed)
 
