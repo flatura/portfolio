@@ -2,13 +2,17 @@
 
 ## My Role
 
-I acted as the technical owner of the system architecture.
+I acted as the system designer and technical owner of the solution.
 
 My work included:
 
-* translating the need into a business request, requirements, constraints, and then into context for LLM;
-* preparing architecture documentation, C4 diagrams, and ADRs;
-* using AI-assisted tools to accelerate implementation while keeping manual control over architecture, data model, review, and deployment decisions.
+- translating a personal need into requirements, constraints, and an architectural model;
+- choosing a serverless architecture given episodic load and cost constraints;
+- designing the asynchronous process: upload -> transcription request -> webhook -> result storage -> download;
+- designing the transcription job state model;
+- selecting AWS services and responsibility boundaries between Lambda, S3, DynamoDB, API Gateway, Cognito, and the external transcription provider;
+- documenting sequence diagrams and ADRs;
+- using AI-assisted development tools as an implementation accelerator while keeping manual control over architecture, security boundaries, and deployment decisions.
 
 ## AI Usage
 

@@ -1,8 +1,34 @@
 # Модель системы
 
-## Доменная модель
-
 ## Модель данных
+
+### TranscriptionJob
+Основная сущность процесса транскрибации.
+
+Атрибуты:
+
+- `fileId`
+- `ownerUserId`
+- `inputS3Key`
+- `transcriptS3Key`
+- `status`
+- `providerTranscriptId`
+- `createdAt`
+- `updatedAt`
+- `errorReason`
+- `speakerMode`
+- `fileSize`
+- `durationEstimate`
+
+### Системные инварианты
+
+- job принадлежит одному пользователю;
+- download URL выдаётся только владельцу job;
+- transcript можно скачать только в статусе `READY`;
+- webhook должен быть idempotent;
+- повторный callback от provider не должен создавать новый transcript;
+- failed job не должен блокировать список остальных job;
+- presigned URLs имеют ограниченное время жизни.
 
 ## DynamoDB - статусы джобов
 
@@ -25,12 +51,12 @@
 
 ## API Gateway (аутентификация)
 
-| Метод | Путь | Lambda handler | Назначение |
-|-------|------|----------------|------------|
-| `GET` | `/upload-url` | `get_upload_url` | Создать запись; вернуть Presigned POST URL и `fileId` |
-| `GET` | `/jobs` | `get_jobs` | Список джобов пользователя (polling UI) |
-| `GET` | `/download-url?fileId=...` | `get_download_url` | Проверка доступа; Presigned GET URL транскрипта |
-| `POST` | `/webhook` | `webhook_assemblyai` | Callback AssemblyAI (`transcript_id`) |
+| Метод | Путь | Назначение |
+|-------|------|------------|
+| `GET` | `/upload-url` | Создать запись; вернуть Presigned POST URL и `fileId` |
+| `GET` | `/jobs` | Список джобов пользователя (polling UI) |
+| `GET` | `/download-url?fileId=...` | Проверка доступа; Presigned GET URL транскрипта |
+| `POST` | `/webhook` |  Callback AssemblyAI (`transcript_id`) |
 
 Все маршруты API Gateway требуют JWT (Amazon Cognito), кроме `/webhook` (callback провайдера транскрибации).
 

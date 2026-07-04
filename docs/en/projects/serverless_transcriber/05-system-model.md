@@ -1,8 +1,34 @@
 # System Model
 
-## Domain Model
-
 ## Data Model
+
+### TranscriptionJob
+The core entity of the transcription process.
+
+Attributes:
+
+- `fileId`
+- `ownerUserId`
+- `inputS3Key`
+- `transcriptS3Key`
+- `status`
+- `providerTranscriptId`
+- `createdAt`
+- `updatedAt`
+- `errorReason`
+- `speakerMode`
+- `fileSize`
+- `durationEstimate`
+
+### System invariants
+
+- a job belongs to one user;
+- a download URL is issued only to the job owner;
+- a transcript can be downloaded only in `READY` status;
+- the webhook must be idempotent;
+- a repeated callback from the provider must not create a new transcript;
+- a failed job must not block the list of other jobs;
+- presigned URLs have a limited lifetime.
 
 ## DynamoDB — job statuses
 
@@ -25,12 +51,12 @@ Each transcription job is stored as a DB record with a lifecycle:
 
 ## API Gateway (authentication)
 
-| Method | Path | Lambda handler | Purpose |
-|-------|------|----------------|---------|
-| `GET` | `/upload-url` | `get_upload_url` | Create record; return Presigned POST URL and `fileId` |
-| `GET` | `/jobs` | `get_jobs` | List user's jobs (UI polling) |
-| `GET` | `/download-url?fileId=...` | `get_download_url` | Verify access; Presigned GET URL for transcript |
-| `POST` | `/webhook` | `webhook_assemblyai` | Transcription provider callback (`transcript_id`) |
+| Method | Path | Purpose |
+|-------|------|---------|
+| `GET` | `/upload-url` | Create record; return Presigned POST URL and `fileId` |
+| `GET` | `/jobs` | List user's jobs (UI polling) |
+| `GET` | `/download-url?fileId=...` | Verify access; Presigned GET URL for transcript |
+| `POST` | `/webhook` | Transcription provider callback (`transcript_id`) |
 
 All API Gateway routes require JWT (Amazon Cognito) except `/webhook` (transcription provider callback).
 

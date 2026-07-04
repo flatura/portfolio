@@ -4,6 +4,12 @@
 
 ## Architectural concept
 
+The system is built on an event-driven model.
+
+The static frontend is served via S3/CloudFront. The user authenticates through Cognito Hosted UI and calls API Gateway using the obtained JWT. API Gateway routes requests to Lambda functions.
+
+Large audio files do not pass through API Gateway and Lambda. The backend issues a presigned POST URL, after which the browser uploads the file directly to S3. An S3 ObjectCreated event triggers a handler that creates a temporary URL for the transcription provider and submits a new transcription request. The external provider performs long transcription asynchronously and returns the result via webhook. The final text transcript is saved to S3, and the job status is updated and stored in DynamoDB.
+
 ```mermaid
 architecture-beta
     service dynamo(aws:dynamodb)[AWS DynamoDB]
