@@ -21,17 +21,17 @@ architecture-beta
     service ai(logos:webhooks)[Transcriber API]
     service front(aws:cloudfront)[AWS CloudFront]
 
-    front:T -- B:static
-    browser:T -- B:api
-    browser:L -- R:front
-    browser:B -- T:cognito
+    front:T --> B:static
+    browser:T --> B:api
+    browser:L --> R:front
+    browser:B --> T:cognito
 
-    api:R -- L:lambda
+    api:R --> L:lambda
     api:T <-- B:ai
-    lambda:T -- R:ai
-    lambda:R -- L:dynamo
-    lambda:B -- T:storage
-    storage:L -- R:browser
+    lambda:T --> R:ai
+    lambda:R --> L:dynamo
+    lambda:B --> T:storage
+    storage:L <-- R:browser
 ```
 
 ## Потоки интеграции
