@@ -63,7 +63,7 @@ plugins:
                     - Дорожная карта и демонстрация: projects/botanical/09-roadmap-and-demonstration.md
                     - Всё вместе: projects/botanical/all-in-one.md
                     - Архитектурное ревью: projects/botanical/architecture-review.md
-                - AI Operational Intelligence Platform:
+                - AI Operational Intelligence Prototype:
                     - projects/ai_oip/index.md
                     - Архитектура и интеграции: projects/ai_oip/06-architecture-and-integrations.md
                     - Решения, компромиссы и риски: projects/ai_oip/08-decisions-trade-offs-and-risks.md
@@ -134,7 +134,7 @@ nav:
           - Roadmap and Demonstration: projects/botanical/09-roadmap-and-demonstration.md
           - All-in-one: projects/botanical/all-in-one.md
           - Architecture review: projects/botanical/architecture-review.md
-      - AI Operational Intelligence Platform:
+      - AI Operational Intelligence Prototype:
           - projects/ai_oip/index.md
           - Architecture and Integrations: projects/ai_oip/06-architecture-and-integrations.md
           - Decisions, Trade-offs, and Risks: projects/ai_oip/08-decisions-trade-offs-and-risks.md

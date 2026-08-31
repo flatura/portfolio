@@ -68,9 +68,9 @@ My role: system analysis, process description, integration flows, DFD/C4, SQL, s
 
 ### AI Operational Intelligence Prototype
 
-A management analytics prototype with a controlled execution loop: LangGraph-based orchestration, tool registry, execution traces, and answers grounded in verifiable data.
+A technical PoC of controlled LLM execution for evidence-backed analytics: chat-like UI, experimental LangGraph flow, tool registry concept, execution traces, and answers grounded in synthetic data.
 
-My role: execution flow design, scenarios, synthetic datasets, tool registry, prototyping, and validation of the approach.
+My role: System Designer, AI-assisted Prototype Engineer — execution flow design, scenarios, synthetic datasets, tool registry concept, prototyping, and validation of the approach.
 
 * [details](projects/ai_oip/)
 

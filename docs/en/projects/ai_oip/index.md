@@ -1,14 +1,15 @@
-# AI Operational Intelligence Platform
+# AI Operational Intelligence Prototype
 
 {% include-markdown "./summary.md" heading-offset=1 %}
 
 ## Quick reading path
 
-1. [Overview](01-overview.md) - product summary and technology stack  
-2. [Context](02-context-and-problem.md) - product direction and execution principle  
-3. [Architecture](06-architecture-and-integrations.md) - Tool Gateway, Tool Registry, playbooks  
-4. [Screenshots and Demo](09-roadmap-and-demonstration.md) - demo scenarios and UI  
-5. [All-in-one](all-in-one.md) - full case study in one page
+1. [Overview](01-overview.md) - prototype summary and technology stack
+2. [Context](02-context-and-problem.md) - problem and execution principle
+3. [Architecture idea](06-architecture-and-integrations.md) - controlled execution flow, tools, evidence
+4. [Limitations](03-goals-requirements-and-constraints.md) - what was and was not implemented
+5. [Demo](09-roadmap-and-demonstration.md) - demo scenarios and UI
+6. [All-in-one](all-in-one.md) - full case study in one page
 
 ## Document assemblies
 

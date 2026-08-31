@@ -1,4 +1,4 @@
-# AI Operational Intelligence Platform — all-in-one
+# AI Operational Intelligence Prototype — all-in-one
 
 This page is assembled from compact project documentation sections. Individual section files remain the source of truth; this page is for sequential reading, review, and PDF-style export.
 

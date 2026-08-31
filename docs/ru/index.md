@@ -68,9 +68,9 @@ B2B SaaS для управления ботаническими коллекци
 
 ### AI Operational Intelligence Prototype
 
-Прототип управленческой AI-аналитики с контролируемым контуром выполнения: LangGraph-based orchestration, tool registry, трассировка запусков и ответы на основе проверяемых данных.
+Технический прототип управляемого LLM-контура для аналитики на проверяемых данных: chat-like UI, экспериментальный LangGraph flow, концепт tool registry, execution traces и ответы на синтетических данных.
 
-Моя роль: проектирование контура, сценарии, synthetic datasets, tool registry, прототипирование и проверка подхода.
+Моя роль: System Designer, AI-assisted Prototype Engineer — проектирование контура, сценарии, synthetic datasets, концепт tool registry, прототипирование и проверка подхода.
 
 * [подробнее](projects/ai_oip/)
 

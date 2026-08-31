@@ -1,14 +1,15 @@
-# AI Operational Intelligence Platform
+# AI Operational Intelligence Prototype
 
 {% include-markdown "./summary.md" heading-offset=1 %}
 
 ## Быстрый маршрут
 
-1. [Обзор](01-overview.md) - краткое описание продукта и технологический стек  
-2. [Контекст](02-context-and-problem.md) - продуктовое направление и принцип исполнения  
-3. [Архитектура](06-architecture-and-integrations.md) - Tool Gateway, Tool Registry, playbooks  
-4. [Скриншоты и демо](09-roadmap-and-demonstration.md) - demo-сценарии и UI  
-5. [Всё вместе](all-in-one.md) - полный кейс на одной странице
+1. [Обзор](01-overview.md) - краткое описание прототипа и технологический стек
+2. [Контекст](02-context-and-problem.md) - проблема и принцип исполнения
+3. [Архитектурная идея](06-architecture-and-integrations.md) - controlled execution flow, tools, evidence
+4. [Ограничения](03-goals-requirements-and-constraints.md) - что было и не было реализовано
+5. [Демо](09-roadmap-and-demonstration.md) - demo-сценарии и UI
+6. [Всё вместе](all-in-one.md) - полный кейс на одной странице
 
 ## Документные сборки
 

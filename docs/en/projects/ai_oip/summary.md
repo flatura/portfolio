@@ -2,24 +2,47 @@
 
 ## Status
 
-Working MVP prototype, June 2026
+Technical PoC / working prototype, June 2026
 
 ## Role
 
-Solution Architect, System Designer, AI-assisted Prototype Engineer
+System Designer, AI-assisted Prototype Engineer
 
 ## Stack
 
-Type: Enterprise AI / Decision-support platform / Agentic analytics MVP
+Type: Enterprise AI / controlled LLM execution prototype / evidence-backed analytics prototype
+
+Python, FastAPI, LangGraph, Open WebUI, PostgreSQL, Qdrant, MinIO, Redis, Docker Compose
 
 ## Project value
 
-An enterprise AI prototype for evidence-based managerial analytics - an **AI Executive Analyst with verifiable evidence** that helps executives investigate business questions without opaque AI reasoning.
+A technical PoC of controlled LLM execution for evidence-backed analytics. The prototype explores how an executive analytics assistant could be built: the LLM does not answer freely from memory and does not get direct access to data. It operates inside a backend-mediated tool environment over prepared synthetic scenarios.
+
+The prototype validated the architectural idea on single-turn analytical requests. It is not a production platform, not a complete decision-support product, and not a multi-turn conversational agent.
+
+## What was implemented
+
+- chat-like UI based on Open WebUI;
+- experimental LangGraph-based execution flow;
+- backend tools for accessing prepared synthetic data;
+- initial tool registry / tool description concept;
+- synthetic financial and cross-functional management scenarios;
+- single-turn analytical requests;
+- evidence-backed response pattern;
+- basic execution trace / run details;
+- architectural documentation and future direction.
+
+## Current limitations
+
+The most important limitation: each new message in Open WebUI was effectively processed as a new independent request rather than continuation of the same analytical session.
 
 ## What this demonstrates
 
-This project demonstrates my ability to move from classical systems analysis into enterprise AI solution architecture.
-
-It shows that I can take an ambiguous AI product idea and turn it into a working, constrained, and demonstrable system: define the architecture, model the data, design diagnostic workflows, build a prototype, prepare synthetic scenarios, expose controlled tools, and make LLM outputs traceable enough for enterprise discussion.
-
-The core value is not "using an LLM". The core value is designing a system where AI reasoning is bounded by architecture, evidence, tool contracts, and auditability.
+- understanding of enterprise AI risks;
+- controlled LLM execution instead of free chat;
+- separation of chat UI and execution layer;
+- tool-mediated analytics;
+- evidence-backed response design;
+- execution trace as a trust/debugging mechanism;
+- ability to build a working prototype quickly;
+- ability to honestly document limitations.

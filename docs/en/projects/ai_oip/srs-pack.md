@@ -1,4 +1,4 @@
-# AI Operational Intelligence Platform — SRS pack
+# AI Operational Intelligence Prototype — SRS pack
 
 This page assembles sections relevant to a software requirements specification: context and problem through security, quality, and operations.
 
