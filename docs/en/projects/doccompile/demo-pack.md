@@ -1,4 +1,4 @@
-# DocCompile — demo pack
+# DocCompile - demo pack
 
 This page assembles sections relevant to demos and stakeholder presentations: overview, role, architecture, decisions, roadmap, and demonstration.
 

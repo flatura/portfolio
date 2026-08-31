@@ -4,11 +4,11 @@
 
 ## Quick reading path
 
-1. [Overview](01-overview.md) — product summary and stack
-2. [Context and Problem](02-context-and-problem.md) — background and problem statement
+1. [Overview](01-overview.md) - product summary and stack
+2. [Context and Problem](02-context-and-problem.md) - background and problem statement
 3. [Architecture and Integrations](06-architecture-and-integrations.md)
-4. [Goals, Requirements, and Constraints](03-goals-requirements-and-constraints.md) — key implemented capabilities
-5. [All-in-one](all-in-one.md) — full case study in one page
+4. [Goals, Requirements, and Constraints](03-goals-requirements-and-constraints.md) - key implemented capabilities
+5. [All-in-one](all-in-one.md) - full case study in one page
 
 ## Document assemblies
 
@@ -20,13 +20,13 @@
 ## Full structure
 
 - [Summary](summary.md)
-- [01 — Overview](01-overview.md)
-- [02 — Context and Problem](02-context-and-problem.md)
-- [03 — Goals, Requirements, and Constraints](03-goals-requirements-and-constraints.md)
-- [04 — Role and Responsibilities](04-role-and-responsibilities.md)
-- [05 — System Model](05-system-model.md)
-- [06 — Architecture and Integrations](06-architecture-and-integrations.md)
-- [07 — Security, Quality, and Operations](07-security-quality-and-operations.md)
-- [08 — Decisions, Trade-offs, and Risks](08-decisions-trade-offs-and-risks.md)
-- [09 — Roadmap and Demonstration](09-roadmap-and-demonstration.md)
+- [01 - Overview](01-overview.md)
+- [02 - Context and Problem](02-context-and-problem.md)
+- [03 - Goals, Requirements, and Constraints](03-goals-requirements-and-constraints.md)
+- [04 - Role and Responsibilities](04-role-and-responsibilities.md)
+- [05 - System Model](05-system-model.md)
+- [06 - Architecture and Integrations](06-architecture-and-integrations.md)
+- [07 - Security, Quality, and Operations](07-security-quality-and-operations.md)
+- [08 - Decisions, Trade-offs, and Risks](08-decisions-trade-offs-and-risks.md)
+- [09 - Roadmap and Demonstration](09-roadmap-and-demonstration.md)
 - [Architecture Decision Records](adr/index.md)

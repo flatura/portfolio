@@ -245,7 +245,7 @@ Separates model behavior releases from application releases. Enables INTERNAL te
 
 * ADMIN / SUPER_ADMIN only.
 * Rollback path.
-* Target INTERNAL → PUBLIC Compiler lifecycle.
+* Target INTERNAL -> PUBLIC Compiler lifecycle.
 
 #### Review trigger
 
@@ -328,7 +328,7 @@ A B2B buyer that will not adopt without a hosted workspace; then a workspace wou
 |---|---|---|
 | Transformation quality may not beat a good LLM prompt by enough | Users will not pay for a thin wrapper | Reference-quality Compilers first; contracts and validators, not prompt theatre |
 | Semantic validation becomes validation theatre | False trust | Separate deterministic checks from probabilistic ones; never claim "AI verified" |
-| Compiler-specific domain work scales poorly | Founder bandwidth | Small Compiler set; Harness invariants; INTERNAL → PUBLIC |
+| Compiler-specific domain work scales poorly | Founder bandwidth | Small Compiler set; Harness invariants; INTERNAL -> PUBLIC |
 | Multi-artifact Situations drift | Contradictory packs | Canonical facts and cross-artifact checks (target) |
 | Patch Compile is hard | Brownfield is the real job | Treat as later epoch; depends on identity, facts, contracts, diffs |
 | Cold start for eval datasets | No Compiler Health | Dogfood, outcome signals, local edit-distance buckets |

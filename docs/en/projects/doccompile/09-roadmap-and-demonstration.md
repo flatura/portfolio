@@ -24,7 +24,7 @@ Epoch numbers are provisional. Prefer the product repository if it has a newer r
 
 | Epoch | Focus | Status |
 |---|---|---|
-| — | Renderer, SaaS contour, first AI transformations, credits / Paddle | Implemented |
+| - | Renderer, SaaS contour, first AI transformations, credits / Paddle | Implemented |
 | E22 | Product and Compiler quality telemetry; Compiler publication lifecycle (PUBLIC / INTERNAL / DISABLED) | Next |
 | E23 | Universal Transformation Harness; Artifact Contract | Planned |
 | E24 | Evidence / Canonical Fact Model | Planned |
@@ -43,10 +43,10 @@ Epoch numbers are provisional. Prefer the product repository if it has a newer r
 
 Screenshots are not fabricated in this pack. Add verified assets under `docs/assets/doccompile/` when they exist in the product repository. Recommended set:
 
-* `editor_main.png` — main editor / compiler interface;
-* `mermaid_document.png` — document with Mermaid and architecture icons;
-* `transformation_before_after.png` — AI transformation input vs output;
-* `admin_history.png` — admin transformation history / observability.
+* `editor_main.png` - main editor / compiler interface;
+* `mermaid_document.png` - document with Mermaid and architecture icons;
+* `transformation_before_after.png` - AI transformation input vs output;
+* `admin_history.png` - admin transformation history / observability.
 
 Architecture is documented as diagrams in [Architecture and Integrations](06-architecture-and-integrations.md) rather than a static PNG.
 

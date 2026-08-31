@@ -6,14 +6,14 @@ The implemented system is a client-side SPA with a serverless AWS backend for id
 
 ```text
 Browser SPA
-    → CloudFront
-    → private S3 origin (OAC)
+    -> CloudFront
+    -> private S3 origin (OAC)
 
 Authenticated / server-side operations:
 Browser
-    → API Gateway
-    → Lambda
-    → DynamoDB / SQS / external services
+    -> API Gateway
+    -> Lambda
+    -> DynamoDB / SQS / external services
 ```
 
 Large document bodies are not the default backend payload. Local rendering, Mermaid, themes, assets, and PDF operations run in the browser. Content is sent to the server when the user explicitly starts an AI transformation.
@@ -22,7 +22,7 @@ AI processing uses an asynchronous job model around server-side workers and an e
 
 ```mermaid
     C4Container
-    title Container Diagram for DocCompile — implemented
+    title Container Diagram for DocCompile - implemented
 
     Person(user, "Author")
     Person(admin, "Admin")

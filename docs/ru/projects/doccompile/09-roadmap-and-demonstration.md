@@ -24,7 +24,7 @@
 
 | Эпоха | Фокус | Статус |
 |---|---|---|
-| — | Рендерер, SaaS-контур, первые AI-трансформации, кредиты / Paddle | Реализовано |
+| - | Рендерер, SaaS-контур, первые AI-трансформации, кредиты / Paddle | Реализовано |
 | E22 | Телеметрия качества продукта и Compiler; жизненный цикл публикации Compiler (PUBLIC / INTERNAL / DISABLED) | Следующее |
 | E23 | Универсальный Transformation Harness; Artifact Contract | Запланировано |
 | E24 | Evidence / Canonical Fact Model | Запланировано |
@@ -43,10 +43,10 @@
 
 Скриншоты в этом пакете не вымышляются. Добавлять проверенные ассеты в `docs/assets/doccompile/`, когда они есть в продуктовом репозитории. Рекомендуемый набор:
 
-* `editor_main.png` — основной интерфейс редактора / compiler;
-* `mermaid_document.png` — документ с Mermaid и иконками архитектуры;
-* `transformation_before_after.png` — вход vs выход AI-трансформации;
-* `admin_history.png` — история трансформаций / наблюдаемость для администратора.
+* `editor_main.png` - основной интерфейс редактора / compiler;
+* `mermaid_document.png` - документ с Mermaid и иконками архитектуры;
+* `transformation_before_after.png` - вход vs выход AI-трансформации;
+* `admin_history.png` - история трансформаций / наблюдаемость для администратора.
 
 Архитектура документирована диаграммами в [Архитектура и интеграции](06-architecture-and-integrations.md), а не статическим PNG.
 

@@ -10,7 +10,7 @@ Markdown
 + architecture icons
 + images
 + professional themes
-→ PDF
+-> PDF
 ```
 
 The current product formula:

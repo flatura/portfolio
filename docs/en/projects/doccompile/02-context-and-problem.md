@@ -10,9 +10,9 @@ The initial product therefore focused on a portable path:
 
 ```text
 portable Markdown
-→ diagrams-as-code
-→ professional rendering
-→ PDF
+-> diagrams-as-code
+-> professional rendering
+-> PDF
 ```
 
 Markdown remains the source of truth. The product favors portable standards: GFM / Markdown, Mermaid, Iconify-compatible architecture icons, YAML front matter, conventional image/asset links, and later potentially LaTeX. Content should stay compatible with Git / GitHub, VS Code / Cursor, MkDocs, Mermaid tooling, and ordinary Markdown tooling.
@@ -35,7 +35,7 @@ Raw meeting notes and transcripts make the last mile more expensive. An expert s
 
 ### 2. Workspace gravity
 
-During product development, the natural SaaS expansion was a proprietary cloud document store: workspace, document management, a broader editor. That path would put DocCompile into competition for where documents live — against Notion, Confluence, GitBook, Google Docs, and the user's own Git repository.
+During product development, the natural SaaS expansion was a proprietary cloud document store: workspace, document management, a broader editor. That path would put DocCompile into competition for where documents live - against Notion, Confluence, GitBook, Google Docs, and the user's own Git repository.
 
 That is the wrong fight for this product. Technical users already have a home for documents. Switching cost is high. A workspace also pulls the architecture toward persistent document storage, which conflicts with the local-first privacy position.
 

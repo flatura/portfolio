@@ -221,9 +221,9 @@ Security layers:
 
 ```text
 submit
-→ queued / running
-→ succeeded | failed
-→ result available to owner
+-> queued / running
+-> succeeded | failed
+-> result available to owner
 ```
 
 Status names may differ in code. The invariant is: a job is attributable, metered, and inspectable; it is not a free-form chat session.

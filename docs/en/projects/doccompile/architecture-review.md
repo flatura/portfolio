@@ -1,4 +1,4 @@
-# DocCompile — architecture review
+# DocCompile - architecture review
 
 This page assembles sections relevant to architecture review: goals, requirements, and constraints; system model; architecture and integrations; security, quality, and operations; and decisions, trade-offs, and risks.
 

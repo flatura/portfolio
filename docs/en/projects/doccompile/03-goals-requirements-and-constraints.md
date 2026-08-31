@@ -19,7 +19,7 @@
 
 * Not a general-purpose cloud document workspace or Notion/Confluence replacement.
 * Not a WYSIWYG Word clone and not a proprietary block editor as the source of truth.
-* Not a guarantee of hallucination-free AI output. Target checks are deterministic validation, source-grounding, and bounded repair — not an unprovable "fully verified AI" claim.
+* Not a guarantee of hallucination-free AI output. Target checks are deterministic validation, source-grounding, and bounded repair - not an unprovable "fully verified AI" claim.
 * Not tied permanently to a single LLM vendor.
 * Does not invent missing professional facts when source evidence is absent; unresolved items should remain unresolved.
 * Does not include formal SLA / RTO / RPO values in this portfolio pack. Those values are Unknown / TBD unless defined in project operations artifacts.
@@ -81,7 +81,7 @@ The public version includes a shortened requirements fragment. Internal billing 
   A custom output template may change artifact structure. It must not weaken Compiler guarantees (grounding, validators, repair bounds).
 
 * **RULE-006. LLM provider is replaceable.**  
-  Product value sits in Compiler specifications, contracts, evidence models, validators, repair, and quality evaluation — not in one prompt or one vendor.
+  Product value sits in Compiler specifications, contracts, evidence models, validators, repair, and quality evaluation - not in one prompt or one vendor.
 
 ### Constraints
 
