@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 PROJECTS = [
     "ai_oip",
     "botanical",
+    "doccompile",
     "serverless_transcriber",
     "enterprise_gis",
     "fastmbo",
