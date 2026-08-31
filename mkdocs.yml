@@ -63,6 +63,13 @@ plugins:
                     - Дорожная карта и демонстрация: projects/botanical/09-roadmap-and-demonstration.md
                     - Всё вместе: projects/botanical/all-in-one.md
                     - Архитектурное ревью: projects/botanical/architecture-review.md
+                - DocCompile:
+                    - projects/doccompile/index.md
+                    - Архитектура и интеграции: projects/doccompile/06-architecture-and-integrations.md
+                    - Решения, компромиссы и риски: projects/doccompile/08-decisions-trade-offs-and-risks.md
+                    - Дорожная карта и демонстрация: projects/doccompile/09-roadmap-and-demonstration.md
+                    - Всё вместе: projects/doccompile/all-in-one.md
+                    - Архитектурное ревью: projects/doccompile/architecture-review.md
                 - AI Operational Intelligence Prototype:
                     - projects/ai_oip/index.md
                     - Архитектура и интеграции: projects/ai_oip/06-architecture-and-integrations.md
@@ -70,13 +77,6 @@ plugins:
                     - Дорожная карта и демонстрация: projects/ai_oip/09-roadmap-and-demonstration.md
                     - Всё вместе: projects/ai_oip/all-in-one.md
                     - Архитектурное ревью: projects/ai_oip/architecture-review.md
-                - AWS Audio Transcriber:
-                    - projects/serverless_transcriber/index.md
-                    - Архитектура и интеграции: projects/serverless_transcriber/06-architecture-and-integrations.md
-                    - Решения, компромиссы и риски: projects/serverless_transcriber/08-decisions-trade-offs-and-risks.md
-                    - Дорожная карта и демонстрация: projects/serverless_transcriber/09-roadmap-and-demonstration.md
-                    - Всё вместе: projects/serverless_transcriber/all-in-one.md
-                    - Архитектурное ревью: projects/serverless_transcriber/architecture-review.md
             - Корпоративный опыт:
                 - FMCG ML Прогнозатор / Планировщик: projects/fmcg_forecaster_planner.md
                 - ГИС ж/д-логистика:
@@ -94,6 +94,13 @@ plugins:
                     - Всё вместе: projects/fastmbo/all-in-one.md
                     - Архитектурное ревью: projects/fastmbo/architecture-review.md
             - Внутренние инициативы:
+                - AWS Audio Transcriber:
+                    - projects/serverless_transcriber/index.md
+                    - Архитектура и интеграции: projects/serverless_transcriber/06-architecture-and-integrations.md
+                    - Решения, компромиссы и риски: projects/serverless_transcriber/08-decisions-trade-offs-and-risks.md
+                    - Дорожная карта и демонстрация: projects/serverless_transcriber/09-roadmap-and-demonstration.md
+                    - Всё вместе: projects/serverless_transcriber/all-in-one.md
+                    - Архитектурное ревью: projects/serverless_transcriber/architecture-review.md
                 - PolylineMechanic:
                     - projects/polyline-mechanic/index.md
                     - Архитектура и интеграции: projects/polyline-mechanic/06-architecture-and-integrations.md
@@ -126,7 +133,7 @@ plugins:
 nav:
   - Home: index.md
   - Approach & Services: services.md
-  - Featured Projects:
+  - Key Projects:
       - Botanical SaaS:
           - projects/botanical/index.md
           - Architecture and Integrations: projects/botanical/06-architecture-and-integrations.md
@@ -134,6 +141,13 @@ nav:
           - Roadmap and Demonstration: projects/botanical/09-roadmap-and-demonstration.md
           - All-in-one: projects/botanical/all-in-one.md
           - Architecture review: projects/botanical/architecture-review.md
+      - DocCompile:
+          - projects/doccompile/index.md
+          - Architecture and Integrations: projects/doccompile/06-architecture-and-integrations.md
+          - Decisions, Trade-offs, and Risks: projects/doccompile/08-decisions-trade-offs-and-risks.md
+          - Roadmap and Demonstration: projects/doccompile/09-roadmap-and-demonstration.md
+          - All-in-one: projects/doccompile/all-in-one.md
+          - Architecture review: projects/doccompile/architecture-review.md
       - AI Operational Intelligence Prototype:
           - projects/ai_oip/index.md
           - Architecture and Integrations: projects/ai_oip/06-architecture-and-integrations.md
@@ -141,13 +155,6 @@ nav:
           - Roadmap and Demonstration: projects/ai_oip/09-roadmap-and-demonstration.md
           - All-in-one: projects/ai_oip/all-in-one.md
           - Architecture review: projects/ai_oip/architecture-review.md
-      - AWS Audio Transcriber:
-          - projects/serverless_transcriber/index.md
-          - Architecture and Integrations: projects/serverless_transcriber/06-architecture-and-integrations.md
-          - Decisions, Trade-offs, and Risks: projects/serverless_transcriber/08-decisions-trade-offs-and-risks.md
-          - Roadmap and Demonstration: projects/serverless_transcriber/09-roadmap-and-demonstration.md
-          - All-in-one: projects/serverless_transcriber/all-in-one.md
-          - Architecture review: projects/serverless_transcriber/architecture-review.md
   - Enterprise Experience:
       - FMCG ML Forecaster / Planner: projects/fmcg_forecaster_planner.md
       - GIS train logistics:
@@ -165,6 +172,13 @@ nav:
           - All-in-one: projects/fastmbo/all-in-one.md
           - Architecture review: projects/fastmbo/architecture-review.md
   - Internal Initiatives:
+      - AWS Audio Transcriber:
+          - projects/serverless_transcriber/index.md
+          - Architecture and Integrations: projects/serverless_transcriber/06-architecture-and-integrations.md
+          - Decisions, Trade-offs, and Risks: projects/serverless_transcriber/08-decisions-trade-offs-and-risks.md
+          - Roadmap and Demonstration: projects/serverless_transcriber/09-roadmap-and-demonstration.md
+          - All-in-one: projects/serverless_transcriber/all-in-one.md
+          - Architecture review: projects/serverless_transcriber/architecture-review.md
       - PolylineMechanic:
           - projects/polyline-mechanic/index.md
           - Architecture and Integrations: projects/polyline-mechanic/06-architecture-and-integrations.md

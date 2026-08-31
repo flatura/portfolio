@@ -50,6 +50,14 @@ My role: system design, domain modeling, data structure, backend/frontend coordi
 
 * [details](projects/botanical/)
 
+### DocCompile
+
+A SaaS platform for compiling professional artifacts from Markdown: local-first rendering with Mermaid, architecture icons, and PDF export; AWS serverless backend; Cognito; credit-metered AI transformations; and a documented pivot from proprietary workspace to a processing layer.
+
+My role: Founder — product owner, system architect, and implementation owner.
+
+* [details](projects/doccompile/)
+
 ### Enterprise GIS / Railway Graph Tooling
 
 An internal tool for working with railway infrastructure data: graph preparation, geodata processing, visualization, editing, and data-loading optimization.
@@ -73,6 +81,8 @@ A technical PoC of controlled LLM execution for evidence-backed analytics: chat-
 My role: System Designer, AI-assisted Prototype Engineer — execution flow design, scenarios, synthetic datasets, tool registry concept, prototyping, and validation of the approach.
 
 * [details](projects/ai_oip/)
+
+## Internal Initiatives
 
 ### Serverless Transcriber
 
